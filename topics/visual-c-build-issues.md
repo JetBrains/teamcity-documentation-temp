@@ -1,5 +1,6 @@
-[//]: # (title: Visual C Build Issues)
-[//]: # (auxiliary-id: Visual C Build Issues)
+//]: # (title: Visual C Build Issues)
+<img width="708" alt="17337039849578010327460780303300" src="https://github.com/user-attachments/assets/8d15f58b-d081-4dd6-94ac-0dc0fd6190b6">
+/[/]: # (auxiliary-id: Visual C Build Issues)
 
 If you experience any problems running a Visual C++ build on a build agent, you can try to work around these issues with the following steps, sequentially:
 

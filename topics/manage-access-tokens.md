@@ -43,7 +43,7 @@ To issue a new token, click the **Generate new token**. In a dialog that pops up
 
 ### Project Scope
 
-Generated tokens are by default available for the currently edited project and all of its subprojects. That is, if you create a token from the Root project's **VCS Auth Page**, this token can be used by any project on the server by default. You can view projects for which a token was initially configured under the **Project Scope**.
+Generated tokens are by default available for the currently edited project and all of its subprojects. That is, if you create a token from the Root project's **VCS Auth Tokens** page, this token can be used by any project on the server by default. You can view projects for which a token was initially configured under the **Project Scope**.
 
 <img src="dk-view-token-scope.png" width="706" alt="View token project scope"/>
 

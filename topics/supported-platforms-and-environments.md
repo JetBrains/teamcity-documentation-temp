@@ -88,7 +88,7 @@ TeamCity Agent is tested under the following operating systems:
 * Linux
 * macOS
 * Windows 7/7x64
-* Windows 10
+* Windows 10, 11
 * Windows Server 2003/2008, 2012, 2016, 2019, 2022
 * Server Core installation of Windows Server 2016
 

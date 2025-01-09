@@ -553,7 +553,7 @@ The message should be printed after all the files are ready and no file is locke
 >
 {style="tip"}
 
-Artifacts are uploaded in the background, which can take time. Make sure the matching files are not deleted till the end of the build (for example, you can put them in a directory that is cleaned on the next build start, in a [temp directory](how-to.md#Make+Temporary+Build+Files+Erased+between+the+Builds), or use [Swabra](build-files-cleaner-swabra.md) to clean them after the build).
+Artifacts are uploaded in the background, which can take time. Make sure the matching files are not deleted till the end of the build step (for example, you can put them in a directory that is cleaned on the next build start, in a [temp directory](how-to.md#Make+Temporary+Build+Files+Erased+between+the+Builds), or use [Swabra](build-files-cleaner-swabra.md) to clean them after the build).
 
 
 
@@ -561,7 +561,7 @@ Artifacts are uploaded in the background, which can take time. Make sure the mat
 >
 {style="note"}
 
-Artifacts that are specified in the build configuration setting will be published as usual.
+Artifacts that are specified in the build configuration setting will be published as usual, after the finish of the last build step.
 
 ### Passing NuGet Packages Between Steps
 

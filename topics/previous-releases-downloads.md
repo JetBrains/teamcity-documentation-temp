@@ -19,7 +19,7 @@ Build 174458
 [Windows installer](https://download.jetbrains.com/teamcity/TeamCity-2024.12.1.exe)<br/>
 [Archive with bundled Tomcat (any platform)](https://download.jetbrains.com/teamcity/TeamCity-2024.12.1.tar.gz)
 
-[Release notes]()
+[Release notes](teamcity-2024-12-1-release-notes.md)
 
 ## TeamCity 2024.12
 

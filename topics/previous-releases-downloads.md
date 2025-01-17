@@ -16,8 +16,8 @@ See also: [Documentation for Previous Versions](documentation-for-previous-versi
 Release date: 17 January 2025<br/>
 Build 174458
 
-[Windows installer]()<br/>
-[Archive with bundled Tomcat (any platform)]()
+[Windows installer](https://download.jetbrains.com/teamcity/TeamCity-2024.12.1.exe)<br/>
+[Archive with bundled Tomcat (any platform)](https://download.jetbrains.com/teamcity/TeamCity-2024.12.1.tar.gz)
 
 [Release notes]()
 

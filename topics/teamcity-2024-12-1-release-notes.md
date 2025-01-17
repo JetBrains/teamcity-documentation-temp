@@ -2,17 +2,30 @@
 [//]: # (auxiliary-id: TeamCity 2024.12 Release Notes)
 
 
-**Build 1744, 17 January 2025**
+**Build 174458, 17 January 2025**
 
 
-<!--project: TeamCity Fix versions: {2024.12 (174331)} #Fixed #Testing visible to: {All Users} -{Trunk issue}-->
-
+<!-- project: TeamCity Fix versions: {2024.12.1} #Fixed #Testing visible to: {All Users} -{Trunk issue} -->
 
 ### Bug
 
-**[TW-90750](https://youtrack.jetbrains.com/issue/TW-90750/Lots-of-Requested-pool-for-non-existing-project-with-id-...-messages-in-the-server-log)** — Lots of "Requested pool for non-existing project with id ..." messages in the server log
+**[TW-91446](https://youtrack.jetbrains.com/issue/TW-91446/Build-tags-are-truncated)** — Build tags are truncated
+
+**[TW-91072](https://youtrack.jetbrains.com/issue/TW-91072/Token-management-tokens-scope-can-be-silently-expanded-during-the-copying-project)** — Token management: token's scope can be silently expanded during the copying project
+
+**[TW-89399](https://youtrack.jetbrains.com/issue/TW-89399/Revision-computation-in-a-build-with-checkout-rules-should-consider-all-available-DAGs-for-all-variations-of-VCS-root-parent)** — Revision computation in a build with checkout rules should consider all available DAGs for all variations of VCS root parent
+
+**[TW-91513](https://youtrack.jetbrains.com/issue/TW-91513/Builds-history-can-be-lost-of-project-was-deleted-from-DSL-and-then-restored)** — Builds history can be lost of project was deleted from DSL and then restored
+
+**[TW-75215](https://youtrack.jetbrains.com/issue/TW-75215/Information-about-dependencies-is-not-updated-after-the-finishing-the-build)** — Information about dependencies is not updated after the finishing the build
+
+**[TW-91309](https://youtrack.jetbrains.com/issue/TW-91309/TeamCity.Node-plugin-fails-with-Failed-to-find-build-runner-settings-error)** — TeamCity.Node plugin fails with "Failed to find build runner settings" error
 
 **[TW-91178](https://youtrack.jetbrains.com/issue/TW-91178/Kubernetes-Executor-swabra-usage-can-potentially-eliminate-compilation-results)** — Kubernetes Executor: swabra usage can potentially eliminate compilation results
+
+**[TW-89052](https://youtrack.jetbrains.com/issue/TW-89052/Unable-to-specify-context-parameters-for-versioned-settings-Editing-of-the-project-settings-is-disabled)** — Unable to specify context parameters for versioned settings: Editing of the project settings is disabled
+
+**[TW-90750](https://youtrack.jetbrains.com/issue/TW-90750/Lots-of-Requested-pool-for-non-existing-project-with-id-...-messages-in-the-server-log)** — Lots of "Requested pool for non-existing project with id ..." messages in the server log
 
 **[TW-90374](https://youtrack.jetbrains.com/issue/TW-90374/AWS-connection-Sakura-UI-all-fields-are-responsive-in-read-only-mode)** — AWS connection Sakura UI: all fields are responsive in read-only mode
 
@@ -32,19 +45,11 @@
 
 **[TW-91575](https://youtrack.jetbrains.com/issue/TW-91575/Agent-may-hang-during-artifact-publishing)** — Agent may hang during artifact publishing
 
-**[TW-75215](https://youtrack.jetbrains.com/issue/TW-75215/Information-about-dependencies-is-not-updated-after-the-finishing-the-build)** — Information about dependencies is not updated after the finishing the build
-
 **[TW-91531](https://youtrack.jetbrains.com/issue/TW-91531/Cannot-request-build-details-via-REST-API-if-the-user-who-approved-the-build-does-not-exist-anymore)** — Cannot request build details via REST API, if the user who approved the build does not exist anymore
-
-**[TW-91309](https://youtrack.jetbrains.com/issue/TW-91309/TeamCity.Node-plugin-fails-with-Failed-to-find-build-runner-settings-error)** — TeamCity.Node plugin fails with "Failed to find build runner settings" error
 
 **[TW-91517](https://youtrack.jetbrains.com/issue/TW-91517/Cannot-install-IntelliJ-Inspections-and-Duplicates-Engine-2024.3)** — Cannot install IntelliJ Inspections and Duplicates Engine 2024.3
 
-**[TW-89052](https://youtrack.jetbrains.com/issue/TW-89052/Unable-to-specify-context-parameters-for-versioned-settings-Editing-of-the-project-settings-is-disabled)** — Unable to specify context parameters for versioned settings: Editing of the project settings is disabled
-
 **[TW-91144](https://youtrack.jetbrains.com/issue/TW-91144/Token-Management-Provide-better-errors-in-case-of-network-problems-during-a-token-generation)** — Token Management: Provide better errors in case of network problems during a token generation
-
-**[TW-91072](https://youtrack.jetbrains.com/issue/TW-91072/Token-management-tokens-scope-can-be-silently-expanded-during-the-copying-of-the-build-configuration-project)** — Token management: token's scope can be silently expanded during the copying of the build configuration/project
 
 **[TW-91348](https://youtrack.jetbrains.com/issue/TW-91348/teamcity-startup.log-contains-all-messages-from-teamcity-server.log-after-changing-logging-preset)** — teamcity-startup.log contains all messages from teamcity-server.log after changing logging preset
 
@@ -65,8 +70,6 @@
 **[TW-90166](https://youtrack.jetbrains.com/issue/TW-90166/Deadlock-prevents-builds-from-starting-Waiting-for-the-build-queue-distribution-process)** — Deadlock prevents builds from starting 'Waiting for the build queue distribution process'
 
 **[TW-91354](https://youtrack.jetbrains.com/issue/TW-91354/Build-does-not-start-because-of-exception-in-NuGetFeedParametersProvider)** — Build does not start because of exception in NuGetFeedParametersProvider
-
-**[TW-91513](https://youtrack.jetbrains.com/issue/TW-91513/Builds-history-can-be-lost-of-project-was-deleted-from-DSL-and-then-restored)** — Builds history can be lost of project was deleted from DSL and then restored
 
 **[TW-90927](https://youtrack.jetbrains.com/issue/TW-90927/Kubernetes-UI-design-review)** — Kubernetes UI design review
 
@@ -158,8 +161,6 @@
 
 **[TW-70202](https://youtrack.jetbrains.com/issue/TW-70202/Do-not-disable-clean-up-of-the-deleted-entities-if-the-problematic-project-build-configuration-is-known)** — Do not disable clean-up of the deleted entities if the problematic project / build configuration is known
 
-**[TW-89399](https://youtrack.jetbrains.com/issue/TW-89399/Revision-computation-in-a-build-with-checkout-rules-should-consider-all-available-DAGs-for-all-variations-of-VCS-root-parent)** — Revision computation in a build with checkout rules should consider all available DAGs for all variations of VCS root parent
-
 
 ### Performance Problem
 
@@ -187,4 +188,3 @@
 **[TW-91392](https://youtrack.jetbrains.com/issue/TW-91392/Allow-to-approve-only-current-build-not-the-whole-buildchain)** — Allow to approve only current build, not the whole buildchain
 
 **[TW-89605](https://youtrack.jetbrains.com/issue/TW-89605/Add-a-metric-for-a-number-of-unregistered-agents)** — Add a metric for a number of unregistered agents
-

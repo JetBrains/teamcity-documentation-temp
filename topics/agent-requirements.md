@@ -3,7 +3,11 @@
 
 _Agent requirements_ are special conditions that define whether a [build configuration](managing-builds.md) can run on a particular [build agent](build-agent.md). Together with grouping by [agent pools](configuring-agent-pools.md), they give you a flexible control over how builds are distributed to agents.
 
-To create an explicit agent requirement for a given build configuration, go to __Build Configuration Settings | Agent Requirements__ and click __Add new requirement__. Each requirement represents a conditional rule for a certain parameter. While you are entering a parameter name or value, TeamCity will show you related suggestions.
+To create an explicit agent requirement for a given build configuration:
+
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Agent Requirements"/></include>
+3. Click __Add new requirement__. Each requirement represents a conditional rule for a certain parameter. While you are entering a parameter name or value, TeamCity will show you related suggestions.
 
 To temporarily disable or delete a requirement, use its context menu.
 

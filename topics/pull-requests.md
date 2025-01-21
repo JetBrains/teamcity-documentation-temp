@@ -653,7 +653,9 @@ TeamCity can detect each pull request sent to the `master` branch and build the 
 
 To configure the described workflow for the `web-app` build configuration in TeamCity:
 1. Add a [VCS root](vcs-root.md) to the build configuration:   
-   * Go to __Build Configuration Settings | Version Control Settings__ and click __Attach VCS root__.
+    * <include from="common-templates.md" element-id="open-configuration-settings"/>
+    * <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Version Control Settings"/></include>
+   * Click __Attach VCS root__.
    * Configure the root parameters:
       - __Type of VCS__: _Git_
       - __VCS root name__: _\<unique_root_name\>_
@@ -663,15 +665,17 @@ To configure the described workflow for the `web-app` build configuration in Tea
       - __Authentication Settings__ of the GitHub user that has access rights to the `web-app` repository
    * Test the connection and, if successful, click __Create__.
 2. Add the _Pull Requests_ [build feature](adding-build-features.md) to the build configuration:
-   * Go to __Build Configuration Settings | Build Features__ and click __Add build feature__.
-   * Configure the feature parameters:
+    * <include from="common-templates.md" element-id="open-configuration-settings"/>
+    * <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+    * Click __Add build feature__.
+    * Configure the feature parameters:
         * __VCS Root__: the VCS root created at Step 1
         * __VCS hosting type__: _GitHub_
         * __Authentication Type__: _Use VCS root credentials_, or select _Access token_ to use a GitHub token instead        
         * __Pull Requests filtering__:
            * __By authors__: _Members of the same organization_
            * __By target branch__: leave empty to apply no filters and monitor all new pull requests in the repository, or explicitly specify the target branch (in this example, _`master`_)
-   * Test the connection and, if successful, click __Save__.
+    * Test the connection and, if successful, click __Save__.
 3. Add a [VCS trigger](configuring-vcs-triggers.md) to the build configuration.
 
 With this integration in place, whenever a member of your GitHub organization sends a pull request to the `master` branch, TeamCity does the following:

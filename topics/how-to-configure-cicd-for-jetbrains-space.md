@@ -1,11 +1,12 @@
 [//]: # (title: How to Configure CI/CD for JetBrains Space)
 [//]: # (auxiliary-id: How to Configure CI/CD for JetBrains Space)
 
-**[JetBrains Space](https://www.jetbrains.com/space/) is a full-cycle collaboration solution for software development teams. This guide explains how to achieve continuous integration and delivery of JetBrains Space projects by integrating them with TeamCity.**
+[JetBrains Space](https://www.jetbrains.com/space/) is a full-cycle collaboration solution for software development teams. This guide explains how to achieve continuous integration and delivery of JetBrains Space projects by integrating them with TeamCity.
 
-<table><tr><td></td></tr><tr><td>
+
 
 Integration with TeamCity brings the following advantages to the JetBrains Space users:
+
 * Compiling, testing, and deploying projects within the same environment.
 * Building source code of merge requests and merging them automatically after a successful build.
 * Extensive build overview: diffs and artifacts, detailed test reports on the fly, code coverage, inspections, and various other metrics. Statuses of builds and code reviews are cross-shared between systems for easier monitoring.
@@ -13,7 +14,7 @@ Integration with TeamCity brings the following advantages to the JetBrains Space
 * Ability to configure builds as code, in [Kotlin DSL](kotlin-dsl.md).
 * Authentication with a single account in both systems: VCS (JetBrains Space) and CI/CD (TeamCity).
 
-</td></tr><tr><td></td></tr></table>
+
 
 This guide consists of the common [preliminary setup](#Preliminary+Setup) and optional procedures for enabling each component of the integration.
 
@@ -128,13 +129,15 @@ After this basic setup, you can advance the Space integration by following the i
 A build's checkout scope usually consists of the following items: the default branch of [VCS root(s)](vcs-root.md) + the project's [branch specification](working-with-feature-branches.md) + [checkout rules](vcs-checkout-rules.md) of the build configuration. By adding the [Pull Request](pull-requests.md) build feature to this build configuration, you can add one more item to this formula — branches of merge requests. This will allow TeamCity to monitor changes in merge requests and run builds on them. The most common use case for this is prebuilding and pretesting sources of feature branches before they are merged into the default branch.
 
 To add this feature:
-1. Go to __Build Configuration Settings | Build Features__.
-2. Click __Add build feature__ and choose _Pull Requests_.
-3. Choose the recently created VCS root.
-4. Select _JetBrains Space_ as the VCS hosting type and specify the settings as follows:
+
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+3. Click __Add build feature__ and choose _Pull Requests_.
+4. Choose the recently created VCS root.
+5. Select _JetBrains Space_ as the VCS hosting type and specify the settings as follows:
    * _Connection_: choose the [connection to Space](#Step+2%3A+Establish+Connection+to+JetBrains+Space).
    * _By target branch_: define the [branch filter](branch-filter.md) to monitor merge requests only on branches that match the specified criteria. If left empty, no filters apply.
-5. Save the settings.
+6. Save the settings.
 
 >Note that the scope of branches you define in this feature should not overlap with the branch specification of the VCS root. This measure will ensure that no conflicts occur when starting builds on merge requests.
 >
@@ -151,22 +154,24 @@ Read more about the Pull Requests build feature in [this article](pull-requests.
 ### Automatically Merging Request if Build is Successful
 
 TeamCity can automatically merge a request into a target branch if the respective build finishes successfully. To achieve this:
-1. Go to __Build Configuration Settings | Build Features__.
-2. Click __Add build feature__ and choose _Automatic Merge_.
-3. Specify what branches to monitor and to merge into.
-4. Choose a merge policy. You can find more information about advanced settings of this feature [here](automatic-merge.md).
-5. Save the settings.
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+3. Click __Add build feature__ and choose _Automatic Merge_.
+4. Specify what branches to monitor and to merge into.
+5. Choose a merge policy. You can find more information about advanced settings of this feature [here](automatic-merge.md).
+6. Save the settings.
 
 Each time a build satisfies the conditions of the selected merge policy, TeamCity will merge it to the specified target branch.
 
 ## Reporting Build Statuses to JetBrains Space
 
 TeamCity can report statuses of builds to JetBrains Space. To achieve this:
-1. Go to __Build Configuration Settings | Build Features__.
-2. Click __Add build feature__ and choose _Commit Status Publisher_.
-3. Select the _JetBrains Space_ publisher and the [connection to Space](#Step+2%3A+Establish+Connection+to+JetBrains+Space).
-4. Specify the name that will be displayed for this service in Space.
-5. Save the settings.
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+3. Click __Add build feature__ and choose _Commit Status Publisher_.
+4. Select the _JetBrains Space_ publisher and the [connection to Space](#Step+2%3A+Establish+Connection+to+JetBrains+Space).
+5. Specify the name that will be displayed for this service in Space.
+6. Save the settings.
 
 Now, whenever you run a build in this configuration, TeamCity will report the build status to JetBrains Space.
 

@@ -353,10 +353,12 @@ On the TeamCity agent:
 
 On the TeamCity server:
 1. Upload a [Git SSH key](ssh-keys-management.md) to your TeamCity server.
-2. On the __Build Configuration Settings | Version Control Settings__ page, enable the checkout on the agent.
-3. In your Git VCS root, enable _Private Key_ authentication.
-4. Add the [SSH Agent](ssh-agent.md) build feature to your configuration.
-5. Specify `release:prepare` in the __Goals__ field of the Maven build step and run the build.
+2. <include from="common-templates.md" element-id="open-configuration-settings"/>
+3. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Version Control Settings"/></include>
+4. Enable the checkout on the agent.
+5. In your Git VCS root, enable _Private Key_ authentication.
+6. Add the [SSH Agent](ssh-agent.md) build feature to your configuration.
+7. Specify `release:prepare` in the __Goals__ field of the Maven build step and run the build.
 
 ## Remote Run limitations
 

@@ -19,20 +19,18 @@ If your GitHub repository has no issue with this ID, the **Issue not found** hin
 
 Before you start, make sure the GitHub issues feature [is enabled](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository) in your repository, and that there is at least one active issue.
 
-1. In TeamCity, navigate to project settings (**Administration | &lt;Your_Project&gt;**) and switch to the **Issue Trackers** tab.
-   
-   <img src="dk-issuetrackerstab.png" width="706" alt="The Issue Trackers tab"/>
-
-2. Click **Create New Connection** and choose **GitHub** as the connection type.
-3. Enter the public name for your integration. This name is used solely for TeamCity UI.
-4. Fill in the repository URL and authentication fields. You can enter all data manually or leverage existing [GitHub connections](configuring-connections.md#GitHub).
+1. <include from="common-templates.md" element-id="open-project-settings"/>
+2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Issue Trackers"/></include>
+3. Click **Create New Connection** and choose **GitHub** as the connection type.
+4. Enter the public name for your integration. This name is used solely for TeamCity UI.
+5. Fill in the repository URL and authentication fields. You can enter all data manually or leverage existing [GitHub connections](configuring-connections.md#GitHub).
 
    <table><tr><td><tabs>
    
    <tab title="Enter Data Manually">
    
-   5. In the **Repository URL** field, enter the URL of your repository main page (not the clone URL). For example, `https://github.com/johndoe/my-repo` (not `https://github.com/johndoe/my-repo.git` or `git@github.com:johndoe/my-repo.git`).
-   6. Choose the required **Authentication** method.
+   6. In the **Repository URL** field, enter the URL of your repository main page (not the clone URL). For example, `https://github.com/johndoe/my-repo` (not `https://github.com/johndoe/my-repo.git` or `git@github.com:johndoe/my-repo.git`).
+   7. Choose the required **Authentication** method.
       
       * **Anonymous** authentication can be used for public repositories and issues that do not require users to log in.
       * **Access token** requires a static [personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) issued on GitHub.
@@ -42,7 +40,7 @@ Before you start, make sure the GitHub issues feature [is enabled](https://docs.
    
    <tab title="Use a GitHub connection">
    
-   5. Click a GitHub icon next to the the **Repository URL** field.
+   6. Click a GitHub icon next to the the **Repository URL** field.
    
    <tip>
    
@@ -55,13 +53,13 @@ Before you start, make sure the GitHub issues feature [is enabled](https://docs.
    If this is the first time you use the connection, TeamCity prompts you to Sign in to GitHub or Sign in to GitHub App. When you click the button, you are redirected to a pop-up window to authorize access to your GitHub account.
    
    </note>
-   6. TeamCity will scan for repositories available through the related connection. Choose the required repository and all required options (including authentication settings) will be filled in automatically.
+   7. TeamCity will scan for repositories available through the related connection. Choose the required repository and all required options (including authentication settings) will be filled in automatically.
    
    </tab>
    
    </tabs></td></tr></table>
 
-<ol start="7">
+<ol start="8">
 
 <li>In the Issue ID Pattern field, specify a regular expression pattern to filter the issues that belong to this project. You can usually leave this at the default setting, <code>#(\d+)</code>. See this article for more information: <a href="integrating-teamcity-with-issue-tracker.md#Converting+Strings+into+Links+to+Issues">Converting Strings into Links to Issues</a></li>
 

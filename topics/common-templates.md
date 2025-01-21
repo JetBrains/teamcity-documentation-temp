@@ -5,10 +5,14 @@
 <snippet id="open-project-settings">Navigate to <b>Administration | &lt;Your Project&gt;</b> to access project settings.</snippet>
 
 <var name="tab-name" value="tab-name"/>
-<snippet id="open-project-settings-tab">Click the <b>%tab-name%</b> settings tab.</snippet>
+<snippet id="open-project-settings-tab">Open the <b>%tab-name%</b> settings tab.</snippet>
 
 
-<snippet id="open-configuration-settings">Navigate to <b>Administration | &lt;Your Configuration&gt;</b> to access project settings.</snippet>
+<snippet id="open-configuration-settings">Navigate to <b>Administration | &lt;Your Configuration&gt;</b> to access build configuration settings.</snippet>
+
+
+<var name="configuration-tab-name" value="configuration-tab-name"/>
+<snippet id="open-configuration-settings-tab">Open the <b>%configuration-tab-name%</b> settings tab.</snippet>
 
 
 

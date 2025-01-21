@@ -1113,11 +1113,14 @@ TeamCity utilizes [Slack connections](configuring-connections.md#Slack) to send 
    * `sendTo` — specifies who should receive the message. Accepts a single Slack channel name, channel ID (starts with "C", for instance, "C052UHDRZU7"), or user ID (starts with "U", for instance, "U02K2UVKJP7") as value. If you need to send the same message to multiple recipients, create multiple service messages with different `sendTo` values.
    * `connectionID` — the optional parameter that allows you to choose a specific Slack connection that TeamCity should use to send this message. Accepts connection IDs as values. If this parameter is not specified, TeamCity will retrieve all Slack connections available for the current project and choose the one whose **Notifications limit** is not zero.
    
-      > To quickly get an ID of a target [Slack connection](configuring-connections.md#Slack), navigate to the required **Administration | &lt;Your_Project&gt; | Connections** page.
-       >
-       > <img src="dk-copy-connection-id.png" alt="Copy connection ID" width="706"/>
-       >
-       {style="tip"}
+      > To quickly get an ID of a target [Slack connection](configuring-connections.md#Slack):
+      > 1. <include from="common-templates.md" element-id="open-project-settings"/>
+      > 2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
+      > 3. Copy a connection ID from an overview table.
+      >
+      >     <img src="dk-copy-connection-id.png" alt="Copy connection ID" width="706"/>
+      >
+      {style="tip"}
 
 <!--
       > Currently, you cannot retrieve Slack connection IDs from the TeamCity 

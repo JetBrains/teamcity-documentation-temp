@@ -17,8 +17,10 @@ Let's see how the build chain mechanism works in details. On triggering a depend
 ## Configuring Build Chains
 
 To specify dependencies in your build configuration:
-1. On the __Build Configuration Settings__ page, select __Dependencies__.
-2. On the __Dependencies__ page, click the __Add new snapshot dependency__ link.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Dependencies"/></include>
+3. Click the __Add new snapshot dependency__ button.
 
 See also [Build Dependencies Setup](build-dependencies-setup.md) for details and an example.
 

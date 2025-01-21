@@ -27,126 +27,23 @@ When committing changes to your version control, __always mention the issue ID__
 
 >Enabling TeamCity integration with YouTrack requires Project Administrator permissions as it is configured at a project level. Note that enabling integration for a project enables it for all its subprojects as well. If the settings are different in a subproject, they have priority over the parent project's settings.
 
-To enable the integration, create a connection to YouTrack on the __Project Settings | Issue Trackers__ page and specify the following settings:
+To enable the integration:
 
-<table><tr>
-
-<td>
-
-Setting
-
-</td>
-
-<td>
-
-Description
-
-</td></tr>
-
-<tr>
-
-<td>
-
-Connection Type
-
-</td>
-
-<td>
-
-Select __YouTrack__ from the list.
-
-</td></tr><tr>
-
-<td>
-
-Display Name
-
-</td>
-
-<td>
-
-Specify the connection name to distinguish it from the other connections.
-
-</td></tr><tr>
-
-<td>
-
-Server URL
-
-</td>
-
-<td>
-
-Enter the base URL of your YouTrack instance.
-
-</td></tr><tr>
-
-<td>
-
-Authentication
-
-</td>
-
-<td>
-
-Select the authorization type you want to use to set up the integration. You can either sign in with a username and password or use a token.
-
-</td></tr><tr>
-
-<td>
-
-Username
-
-</td>
-
-<td>
-
-Enter a username of your YouTrack user account.  
-This option is shown when __Authentication__ is set to __Username / Password__.
-
-</td></tr><tr>
-
-<td>
-
-Password
-
-</td>
-
-<td>
-
-Enter a password for your YouTrack user account.  
-This option is shown when __Authentication__ is set to __Username / Password__.
-
-</td></tr><tr>
-
-<td>
-
-Permanent token
-
-</td>
-
-<td>
+1. <include from="common-templates.md" element-id="open-project-settings"/>
+2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Issue Trackers"/></include>
+3. Create a new connection with the following settings:
+    * **Connection Type** — Select __YouTrack__ from the list.
+    * **Display Name** — Specify the connection name to distinguish it from the other connections.
+    * **Server URL** — Enter the base URL of your YouTrack instance.
+    * **Authentication** — Select the authorization type you want to use to set up the integration. You can either sign in with a username and password or use a token.
+    * **Username** — Enter a username of your YouTrack user account. This option is shown when __Authentication__ is set to __Username / Password__.
+    * **Password** — Enter a password for your YouTrack user account. This option is shown when __Authentication__ is set to __Username / Password__.
+    * **Permanent token** — Enter your [permanent token](https://www.jetbrains.com/help/youtrack/standalone/Manage-Permanent-Token.html). This option is shown when __Authentication__ is set to __Permanent Token__.
+    * **Project IDs** — Enter a space-separated list of _project IDs_ to specify which strings should be recognized as references to issues in YouTrack. For example, if a project ID is `TW`, an issue ID like `TW-18802`, mentioned in a VCS comment, will be turned into a link to the corresponding issue.
+        
+        You can also load all project IDs automatically: enable _Use all YouTrack IDs automatically_ and test the connection to your YouTrack server. If the connection is successful, the __Project IDs__ field will be automatically populated. TeamCity will detect newly created projects in YouTrack  and automatically synchronize the list of project IDs.
 
 
-Enter your [permanent token](https://www.jetbrains.com/help/youtrack/standalone/Manage-Permanent-Token.html).  
-This option is shown when __Authentication__ is set to __Permanent Token__.
-
-</td></tr><tr>
-
-<td>
-
-Project IDs
-
-</td>
-
-<td>
-
-Enter a space-separated list of _project IDs_ to specify which strings should be recognized as references to issues in YouTrack. For example, if a project ID is `TW`, an issue ID like `TW-18802`, mentioned in a VCS comment, will be turned into a link to the corresponding issue.
-
-You can also load all project IDs automatically: enable _Use all YouTrack IDs automatically_ and test the connection to your YouTrack server. If the connection is successful, the __Project IDs__ field will be automatically populated. TeamCity will detect newly created projects in YouTrack  and automatically synchronize the list of project IDs.
-
-
-</td></tr></table>
 
 Note that a user specified in the connection to YouTrack should have sufficient permissions to view YouTrack issues. This will allow TeamCity to retrieve the information about issues and display it in the UI.
 

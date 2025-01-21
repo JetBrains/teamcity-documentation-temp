@@ -35,15 +35,17 @@ In this step, you will create a project with an empty build configuration and a 
 
 3. Do not select any steps suggested by TeamCity after it scans the repository. We will perform actual building tasks in separate configurations, and this initially created configuration will be used later to trigger all of them at once.
 
-4. Go to **Administration | &lt;Your Project&gt;** and click **Create Subproject**. This subproject should target the same GitHub repository as in Step 1.
+4. <include from="common-templates.md" element-id="open-project-settings"/>
+
+5. Click **Create Subproject**. This subproject should target the same GitHub repository as in Step 1.
 
     <img src="dk-compositeConf-subproject.png" width="706" alt="Create Subproject"/>
 
-5. Since your subproject uses the same repository as the root project, TeamCity suggests that both projects share the same [VCS root](vcs-root.md) instead of creating a duplicate. Click **Use this** when prompted to agree.
+6. Since your subproject uses the same repository as the root project, TeamCity suggests that both projects share the same [VCS root](vcs-root.md) instead of creating a duplicate. Click **Use this** when prompted to agree.
       
     <img src="dk-share-vcsroot.png" width="706" alt="Share VCS root between projects"/>
 
-6. In your new *"Building Configurations"* subproject, [create five building configurations](creating-and-editing-build-configurations.md). All configurations should target the same repository as in Step 1 and use the shared VCS root (see Step 5).
+7. In your new *"Building Configurations"* subproject, [create five building configurations](creating-and-editing-build-configurations.md). All configurations should target the same repository as in Step 1 and use the shared VCS root (see Step 5).
 
    * **Run Tests (Linux)** — a configuration with a single [](net.md) runner that tests the "Clock.Tests" C# project inside the [.NET SDK container](https://mcr.microsoft.com/en-us/product/dotnet/sdk/about) for Linux.
 
@@ -57,11 +59,11 @@ In this step, you will create a project with an empty build configuration and a 
 
    * **Build console & web (linux-x64)** — same as the previous configuration, but the **Runtime** and **Output directory** settings of .NET steps are set to "linux-x64" and "bin/&lt;ProjectName&gt;/linux-x64" respectively.
 
-7. Since these build configurations will be parts of a single [build chain](build-chain.md), you do not need automatically added [build triggers](configuring-build-triggers.md) to start all five build configurations independently whenever TeamCity detects changes in the remote repository. Go to **Build configuration settings | Triggers** and disable or delete triggers for all configurations (except for the *"Build All"* configuration owned by the topmost project).
+8. Since these build configurations will be parts of a single [build chain](build-chain.md), you do not need automatically added [build triggers](configuring-build-triggers.md) to start all five build configurations independently whenever TeamCity detects changes in the remote repository. Go to **Build configuration settings | Triggers** and disable or delete triggers for all configurations (except for the *"Build All"* configuration owned by the topmost project).
     
     <img src="dk-compositeConf-removeTriggers.png" width="706" alt="Remove or disable triggers"/>
 
-8. Both *"Build console &amp; web"* configurations should publish their "bin" folders. To do that, specify the `bin => bin` [artifact paths](configuring-general-settings.md#Artifact+Paths) in these configurations. Published artifacts will be later used by [deployment configurations](deployment-build-configuration.md).
+9. Both *"Build console &amp; web"* configurations should publish their "bin" folders. To do that, specify the `bin => bin` [artifact paths](configuring-general-settings.md#Artifact+Paths) in these configurations. Published artifacts will be later used by [deployment configurations](deployment-build-configuration.md).
 
 You should end up with five independent build configurations that perform build steps and an empty *"Build All"* configuration. Run each configuration to ensure they finish successfully. The [Kotlin](kotlin-dsl.md) code below illustrates settings for all five build configurations and their parent TeamCity projects.
 

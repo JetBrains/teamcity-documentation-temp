@@ -18,7 +18,7 @@ Clean-up deletes the data stored under [`<TeamCity Data Directory>`](teamcity-da
 <note instance="tc">
 
 Note that in case of any critical configuration errors on the server, TeamCity will not clean up the data of deleted projects and build configurations.   
-To see all the current server warnings and errors, go to __Administration | Project-related Settings | Server Health__.
+To see all the current server warnings and errors, go to __Administration | Server Health__.
 
 </note>
 

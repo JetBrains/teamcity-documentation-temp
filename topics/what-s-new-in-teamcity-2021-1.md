@@ -150,7 +150,11 @@ where `90` is the number of the exact revision of `dir1` and `automaticLabelWith
 
 TeamCity allows using [Perforce streams as feature branches](integrating-teamcity-with-perforce.md#Running+Builds+on+Perforce+Streams). To optimally process changes in such streams, it needs to create and maintain dedicated workspaces on the Perforce server. Over time, these workspaces might consume a significant amount of resources on the Perforce server's machine. Besides, if you want to close a task stream, you won't be able to do this if there is a workspace associated with it. Both of these problems can be solved by deleting no longer necessary workspaces. Previously, there were no means to clean them up automatically, and any manual cleaning would require involving a Perforce server administrator. With the new _Perforce Administrator Access_ connection, project administrators can clean workspaces right from the TeamCity UI.
 
-To configure this, go to your project settings in TeamCity and, under __Connections__, add a new connection with the _Perforce Administrator Access_ type. Enter the host and user credentials for accessing the Perforce server (the user must have the [admin permission](https://www.perforce.com/manuals/p4sag/Content/P4SAG/protections.set.html#protections.set.access_levels)), and TeamCity will connect to it.
+To configure this integration:
+
+1. <include from="common-templates.md" element-id="open-project-settings"/>
+2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
+3. Add a new connection with the _Perforce Administrator Access_ type. Enter the host and user credentials for accessing the Perforce server (the user must have the [admin permission](https://www.perforce.com/manuals/p4sag/Content/P4SAG/protections.set.html#protections.set.access_levels)), and TeamCity will connect to it.
 
 <img src="p4-admin-connect.png" width="460" alt="Perforce Administrator Access connection"/>
 

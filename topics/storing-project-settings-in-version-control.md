@@ -194,7 +194,9 @@ To specify which settings TeamCity should apply when a build starts, choose a re
         // ...
     })
     ```
-4. Go to **Administration | &lt;Project&gt; | Versioned Settings** and choose the following options:
+4. <include from="common-templates.md" element-id="open-project-settings"/>
+5. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Versioned Settings"/></include>
+6. Choose the following options:
 
    * **Synchronization enabled**: On
    * **Project settings VCS root**: Choose your project's VCS root
@@ -202,19 +204,19 @@ To specify which settings TeamCity should apply when a build starts, choose a re
    * **When build starts**: Select "use settings from VCS"
    * **Apply changes in snapshot dependencies and version control settings**: On (see the [](#Apply+Changes+in+Snapshot+Dependencies+and+Version+Control+Settings) section)
    
-5. Click **Apply** to save your new settings. TeamCity will verify the validity of your build configuration and push the [project settings directory](#Custom+Settings+Path) with your settings to the related VCS repository.
-6. Clone TeamCity settings from a remote repository to local storage.
+7. Click **Apply** to save your new settings. TeamCity will verify the validity of your build configuration and push the [project settings directory](#Custom+Settings+Path) with your settings to the related VCS repository.
+8. Clone TeamCity settings from a remote repository to local storage.
     
     ```Shell
     git clone <Clone_URL> .
     ```
 
-7. Create a new repository branch.
+9. Create a new repository branch.
 
     ```Shell
     git checkout -b custom-branch
     ```
-8. Edit the local copy of your [`<project settings directory>`](#Custom+Settings+Path)`/settings.kts` (`.teamcity/settings.kts` by default) file as follows:
+10. Edit the local copy of your [`<project settings directory>`](#Custom+Settings+Path)`/settings.kts` (`.teamcity/settings.kts` by default) file as follows:
 
     ```Kotlin
     import jetbrains.buildServer.configs.kotlin.*
@@ -235,7 +237,7 @@ To specify which settings TeamCity should apply when a build starts, choose a re
     
     ```
 
-9. Push your new branch to the remote repository.
+11. Push your new branch to the remote repository.
 
     ```Shell
     git add *
@@ -243,9 +245,9 @@ To specify which settings TeamCity should apply when a build starts, choose a re
     git push --set-upstream origin custom-branch
     ```
    
-10. TeamCity should collect your new changes shortly. You can manually trigger this process by clicking **Load project settings from VCS...** on the **Versioned Settings** tab of your project settings page.
+12. TeamCity should collect your new changes shortly. You can manually trigger this process by clicking **Load project settings from VCS...** on the **Versioned Settings** tab of your project settings page.
 
-11. If you have a default [trigger](configuring-build-triggers.md) set up to launch new builds whenever a remote repository changes, a new build for your new custom-branch will start automatically. Otherwise, choose the required branch on the build configuration page and run a new build manually.
+13. If you have a default [trigger](configuring-build-triggers.md) set up to launch new builds whenever a remote repository changes, a new build for your new custom-branch will start automatically. Otherwise, choose the required branch on the build configuration page and run a new build manually.
     
     <img src="dk-versionedSettingsBranch.png" width="706" alt="Trigger custom branch build"/>
 

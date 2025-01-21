@@ -28,10 +28,11 @@ To be able to run builds on project sources stored in Perforce Helix Core and to
    2. Enter the _Name_ and _ID_ of the project.
    3. Click __Create__.
 2. Create a Perforce VCS root:
-   1. In the __Project Settings__, go to __VCS Roots__.
-   2. Click __Create VCS root__.
-   3. Choose _Perforce Helix Core_ as a VCS type.
-   4. Configure the root's settings as described in [this article](perforce.md).
+   1. <include from="common-templates.md" element-id="open-project-settings"/>
+   2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="VCS Roots"/></include>
+   3. Click __Create VCS root__.
+   4. Choose _Perforce Helix Core_ as a VCS type.
+   5. Configure the root's settings as described in [this article](perforce.md).
 
 After the project and Perforce root are configured, you can proceed with [adding build configurations](creating-and-editing-build-configurations.md) and running builds.
 
@@ -74,9 +75,11 @@ To **manually run** a custom build on Perforce shelved files:
 4. Choose the target Perforce root.
 
 To **configure automatic triggering** for a Perforce shelved changelist:
-1. Go to __Build Configuration Settings | Triggers__.
-2. Add a new trigger of the _Perforce Shelve Trigger_ type.
-3. Configure its settings as described in [this article](perforce-shelve-trigger.md).
+
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Triggers"/></include>
+3. Add a new trigger of the _Perforce Shelve Trigger_ type.
+4. Configure its settings as described in [this article](perforce-shelve-trigger.md).
 
 To build the target shelved changelist with [TeamCity REST API](https://www.jetbrains.com/help/teamcity/rest/start-and-cancel-builds.html), send a `POST` request with the following body to the `/app/rest/buildQueue` endpoint:
 
@@ -186,10 +189,12 @@ TeamCity provides a dedicated hook script that should be saved on your Perforce 
 TeamCity can assign custom labels to Perforce project sources. The list of applied labels and their status is displayed on the __[Changes](build-results-page.md#Changes+Tab)__ tab of __Build Results__.
 
 To configure automatic labeling for a build configuration:
-1. Go to __Build Configuration Settings | Build Features__.
-2. Add a new feature of the _VCS labeling_ type.
-3. Choose a Perforce VCS root to label.
-4. Specify the labeling pattern as described [here](vcs-labeling.md#Labeling+in+Perforce).
+
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+3. Add a _VCS labeling_ feature.
+4. Choose a Perforce VCS root to label.
+5. Specify the labeling pattern as described [here](vcs-labeling.md#Labeling+in+Perforce).
 
 ### View Perforce Jobs
 

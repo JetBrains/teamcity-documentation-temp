@@ -10,8 +10,14 @@ In TeamCity 2022.04, the tests' distribution logic is provided by TeamCity itsel
 
 ## Run tests in parallel
 
-The new _Parallel tests_ build feature solves the task of parallel tests execution on different agents.
-To enable this feature in an existing build configuration which is already configured to run build steps with tests, go to **Build Configuration Settings | Build Features**, click **Add build feature**, and choose the _Parallel tests_ type. You will be prompted to set the number of batches, which also means the number of parallel agents to use in a build.
+The _Parallel tests_ build feature solves the task of parallel tests execution on different agents.
+
+To enable this feature in an existing build configuration:
+
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+3. Click **Add build feature** and choose the _Parallel tests_ type.
+4. Set the number of test batches, which also means the number of parallel agents to use in a build.
 
 > Note: Only tests methods from different classes (or test cases) can run in parallel on different agents.
 

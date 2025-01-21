@@ -208,8 +208,10 @@ object MyBuildConfig : BuildType({
 })
 ```
 
-> To quickly get an ID of a target [Docker Registry](configuring-connections.md#Docker+Registry), navigate to the required **Administration | &lt;Your_Project&gt; | Connections** page.
->
+> To quickly get an ID of a target [Docker Registry](configuring-connections.md#Docker+Registry):
+> 1. <include from="common-templates.md" element-id="open-project-settings"/>
+> 2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
+> 3. Copy a connection ID from the overview table.
 > <img src="dk-copy-connection-id.png" alt="Copy connection ID" width="706"/>
 >
 {style="tip"}

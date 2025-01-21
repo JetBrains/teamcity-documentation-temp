@@ -94,7 +94,7 @@ val addressee = args.firstOrNull() ?: "World"
 
 print(createHTML().html {
     body {
-        h1 { +"Hello, $address!" }
+        h1 { +"Hello, addressee!" }
     }
 })
 

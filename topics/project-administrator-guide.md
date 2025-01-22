@@ -36,6 +36,7 @@ The following diagram illustrates the basic TeamCity workflow:
 1. The TeamCity server detects a change in your repository. This happens in one of the following ways:
     * Default setup: every 60 seconds TeamCity automatically [polls](teamcity-configuration-and-maintenance.md#Version+Control+Settings) all VCS repositories targeted by its projects.
     * Webhooks: if [a post-commit hook](configuring-vcs-post-commit-hooks-for-teamcity.md) is configured, any commit sends this webhook to TeamCity. This approach has two major benefits: decreased server load since the server no longer periodically polls the repo, and shortened feedback loop (the server gets notified about changes immediately after a change was introduced).
+        > For building GitHub-hosted projects, you can utilize [](github-checks-trigger.md) that does not require manually configuring post-commit hooks.
 2. The server writes this change to the database.
 3. A [trigger](configuring-build-triggers.md) attached to the build configuration detects the relevant change in the database and initiates a build.
 4. The triggered build appears in the [build queue](working-with-build-queue.md).
@@ -69,12 +70,44 @@ However, configurations never own roots. You can "attach" a VCS root to a config
 Although a VCS root is an existential part of any build configuration that works with a remote repository, in many scenarios TeamCity generates roots automatically and does not require that you create them by hand for each new build configuration. See [this tutorial](configure-and-run-your-first-build.md) for an example.
 
 
+## Artifacts
+
+Artifacts are files produced during a build. These files are available to:
+
+* TeamCity users, who can download them from the [](build-results-page.md).
+* Other TeamCity builds, who can import these files using [](artifact-dependencies.md).
+
+To choose which files should be available as build artifacts:
+
+1. <include from="common-templates.md" element-id="open-configuration-settings"/>
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="General Settings"/></include>
+3. Set up **Artifact paths** property. You can first run a build that produces required files. Then, you will be able to click the "Select files from the latest build" button and choose files from the drop-down menu instead of manually entering their paths.
+
+Related article: [](build-artifact.md)
+
 
 ## Build Chains
 
-???
+A build chain is a sequence of build configurations. Key features of a build chain include:
 
-Snapshot vs artifact dependencies
+* Configurations linked in a single chain can belong to the same or different TeamCity projects.
+* Linked configurations can share artifacts. In other words, artifacts produced by one configuration can be imported and used by configurations running further down the chain.
+* Configurations use right-to-left dependency mechanism. In a sample "Build &rarr; Test &rarr; Deploy" build chain:
+    * "Build" can be run as a solo configuration and does not trigger any parts of the chain.
+    * "Test" depends on "Build" and requires "Build" to finish before it can start.
+    * "Deploy" depends on "Test", which in turn depends on "Build". Triggering the deployment configuration will result in the entire chain running.
+    > TeamCity also supports left-to-right dependencies where builds of one configuration trigger new builds of another configuration. See [](configuring-finish-build-trigger.md) article for more information.
+* Build chains can reuse previous successful builds to avoid redundant operations. For example, if the "Build &rarr; Deploy" chain has successfully finished and no new commits were made, further "Deploy" runs will reuse that last successful "Build" results. This behavior is customizable, you can allow mission-critical dependent configurations to force fresh builds every time.
+* TeamCity allows you to create snapshot and artifact dependencies.
+    <deflist type="medium">
+    <def title="Snapshot dependency">
+    Defines a relation between two build configurations. If "Configuration B" has a snapshot dependency to "Configuration A", new "B" builds require previously finished "A" builds, and have an ability to trigger a new "A" build if no suitable one exists.
+    </def>
+    <def title="Artifact dependency">
+    Imports artifacts produced by a target configuration build into the current build. Can be used with or without a snapshot dependency. If used solo, the dependent build has no ability to force a new build of the upstream configuration in case there is no suitable one. For that reason, you may want to set up artifact dependencies to target pinned/tagged builds. This setup can exhibit more control on your building routine: team developers inspect build "A", verify it is stable, and pin it. New builds "B" then use an artifact dependency to utilize this pinned build instead of newest (unverified) "A" builds.
+    </def>
+    </deflist>
+    Since artifact dependencies do not establish explicit relationships between configurations, only configurations connected through snapshot dependencies are considered part of a build chain.
 
 Related article: [](configuring-dependencies.md)
 

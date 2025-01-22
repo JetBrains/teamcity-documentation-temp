@@ -119,8 +119,13 @@
 			<toc-element topic="configure-server-installation.md">
 				<toc-element accepts-web-file-names-ref="server-startup-properties" topic="server-startup-properties.md"/>
 			</toc-element>
-			<toc-element topic="teamcity-data-directory.md"/>
-			<toc-element topic="teamcity-home-directory.md"/>
+			<toc-element toc-title="TeamCity Directories">
+				<toc-element topic="teamcity-data-directory.md"/>
+				<toc-element topic="teamcity-home-directory.md"/>
+				<toc-element topic="agent-work-directory.md"/>
+				<toc-element topic="build-checkout-directory.md"/>
+				<toc-element topic="build-working-directory.md"/>
+			</toc-element>
 			<toc-element topic="teamcity-maintenance-mode.md"/>
 		</toc-element>
 
@@ -274,10 +279,6 @@
 			<toc-element topic="configuring-cross-server-projects-pop-up-menu.md"/>
 			<toc-element topic="archiving-projects.md"/>
 			<toc-element topic="customizing-statistics-charts.md"/>
-			<toc-element topic="configuring-artifacts-storage.md">
-				<toc-element topic="storing-build-artifacts-in-amazon-s3.md"/>
-				<toc-element topic="artifacts-migration-tool.md"/>
-			</toc-element>
 		</toc-element>
 		<toc-element toc-title="Managing Build Configurations">
 			<toc-element topic="creating-and-editing-build-configurations.md">
@@ -407,6 +408,13 @@
 				<toc-element topic="use-parameters-in-build-chains.md"/>
 			</toc-element>
 		</toc-element>
+		<toc-element toc-title="Build Artifacts and Artifact Storages">
+			<toc-element topic="build-artifact.md"/>
+			<toc-element topic="configuring-artifacts-storage.md">
+				<toc-element topic="storing-build-artifacts-in-amazon-s3.md"/>
+				<toc-element topic="artifacts-migration-tool.md"/>
+			</toc-element>
+		</toc-element>
 		<toc-element accepts-web-file-names-ref="configuring-test-reports-and-code-coverage" topic="configuring-test-reports-and-code-coverage.md">
 			<toc-element topic="net-testing-frameworks-support.md"/>
 			<toc-element topic="java-testing-frameworks-support.md"/>
@@ -480,15 +488,17 @@
 
 		<toc-element topic="agentless-build-step.md"/>
 		<toc-element topic="agent-requirements.md"/>
-		<toc-element topic="agent-work-directory.md"/>
+
 		<toc-element topic="authentication-modules.md"/>
 
-		<toc-element topic="build-artifact.md"/>
 
-		<toc-element topic="build-checkout-directory.md"/>
+
+
+
+
 
 		<toc-element topic="build-runner.md"/>
-		<toc-element topic="build-working-directory.md"/>
+
 		<toc-element topic="change.md"/>
 		<toc-element topic="clean-checkout.md"/>
 		<toc-element topic="dependent-build.md"/>
@@ -515,7 +525,7 @@
 			<toc-element toc-title="GitHub" topic="github.md"/>
 			<toc-element toc-title="GitLab" topic="gitlab.md"/>
 			<toc-element toc-title="Jira" topic="jira.md"/>
-			<toc-element toc-title="Azure Board Work Items" accepts-web-file-names-ref="azure-board-work-items" topic="azure-board-work-items.md"/>
+			<toc-element topic="azure-board-work-items.md"/>
 			<toc-element toc-title="YouTrack" topic="youtrack.md"/>
 		</toc-element>
 		<toc-element topic="teamcity-webhooks.md"/>

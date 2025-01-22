@@ -126,6 +126,7 @@ In this tutorial we will slightly modify an existing root to alter the checkout 
 2. In the **General Settings** section, change the **Fetch URL** to an SSH format. For example, `git@github.com:JetBrains/Maven-Configuration-TeamCity-Samples.git`.
 3. Scroll down to **Authentication Settings** and set **Authentication method** to "Custom Private Key". Private keys are typically [uploaded to the Root project](ssh-keys-management.md) so that you can easily reuse them, but since we have none at the moment, we will just specify the key manually.
 4. Enter the path to your private SSH key. For example, `/Users/John.Doe/.ssh/id_ed25519`.
+   > Frequently used SSH keys can be [uploaded to TeamCity](ssh-keys-management.md).
 5. If needed, enter username and passphrase. Note that if username is set, it will override the URL included in fetch URL.
 6. Test the VCS connection with your updated settings and save the root.
 

@@ -131,12 +131,13 @@ You can manually lower or raise the priority of a self-hosted agent by modifying
 
 <img src="dk-agentpriority.png" width="706" alt="Set the image priority for a EC2 Cloud Image"/>
 
-For other cloud images and bare-metal agents, add the following line to the [&lt;TeamCity_Agent_Home&gt;/conf/buildAgent.properties](configure-agent-installation.md) file:
+For other agent types, add the following line to the [&lt;TeamCity_Agent_Home&gt;/conf/buildAgent.properties](configure-agent-installation.md) file:
 
 ```XML
 teamcity.agent.priority=54
 ```
 
+Note that TeamCity recognizes agent properties only after the agent is fully booted and connected to the server. For that reason, priorities for non-EC2 cloud agents apply only to active/running instances. Currently, only EC2 cloud images relay agent priorities before instances start.
 
 ## Agent Priority
 {instance="tc"}
@@ -147,11 +148,13 @@ You can manually lower or raise the priority of a any agent by modifying its int
 
 <img src="dk-agentpriority.png" width="706" alt="Set the image priority for a EC2 Cloud Image"/>
 
-For other cloud images and bare-metal agents, add the following line to the [&lt;TeamCity_Agent_Home&gt;/conf/buildAgent.properties](configure-agent-installation.md) file:
+For other agent types, add the following line to the [&lt;TeamCity_Agent_Home&gt;/conf/buildAgent.properties](configure-agent-installation.md) file:
 
 ```XML
 teamcity.agent.priority=54
 ```
+
+Note that TeamCity recognizes agent properties only after the agent is fully booted and connected to the server. For that reason, priorities for non-EC2 cloud agents apply only to active/running instances. Currently, only EC2 cloud images relay agent priorities before instances start.
 
 <seealso>
         <category ref="installation">

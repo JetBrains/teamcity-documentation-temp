@@ -119,7 +119,7 @@ Note that the dialog allows you to skip only those build configurations that are
 
 ### Build Parameters
 
-Starting with version 2024.12, TeamCity supports the `teamcity.build.chain.skipTags` and `teamcity.build.chain.onlyTags` [configuration parameters](configuring-build-parameters.md).
+Starting with version 2024.12, TeamCity supports the `teamcity.build.chain.skipTags` and `teamcity.build.chain.onlyTags` [configuration parameters](configuring-build-parameters.md). These parameters allow you to configure conditional build dependencies.
 
 * The `teamcity.build.chain.skipTags` parameter explicitly skips unwanted configurations. The chain will run only non-excluded builds.
 * The `teamcity.build.chain.onlyTags` parameter specifies configurations you want to run. However, this does not limit the build chain to the mentioned configurations only.

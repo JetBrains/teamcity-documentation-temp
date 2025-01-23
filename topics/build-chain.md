@@ -117,7 +117,7 @@ If you rarely need to run a chain portion, you can leave your chain configuratio
 
 Note that the dialog allows you to skip only those build configurations that are directly linked to the configuration you are about to run. For example, starting "Build 4" of the "Build 1 &rarr; Build 2 &rarr; Build 3 &rarr; Build 4" chain allows you to skip only "Build 3". You cannot trigger "Build 4" and tell TeamCity to ignore any configurations preceding "Build 3".
 
-### Build Parameters
+### Conditional Build Dependencies
 
 Starting with version 2024.12, TeamCity supports the `teamcity.build.chain.skipTags` and `teamcity.build.chain.onlyTags` [configuration parameters](configuring-build-parameters.md). These parameters allow you to configure conditional build dependencies.
 
@@ -465,7 +465,7 @@ The list of available values does **NOT** have these options:
 
 ### Service Message
 
-Send the `##teamcity[skipQueuedBuilds tags='value1,value2,...' comment='Your comment']` [service message](service-messages.md) from any build step of an upstream build configuration to cancel queued builds of downstream configurations. Same as with `skipTags` / `onlyTags` [parameters](#Build+Parameters), the `tags` argument of this message accepts:
+Send the `##teamcity[skipQueuedBuilds tags='value1,value2,...' comment='Your comment']` [service message](service-messages.md) from any build step of an upstream build configuration to cancel queued builds of downstream configurations. Same as with `skipTags` / `onlyTags` [parameters](#Conditional+Build+Dependencies), the `tags` argument of this message accepts:
 
 * values of `teamcity.configuration.tags` parameters added to configurations;
 * configuration IDs.

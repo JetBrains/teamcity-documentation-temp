@@ -17,6 +17,7 @@
 * Using Git SSH proxy settings (`teamcity.git.sshProxy*`) may require additional installation of `netcat` utility for servers running on some Linux distributions including RHEL. More information: [TW-91621](https://youtrack.jetbrains.com/issue/TW-91621).
 * Using Git v2.48.0 and v2.48.1 on the agents may result in incorrect tag resolution in the build steps. We recommend staying on Git v2.47.2 until further updates. See this YouTrack ticket for more information: [TW-91499](https://youtrack.jetbrains.com/issue/TW-91499)
 * Linux AMD64 [server image](https://hub.docker.com/r/jetbrains/teamcity-server/tags) fails to set the locale, causing special characters to render incorrectly. If these characters appear in branch, VCS root, project, or other names, it triggers various TeamCity error reports. Follow this ticket for more information: [TW-91776](https://youtrack.jetbrains.com/issue/TW-91776).
+* TeamCity fails to render overview pages for build configurations that are both paused and investigated due to a missing icon. To resolve this issue, download the archive from the [TW-91764](https://youtrack.jetbrains.com/issue/TW-91764) ticket and extract its contents to the `<TeamCity-installation-directory>/webapps/ROOT/js/ring` directory.
 
 ## Changes from 2024.07 to 2024.12
 {id="2024.12"}

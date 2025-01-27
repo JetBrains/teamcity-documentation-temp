@@ -15,7 +15,7 @@ The _NUnit_ build runner is designed to run NUnit tests on the TeamCity server. 
 
 Version 2024.07 introduces an updated NUnit runner that, compared to the legacy runner, does not allow you to select a .NET Runtime or .NET Framework version. If needed, use the **Additional command line parameters** field to specify these settings. In addition, the updated runner no longer supports outdated NUnit 2.x.x versions.
 
-In version 2024.07, both updated and legacy runners are fully functional and available from the [Build Steps](configuring-build-steps.md) page. In the following release cycles we expect to unbundle the legacy runner and move it to a separate plugin. When it is done, you will need to manually install this plugin from JetBrains Marketplace to continue using the legacy runner. As such, we recommend migrating your projects to either updated NUnit or regular [](net.md) runners.
+In version 2024.07, both updated and legacy runners are fully functional and available from the [Build Steps](configuring-build-steps.md) page. In the following release cycles we expect to unbundle the legacy runner and move it to a separate plugin. When it is done, you will need to manually [install this plugin from JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26350-deprecated-net-build-runners-support) to continue using the legacy runner. As such, we recommend migrating your projects to either updated NUnit or regular [](net.md) runners.
 
 </snippet>
 

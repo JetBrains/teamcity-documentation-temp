@@ -86,30 +86,45 @@ To choose which files should be available as build artifacts:
 Related article: [](build-artifact.md)
 
 
-## Build Chains
+## Creating Cross-Configuration Dependencies
 
-A build chain is a sequence of build configurations. Key features of a build chain include:
+Real-life CI/CD pipelines often combine multiple standalone configurations. For example, "Build", "Test", and "Deploy to Staging" configurations (or Jobs) can run independently or in sequence.
 
-* Configurations linked in a single chain can belong to the same or different TeamCity projects.
-* Linked configurations can share artifacts. In other words, artifacts produced by one configuration can be imported and used by configurations running further down the chain.
-* Configurations use right-to-left dependency mechanism. In a sample "Build &rarr; Test &rarr; Deploy" build chain:
-    * "Build" can be run as a solo configuration and does not trigger any parts of the chain.
-    * "Test" depends on "Build" and requires "Build" to finish before it can start.
-    * "Deploy" depends on "Test", which in turn depends on "Build". Triggering the deployment configuration will result in the entire chain running.
-    > TeamCity also supports left-to-right dependencies where builds of one configuration trigger new builds of another configuration. See [](configuring-finish-build-trigger.md) article for more information.
-* Build chains can reuse previous successful builds to avoid redundant operations. For example, if the "Build &rarr; Deploy" chain has successfully finished and no new commits were made, further "Deploy" runs will reuse that last successful "Build" results. This behavior is customizable, you can allow mission-critical dependent configurations to force fresh builds every time.
-* TeamCity allows you to create snapshot and artifact dependencies.
-    <deflist type="medium">
-    <def title="Snapshot dependency">
-    Defines a relation between two build configurations. If "Configuration B" has a snapshot dependency to "Configuration A", new "B" builds require previously finished "A" builds, and have an ability to trigger a new "A" build if no suitable one exists.
-    </def>
-    <def title="Artifact dependency">
-    Imports artifacts produced by a target configuration build into the current build. Can be used with or without a snapshot dependency. If used solo, the dependent build has no ability to force a new build of the upstream configuration in case there is no suitable one. For that reason, you may want to set up artifact dependencies to target pinned/tagged builds. This setup can exhibit more control on your building routine: team developers inspect build "A", verify it is stable, and pin it. New builds "B" then use an artifact dependency to utilize this pinned build instead of newest (unverified) "A" builds.
-    </def>
-    </deflist>
-    Since artifact dependencies do not establish explicit relationships between configurations, only configurations connected through snapshot dependencies are considered part of a build chain.
+TeamCity offers multiple options to create relations between standalone configurations.
 
-Related article: [](configuring-dependencies.md)
+<deflist>
+<def title="Build Chain">
+
+A build chain is a collection of classic TeamCity configurations interconnected using <a href="snapshot-dependencies.md">snapshot dependencies</a>.
+
+Snapshot dependencies are right-to-left relations. For example, in the "A -> B" chain where configuration "B" has a dependency on configuration "A", "B" cannot run until "A" produces a suitable build first. The criteria for "suitable" builds depends on your setup, see the <a href="snapshot-dependencies.md#Suitable+Builds">Suitable Builds</a> section for more information. At the same time, "A" can run independently without triggering new "B" builds.
+
+For mission-critical scenarios, can set up dependent configurations to always force fresh upstream configuration builds, even if there were no recent changes to the project.
+</def>
+
+<def title="Finish Build Triggers">
+
+<a href="configuring-finish-build-trigger.md">Finish build triggers</a> establish left-to-right relations. For example, you can create a similar "A -> B" sequence similar to a build chain, but with one key difference: "B" can run independently, while each new "A" build automatically triggers a new "B" build.
+
+Finish build triggers offer a simple but inflexible way to trigger downstream builds and can often be replaced or complemented by snapshot dependencies.
+</def>
+
+
+<def title="Artifact Dependencies">
+
+<a href="artifact-dependencies.md">Artifact dependencies</a> allow configurations to import files produced during other configurations' builds. For example, a "Delivery" configuration can deploy files (Docker images, NuGet packages, HTML documentation pages, and so on) produced by a "Build" configuration to a designated resource.
+
+Artifact dependencies don’t create explicit links between configurations: both can run independently without triggering each other’s builds. If you use artifact dependencies without corresponding snapshot dependencies, a dependent build has no ability to ensure a suitable source of artifacts (an upstream configuration build) exists. For that reason, you may want to set up artifact dependencies to target pinned/tagged builds. This setup can exhibit more control on your building routine.
+</def>
+
+<def title="Pipelines">
+
+In the lightweight TeamCity Pipelines mode, you create Pipelines instead of classic TeamCity projects, and Jobs instead of build configurations. By default, each Job of a pipeline is an separate entity that runs in parallel to other Jobs. To unite these Jobs in a sequence, use the Job settings panel or drag-and-drop Jobs in the visual editor. For each cross-Job dependency, you can additionally specify whether an upstream Job should share its artifacts to the downstream one.
+
+Pipeline dependencies substitute classic TeamCity artifact and snapshot dependencies, but have fewer options (for example, you cannot choose to reuse only pinned/tagged builds of an upstream Job).
+</def>
+
+</deflist>
 
 ## Tutorial: Create Your First Project in TeamCity
 

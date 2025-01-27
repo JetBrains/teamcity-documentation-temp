@@ -6,7 +6,7 @@
 
 Starting with TeamCity 2024.07, the NAnt runner is deprecated. It remains bundled for compatibility but will be removed in future releases. We recommend switching to the  [](net.md) runner for testing .NET and .NET Framework applications.
 
-To continue using the NAnt runner after it is unbundled, you can download a separate plugin from the JetBrains Marketplace.
+To continue using the NAnt runner after it is unbundled, you can [download a separate plugin from the JetBrains Marketplace](https://plugins.jetbrains.com/plugin/26350-deprecated-net-build-runners-support).
 
 </note>
 

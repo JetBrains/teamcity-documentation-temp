@@ -20,27 +20,40 @@ title="TeamCity tutorial — How to work with feature branches"/>
 
 ## Configuring Branches
 
-To start working with DVCS branches, you need to configure which branches need to be watched for changes. This is done in the __General Settings__ section of a [Git](git.md) or [Mercurial](mercurial.md) VCS root via the __Branch Specification__ field.    
-With Perforce, check the corresponding box to enable feature branches support, which will display the branch specification field. The field accepts a list of branch names or patterns. TeamCity monitors the branches matched by the branch specification in addition to the [default branch](#Default+Branch).
+To start working with DVCS branches, you need to set up branch specifications. These specifications specify which branches should be watched for changes.
 
 Once you've configured the branch specification, TeamCity will start to monitor these branches for changes. If your build configuration has [a VCS trigger and a change is found in some branch](configuring-vcs-triggers.md#branch-filter-1), TeamCity will trigger a build in this branch. From the build configuration home page you'll also be able to filter the history, change log, pending changes and issue log by the branch name. Branch names will also appear in the custom build dialog, so you'll be able to manually trigger a custom build on a branch too.
 
-<anchor name="branch-spec-syntax"/>
+### Common Specification Syntax
 
-The syntax of the branch specification field is newline-delimited list of `+|-:branch_name` rules.       
-<include from="branch-filter.md" element-id="OR-syntax-tip"/>
+<include from="project-administrator-guide.md" element-id="common-branch-spec-syntax"></include>
 
-Each rule can have one optional `*` placeholder which matches one or more characters.    
-For example, `+:refs/heads/teamcity*` matches all branches starting with `refs/heads/teamcity` __and at least one additional character__.   
-The branch with `refs/heads/teamcity` will not be matched. 
-  
-The `branch_name` parameter is VCS-specific, i.e. `refs/heads/master` in Git:
- 
-<img src="branchSpec.png" alt="Branch specification" width="750"/>
+> For [Git](git.md) and [Mercurial](mercurial.md) VCS roots, the **Branch specification** field is available by default. For [](perforce.md) roots, tick the **Enable feature branches support** option to display this field.
+> 
+{style="tip"}
+
+
+> The [default branch](#Default+Branch) is implicitly included in the branch specification, so you do not need to enter it manually.
+> 
+{style="note"}
+
+
+### Wildcards
+
+<include from="project-administrator-guide.md" element-id="branch-spec-wildcard"></include>
+
 
 The part of the branch name matched by the asterisk (`*`) wildcard becomes the short branch name to be displayed in the TeamCity user-level interface (also known as the [logical branch name](#Logical+Branch+Name)). The line can also contain optional parentheses which, when present, denote the part of the pattern to be used as the logical name instead of just *-matched symbols.
 
-You can use parameters in the branch specification.
+> The `*` wildcard must resolve at least one symbol. For example, if the branch specification is `+:refs/heads/feature*`:
+> * The `refs/heads/feature1` branch will be matched
+> * The `refs/heads/feature-JohnDoe` branch will be matched
+> * `refs/heads/feature` branch will NOT be matched
+>
+{style="warning"}
+
+
+### Order and Priority
 
 When a single VCS branch is matched by several lines of the branch specification, the most specific (the least characters matched by the pattern) last rule applies.
 
@@ -52,16 +65,20 @@ That is, if the specification contains an exact pattern matching the branch (i.e
 ```
 
 then the last pattern will win and the branch will be excluded.
-    
-If a branch specification has several patterns with the `*` wildcard, then TeamCity selects the pattern producing the shortest logical name. This branch specification:
+
+If two wildcard-containing rules match the same branch but conflict, the rule generating the shortest logical name takes precedence. For example:
 
 ```
 +:refs/heads/*/hotfix
 -:refs/heads/v1/*
 ```
 
-will include the `refs/heads/v1/hotfix` branch (because `v1` is shorter than `hotfix`).    
-If 2 patterns with `*` wildcard produce logical names of the same length, then the last pattern wins.
+For the `refs/heads/v1/hotfix` branch, these rules are ambiguous:
+
+* Include `v1/hotfix` under the logical name `v1`
+* Exclude `v1/hotfix` under the logical name `hotfix`
+
+The `v1` logical name is shorter than `hotfix`, meaning TeamCity had to resolve fewer wildcard characters. This makes the first rule more specific, and it will be prioritized. Therefore, the `refs/heads/v1/hotfix` branch will be included.
 
 >To run builds on GitHub and GitLab pull request branches, use the [Pull Requests](pull-requests.md) build feature.
 

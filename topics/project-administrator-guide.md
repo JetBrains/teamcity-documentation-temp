@@ -3,6 +3,7 @@
 This section focuses on **Project administration**. To learn more about other aspects of TeamCity, refer to the [](server-administrator-guide.md) and [](user-guide.md) sections.
 
 
+
 ## Steps, Configurations and Projects
 
 In TeamCity, a building routine consists of the following blocks:
@@ -25,24 +26,6 @@ In TeamCity, a building routine consists of the following blocks:
 * **Project** — a collection of independent build configurations. These configurations can be run separately but are grouped under a single project to share common resources: [connections](configuring-connections.md), [parameters](configuring-build-parameters.md), [artifact storages](configuring-artifacts-storage.md), [cloud agent profiles](agent-cloud-profile.md), and so on.
 
     Each project can be owned by another project for the same benefits: subprojects can access entities owned by their parent projects. The topmost project, called the **Root project**, is created automatically by TeamCity. This Root project cannot be removed and is ideal for setting up globally accessible parameters, connections, cloud profiles, and other shared resources.
-
-
-## Basic CI Workflow in TeamCity
-
-The following diagram illustrates the basic TeamCity workflow:
-
-<img src="cicd-flow.png" width="711" alt="Basic CI flow with TeamCity"/>
-
-1. The TeamCity server detects a change in your repository. This happens in one of the following ways:
-    * Default setup: every 60 seconds TeamCity automatically [polls](teamcity-configuration-and-maintenance.md#Version+Control+Settings) all VCS repositories targeted by its projects.
-    * Webhooks: if [a post-commit hook](configuring-vcs-post-commit-hooks-for-teamcity.md) is configured, any commit sends this webhook to TeamCity. This approach has two major benefits: decreased server load since the server no longer periodically polls the repo, and shortened feedback loop (the server gets notified about changes immediately after a change was introduced).
-        > For building GitHub-hosted projects, you can utilize [](github-checks-trigger.md) that does not require manually configuring post-commit hooks.
-2. The server writes this change to the database.
-3. A [trigger](configuring-build-triggers.md) attached to the build configuration detects the relevant change in the database and initiates a build.
-4. The triggered build appears in the [build queue](working-with-build-queue.md).
-5. The build is assigned to a free compatible build agent.
-6. The agent executes the build steps, described in the build configuration. While executing the steps, the agent reports the build progress to the TeamCity server. It sends all the log messages, test reports, code coverage results on the fly, so you can monitor the build process in real time.
-7. After finishing the build, the agent sends [build artifacts](build-artifact.md) to the server.
 
 
 ## VCS Roots
@@ -70,6 +53,108 @@ However, configurations never own roots. You can "attach" a VCS root to a config
 Although a VCS root is an existential part of any build configuration that works with a remote repository, in many scenarios TeamCity generates roots automatically and does not require that you create them by hand for each new build configuration. See [this tutorial](configure-and-run-your-first-build.md) for an example.
 
 
+## Working with Branches
+
+TeamCity allows you to set up different building rules for different branches. For example, you might want to build the "production" branch whenever a new change appears, the "development" branch nightly, and ignore the "sandbox" branch. To do this, you need to specify branch specs and filters.
+
+### Branch Specifications
+
+Branch specifications are VCS root settings that specify which repository branches are tracked by this project. This is the entry point for any branch-related operation, individual elements like build triggers cannot work with branches excluded from branch specs.
+
+<snippet id="common-branch-spec-syntax">
+
+To set up branch specifications, open general VCS root settings and scroll down to the **Branch specification** field. Each specification is a new line that starts with `+:` or `-:` to include or exclude a specific branch, followed by the fully resolved branch name. The `+:` part can be omitted.
+
+<deflist type="wide">
+<def title="+:refs/heads/development">
+Tracks the "development" branch
+</def>
+<def title="-:refs/heads/sandbox">
+Ignores the "sandbox" branch
+</def>
+</deflist>
+
+</snippet>
+
+
+<snippet id="branch-spec-wildcard">
+
+The `*` wildcard allows you to reference multiple branches with similar names:
+
+<deflist type="wide">
+<def title="refs/heads/*">
+The default rule that tracks all existing repository feature branches.
+</def>
+<def title="refs/heads/dev-*">
+Tracks feature branches whose names start with "dev-": "dev-2024.2", "dev-2025.1", and others.
+</def>
+</deflist>
+
+</snippet>
+
+Related article: [](working-with-feature-branches.md).
+
+### Branch Filters
+
+Branch filters are available for many TeamCity entities: triggers, build features, clean-up rules, and so on. These filters specify which of the branches specified in branch specification rules are available to this entity. For example, using branch filters of a [VCS Trigger](configuring-vcs-triggers.md) you can choose which branches should automatically start builds on new changes.
+
+Branch filters use the same `+|-:BRANCH_NAME` syntax as branch specification rules, with two notable exceptions:
+
+* certain entities accept only fully resolved branch names (`refs/heads/main`) whereas other support logical names as well (`main`);
+* the additional `+|-pr:` syntax allows you to [filter Git pull request branches](branch-filter.md#Pull+Request+Branch+Filters).
+
+Related article: [](branch-filter.md)
+
+
+## Collecting Changes
+
+Once your project is set up, TeamCity can receive information about all new changes committed to repository branches included in [branch specifications](#Branch+Specifications). New changes notifications are received in one of the following ways:
+
+
+
+<deflist>
+<def title="Periodic repository polling">
+
+By default, every 60 seconds TeamCity automatically polls all VCS repositories targeted by its projects. The downsides of this approach are:
+
+<ul>
+<li>Inefficiency — TeamCity keeps constantly polling all repositories, even those that rarely have new changes.</li>
+<li>Performance — If your TeamCity server has a large amount of projects, periodic polling can produce a significant load.</li>
+<li>Delays — After a user committed their change, they can wait up to a minute for this change to show up on TeamCity configuration's <b>Pending changes</b> tab. Users can also use the <b>Actions</b> configuration menu to manually trigger the process:
+<img src="dk-check-for-pending.png" width="706" alt="Check for new changes"/>
+</li>
+</ul>
+
+To change the polling interval, navigate to <a href="teamcity-configuration-and-maintenance.md#Version+Control+Settings">general TeamCity server settings</a>. To override this value for individual configurations, edit the VCS root <a href="configuring-vcs-roots.md">minimum polling interval</a> setting.
+</def>
+
+<def title="Webhooks">
+
+Webhooks allow VCS hosting providers to notify TeamCity about new changes. Compared to the default polling mechanism, this behavior has the following advantages:
+
+* Efficiency — TeamCity server receives change notifications when these changes appear.
+* Speed — Change notifications arrive as soon as they are committed.
+
+On the downside, webhooks require manual setup for each repository/project.
+
+<include from="configuring-vcs-post-commit-hooks-for-teamcity.md" element-id="polling-with-hooks"/>
+
+Related article: <a href="configuring-vcs-post-commit-hooks-for-teamcity.md">Configuring VCS Post-Commit Hooks</a>
+
+</def>
+</deflist>
+
+
+## Start Builds Automatically
+
+TeamCity users can trigger new builds at any moment via the **Run** button in the configuration's top right corner. To start new builds automatically, you need to configure [triggers](configuring-build-triggers.md).
+
+TeamCity offers various triggers to start new builds based on different events, such as time-based triggers for scheduled builds, change-based triggers for new commits, triggers that launch builds upon the completion of other configurations, and so on.
+
+Related article: [](configuring-build-triggers.md)
+
+
+
 ## Artifacts
 
 Artifacts are files produced during a build. These files are available to:
@@ -86,7 +171,7 @@ To choose which files should be available as build artifacts:
 Related article: [](build-artifact.md)
 
 
-## Creating Cross-Configuration Dependencies
+## Set Up Cross-Configuration Dependencies
 
 Real-life CI/CD pipelines often combine multiple standalone configurations. For example, "Build", "Test", and "Deploy to Staging" configurations (or Jobs) can run independently or in sequence.
 
@@ -99,7 +184,7 @@ A build chain is a collection of classic TeamCity configurations interconnected 
 
 Snapshot dependencies are right-to-left relations. For example, in the "A -> B" chain where configuration "B" has a dependency on configuration "A", "B" cannot run until "A" produces a suitable build first. The criteria for "suitable" builds depends on your setup, see the <a href="snapshot-dependencies.md#Suitable+Builds">Suitable Builds</a> section for more information. At the same time, "A" can run independently without triggering new "B" builds.
 
-For mission-critical scenarios, can set up dependent configurations to always force fresh upstream configuration builds, even if there were no recent changes to the project.
+For mission-critical scenarios, you can set up dependent configurations to always force fresh upstream configuration builds, even if there were no recent changes to the project.
 </def>
 
 <def title="Finish Build Triggers">
@@ -125,6 +210,20 @@ Pipeline dependencies substitute classic TeamCity artifact and snapshot dependen
 </def>
 
 </deflist>
+
+## Summary: Basic TeamCity Workflow
+
+The following diagram illustrates the basic TeamCity workflow:
+
+<img src="cicd-flow.png" width="711" alt="Basic CI flow with TeamCity"/>
+
+1. The TeamCity server [detects a change in your repository](#Collecting+Changes).
+2. The server writes this change to the database.
+3. A [trigger](configuring-build-triggers.md) attached to the build configuration detects the relevant change in the database and initiates a build.
+4. The triggered build appears in the [build queue](working-with-build-queue.md).
+5. The build is assigned to a free compatible build agent.
+6. The agent executes the build steps, described in the build configuration. While executing the steps, the agent reports the build progress to the TeamCity server. It sends all the log messages, test reports, code coverage results on the fly, so you can monitor the build process in real time.
+7. After finishing the build, the agent sends [build artifacts](build-artifact.md) to the server.
 
 ## Tutorial: Create Your First Project in TeamCity
 

@@ -217,7 +217,9 @@ In case of authentication issues, navigate to **Administration | Diagnostics** a
 
 ### Repository Polling with Configured Hooks
 
-Projects that have configured commit hooks still poll their remote repositories as a backup mechanism for cases when hooks stop working. However, with each successful hook communication, the polling interval automatically doubles. The maximum value to which TeamCity increases this interval is 4 hours, and the minimum interval is 15 minutes. Should scheduled polling reveal a change that did not trigger a commit hook, TeamCity will reset the polling interval to its default value.
+<snippet id="polling-with-hooks">
+Projects that have configured commit hooks still poll their remote repositories as a backup mechanism in case hooks stop working. However, with each successful hook communication, the polling interval automatically doubles. The maximum value to which TeamCity increases this interval is 4 hours, and the minimum interval is 15 minutes. Should scheduled polling reveal a change that did not trigger a commit hook, TeamCity will reset the polling interval to its default value.
+</snippet>
 
 To check the current polling interval and the commit hook status, navigate to **Administration | &lt;Your_Project&gt; | &lt;Your_Build_Configuration&gt; | Vesrion Control Settings**.
 

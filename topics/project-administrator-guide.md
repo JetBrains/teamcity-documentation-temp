@@ -6,13 +6,15 @@ This section focuses on **Project administration**. To learn more about other as
 
 ## Steps, Configurations and Projects
 
+
+
 In TeamCity, a building routine consists of the following blocks:
 
 <img src="dk-basic-tree-diagram3.png" alt="TeamCity elements" width="706"/>
 
-* **Build step** — an essential building block that executes a predefined set of commands. This can be a single command (like `dotnet test` or `gradle clean build`) or a series of operations (such as a custom Python or Bash script). Build steps run fully, with no partial execution.
+* <snippet id="build-step-overview">**Build step** — an essential building block that executes a predefined set of commands. This can be a single command (like `dotnet test` or `gradle clean build`) or a series of operations (such as a custom Python or Bash script). Build steps run fully, with no partial execution.</snippet>
 
-* **Build configuration** — a sequence of build steps executed in a specific order. With a configuration, you can:
+* <snippet id="build-configuration-overview">**Build configuration** — a sequence of build steps executed in a specific order.</snippet> With a configuration, you can:
 
     * arrange steps in any order you need;
     * temporarily disable individual steps.
@@ -23,9 +25,11 @@ In TeamCity, a building routine consists of the following blocks:
     You can also incorporate configurations from the same or different projects into one [unified workflow](build-chain.md).
 
 
-* **Project** — a collection of independent build configurations. These configurations can be run separately but are grouped under a single project to share common resources: [connections](configuring-connections.md), [parameters](configuring-build-parameters.md), [artifact storages](configuring-artifacts-storage.md), [cloud agent profiles](agent-cloud-profile.md), and so on.
+* <snippet id="project-overview">**Project** — a collection of independent build configurations. These configurations can be run separately but are grouped under a single project to share common resources: [connections](configuring-connections.md), [parameters](configuring-build-parameters.md), [artifact storages](configuring-artifacts-storage.md), [cloud agent profiles](agent-cloud-profile.md), and so on.</snippet>
 
     Each project can be owned by another project for the same benefits: subprojects can access entities owned by their parent projects. The topmost project, called the **Root project**, is created automatically by TeamCity. This Root project cannot be removed and is ideal for setting up globally accessible parameters, connections, cloud profiles, and other shared resources.
+
+
 
 
 ## VCS Roots
@@ -149,7 +153,7 @@ Related article: <a href="configuring-vcs-post-commit-hooks-for-teamcity.md">Con
 
 TeamCity users can trigger new builds at any moment via the **Run** button in the configuration's top right corner. To start new builds automatically, you need to configure [triggers](configuring-build-triggers.md).
 
-TeamCity offers various triggers to start new builds based on different events, such as time-based triggers for scheduled builds, change-based triggers for new commits, triggers that launch builds upon the completion of other configurations, and so on.
+<snippet id="triggers-pa-guide">TeamCity offers various triggers to start new builds based on different events, such as time-based triggers for scheduled builds, change-based triggers for new commits, triggers that launch builds upon the completion of other configurations, and so on.</snippet>
 
 Related article: [](configuring-build-triggers.md)
 

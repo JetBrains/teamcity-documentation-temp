@@ -1,6 +1,16 @@
 [//]: # (title: Upgrade Notes)
 [//]: # (auxiliary-id: Upgrade Notes)
 
+
+## Changes from 2024.12.1 to 2024.12.2
+{id="2024.12.2"}
+
+### Bundled Tools Updates
+{id="bundled-tools-updates-2024-12-2"}
+
+* Bundled JaCoCo has been updated to version 0.8.8.
+
+
 ## Changes from 2024.12 to 2024.12.1
 {id="2024.12.1"}
 

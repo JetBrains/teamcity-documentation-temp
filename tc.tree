@@ -9,6 +9,7 @@
 		<toc-element topic="what-s-new-in-teamcity.md">
 			<toc-element topic="teamcity-2024-12-release-notes.md"/>
 			<toc-element topic="teamcity-2024-12-1-release-notes.md"/>
+			<toc-element topic="teamcity-2024-12-2-release-notes.md"/>
 		</toc-element>
 		<toc-element hidden="true" topic="what-s-new-in-teamcity-2024-07.md">
 			<toc-element hidden="true" topic="teamcity-2024-07-release-notes.md"/>

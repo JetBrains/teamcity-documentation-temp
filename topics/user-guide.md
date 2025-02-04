@@ -64,15 +64,47 @@ Related article: [](personal-build.md)
 
 ## Investigating Build Results
 
-* Build Overview: Clicking on a build number takes you to the build overview page. Here, you'll see details like build status, duration, changes included, and related tests.
+From the main configuration screen, click on any build number to get into the [](build-results-page.md) page. This page has multiple tabs with comprehensive data about the build.
 
-* Build Log: The build log provides a detailed record of the build process, including any errors or warnings. Use this to pinpoint the cause of build failures.
+<img src="dk-build-results-page-overview.png" width="706" alt="Build results page"/>
 
-* Changes: The "Changes" tab lists the code changes associated with the build, including commit messages and authors.
+<deflist>
+<def title="Overview">
+Displays general information about the build: build duration, user or automatic trigger that started it, a build agent that was used to run it, the summary of processed changes, and so on.
+</def>
 
-* Tests: If the build includes tests, the "Tests" tab displays the test results. You can view details of passed and failed tests, including error messages and stack traces.
+<def title="Changes">
+Lists the code changes associated with the build, including commit messages and authors. This tab allows you to navigate directly to the related VCS and inspect a corresponding change.
+</def>
 
-* Artifacts: The "Artifacts" tab provides access to the files produced by the build (e.g., executables, documentation). You can download these artifacts as needed. 
+<def title="Tests">
+If the build includes tests, the "Tests" tab displays the test results. You can view details of passed and failed tests, including error messages and stack traces.
+</def>
+
+<def title="Build Log">
+Provides a detailed record of the build process, including any errors or warnings. Allows you to filter log messages by their importance. Use this tab to pinpoint the cause of build failures.
+</def>
+
+<def title="Artifacts">
+Provides access to downloadable files produced by the build (executables, images, documentation, and so on).
+</def>
+
+<def title="Parameters">
+Allows you to track service and user-defined <a href="configuring-build-parameters.md">build parameters</a> associated with this build. Highlights parameters whose values changed during the build.
+</def>
+
+<def title="PerfMon">
+Shows hardware data related to this build: CPU usage statistics, memory consumption, and others. This page is available for build configuration with the <a href="performance-monitor.md">Performance Monitor</a> feature (included by default for all new configurations created via existing VCS connections).
+</def>
+
+<def title="Dependencies">
+Available for builds that are parts of a <a href="build-chain.md">build chain</a>. Allows you to view this entire chain and navigate to associated builds from other configurations.
+</def>
+
+<def title="Maven Build Info">
+Displays Maven-specific build details that can be useful for build engineers when adjusting build configurations.
+</def>
+</deflist>
 
 ## Statuses and Icons
 

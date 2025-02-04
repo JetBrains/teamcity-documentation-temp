@@ -3,6 +3,8 @@
 
 In TeamCity, all information about a build, whether it is queued, running or finished, is accumulated on its __Build Results__ page. This page can be accessed from the __Build Configuration Home__ page and from various places in the TeamCity UI where a build number or build status appears as a link, when browsing in the __[Home](working-with-build-results.md)__ mode. Some data is accessible only after the build is finished, some details like Changes, Parameters, and Dependencies are also applicable to the build while it is waiting in the queue.
 
+<img src="dk-build-results-page-overview.png" width="706" alt="Build results page"/>
+
 This article gives an overview of the __Build Results__ page of the new TeamCity UI. Most of its features are also available in the classic UI mode.
 
 ## Internal Build ID

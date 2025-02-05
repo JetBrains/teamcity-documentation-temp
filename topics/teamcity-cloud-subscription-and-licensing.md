@@ -25,7 +25,7 @@ You can manage your subscription on the __[Subscription & Resources](managing-su
 
 _[Build credits](#cloud-build-credits)_ are granted to your subscription per each committer and can be flexibly utilized according to your needs. At the end of each month, the remaining build credits expire from your subscription, and a new set of build credits is provided at the beginning of the next month. If you purchase [additional build credits](#On-demand+Cloud+Resources), they do not expire.
 
-Build credits are automatically spent on build time on agents. You can also exchange them on:
+Build credits are automatically spent on build time on agents. You can also exchange them for:
 * Committer slots
 * Concurrent builds on self-hosted agents
 * Agents prepaid monthly

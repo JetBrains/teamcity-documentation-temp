@@ -57,6 +57,11 @@ However, configurations never own roots. You can "attach" a VCS root to a config
 Although a VCS root is an existential part of any build configuration that works with a remote repository, in many scenarios TeamCity generates roots automatically and does not require that you create them by hand for each new build configuration. See [this tutorial](configure-and-run-your-first-build.md) for an example.
 
 
+## Build Features
+
+???
+
+
 ## Working with Branches
 
 TeamCity allows you to set up different building rules for different branches. For example, you might want to build the "production" branch whenever a new change appears, the "development" branch nightly, and ignore the "sandbox" branch. To do this, you need to specify branch specs and filters.
@@ -215,7 +220,13 @@ Pipeline dependencies substitute classic TeamCity artifact and snapshot dependen
 
 </deflist>
 
-## Summary: Basic TeamCity Workflow
+
+## Investigations and Mutes
+
+??? end-user capabilities + auto-investigator
+
+
+## Basic TeamCity Workflow
 
 The following diagram illustrates the basic TeamCity workflow:
 

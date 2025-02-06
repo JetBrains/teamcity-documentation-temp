@@ -35,7 +35,28 @@ The figure below illustrates main UI elements that allow you to locate projects 
 
 * Search bars — Allow you to filter the list of configurations and projects (4) and find specific builds (5).
 
-## Run New Builds
+The drop-down menu below the configuration name allows you to view builds of specific branch only (by default, **&lt;All branches&gt;** is selected).
+
+> If a required branch is missing from this drop-down menu, ask your project administrator to check whether the [branch specification](project-administrator-guide.md#Branch+Specifications) of this configuration is correctly configured.
+> 
+{style="note"}
+
+The **Branches** / **Builds** toggle of the main configuration page allows you to choose how to view builds: as a flat list or grouped by branches. A default branch is highlighted with a slightly darker background.
+
+> In TeamCity, the [default branch](working-with-feature-branches.md#Default+Branch) depends on configuration settings (more specifically, on attached VCS root's settings). This is not necessarily the same default/main branch as in your VCS repository. The default branch is used whenever you click **Run** without selecting a specific branch first.
+> 
+> When a new release cycle begins, you can ask a project administrator to edit VCS root settings to switch the default branch.
+> 
+{style="note"}
+
+
+## Icons and Colors
+
+<include from="build-state.md" element-id="color-coding"/>
+
+Related articles: [](build-state.md), [](change-state.md)
+
+## Run a New Build
 
 Depending on configuration triggers, new builds can start automatically. <include from="project-administrator-guide.md" element-id="triggers-pa-guide"/>
 
@@ -43,9 +64,15 @@ This section outlines how to trigger builds manually.
 
 ### Default Builds
 
-To start a new build with default settings, open a required configuration and click **Run** in the top right corner.
+To start a new build with default settings:
+
+1. Open a required configuration.
+2. (optional) Select a required branch in the drop-down menu below a configuration name.
+3. Click **Run** in the top right corner of a screen. If you skipped step #2, TeamCity will run a build for the configuration's default branch.
 
 <img src="dk-run-button.png" width="706" alt="Run button"/>
+
+If any of the agents eligible to run this build is immediately available, the build will start right away. Otherwise, it will be [queued](working-with-build-queue.md).
 
 ### Custom Builds
 
@@ -62,56 +89,13 @@ Related article: [](running-custom-build.md)
 Related article: [](personal-build.md)
 
 
-## Investigating Build Results
+## View Build Results
 
-From the main configuration screen, click on any build number to get into the [](build-results-page.md) page. This page has multiple tabs with comprehensive data about the build.
+<include from="build-results-page.md" element-id="build-results-intro"/>
 
-<img src="dk-build-results-page-overview.png" width="706" alt="Build results page"/>
+Related article: [](build-results-page.md)
 
-<deflist>
-<def title="Overview">
-Displays general information about the build: build duration, user or automatic trigger that started it, a build agent that was used to run it, the summary of processed changes, and so on.
-</def>
 
-<def title="Changes">
-Lists the code changes associated with the build, including commit messages and authors. This tab allows you to navigate directly to the related VCS and inspect a corresponding change.
-</def>
-
-<def title="Tests">
-If the build includes tests, the "Tests" tab displays the test results. You can view details of passed and failed tests, including error messages and stack traces.
-</def>
-
-<def title="Build Log">
-Provides a detailed record of the build process, including any errors or warnings. Allows you to filter log messages by their importance. Use this tab to pinpoint the cause of build failures.
-</def>
-
-<def title="Artifacts">
-Provides access to downloadable files produced by the build (executables, images, documentation, and so on).
-</def>
-
-<def title="Parameters">
-Allows you to track service and user-defined <a href="configuring-build-parameters.md">build parameters</a> associated with this build. Highlights parameters whose values changed during the build.
-</def>
-
-<def title="PerfMon">
-Shows hardware data related to this build: CPU usage statistics, memory consumption, and others. This page is available for build configuration with the <a href="performance-monitor.md">Performance Monitor</a> feature (included by default for all new configurations created via existing VCS connections).
-</def>
-
-<def title="Dependencies">
-Available for builds that are parts of a <a href="build-chain.md">build chain</a>. Allows you to view this entire chain and navigate to associated builds from other configurations.
-</def>
-
-<def title="Maven Build Info">
-Displays Maven-specific build details that can be useful for build engineers when adjusting build configurations.
-</def>
-</deflist>
-
-## Statuses and Icons
-
-Success: The build completed successfully.
-Failure: The build failed due to an error. Investigate the build log and tests to identify the cause.
-Running: The build is currently in progress.
-Queued: The build is waiting for available resources to start.
 
 ## Working with Build Failures
 

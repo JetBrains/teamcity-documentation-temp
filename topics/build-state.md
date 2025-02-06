@@ -241,34 +241,60 @@ If such an error occurs, TeamCity:
 
 ## Project and Build Configuration Icons
 
-Build states affect the way TeamCity projects and build configurations are presented. Color-coded icons provide a bird's eye view of the build farm, enabling you to instantly spot problematic projects.
+<snippet id="color-coding">
 
-Project and configuration icons have three distinctive colors:
+A build's success or failure affects its color and the colors of its parent configuration and project. Color-coded icons provide a bird's eye view of the build farm, enabling you to instantly spot problematic projects.
 
-* **Gray** — corresponds to unknown (neither successful nor failure) project/configuration status. This typically happens when no recent builds exist.
-    <img src="dk-icons-gray.png" width="660" alt="Gray project and configuration icons" style="block"/>
+TeamCity object icons have three distinctive colors:
 
-* **Green** — used for configurations whose last builds were successful and projects whose configurations are all green.
-  <img src="dk-icons-green.png" width="660" alt="Green project and configuration icons" style="block"/>
+<deflist>
+<def title="Gray">
 
-* **Red** — used for configurations whose last builds failed and projects that have at least one red configuration.
-  <img src="dk-icons-red.png" width="660" alt="Red project and configuration icons" style="block"/>
+<img src="dk-icons-gray.png" width="660" alt="Gray project and configuration icons" style="block"/>
 
+* Build: not yet started (queued) or cancelled.
+* Configuration: either the selected branch has no builds, or the default branch doesn't (for the side navigation tree and **&lt;All branches&gt;** view).
+* Project: neither of the project configurations have builds.
 
-TeamCity uses builds of the **specific branch** to identify the project/configuration status. If a configuration's version selector points to the specific branch, builds of this branch affect the configuration status. Global views, such as project overview and side navigation bar, use configuration default branches instead.
+</def>
 
+<def title="Green">
 
-For example, the configuration below has multiple successful builds in the "development" branch. The configuration's branch selector targets this specific branch, and the configuration's icon is green.
+<img src="dk-icons-green.png" width="660" alt="Green project and configuration icons" style="block"/>
 
-<img src="dk-confbuttons-green.png" width="706" alt="Green configuration icons"/>
+* Build: successfully finished or running without any issues.
+* Configuration: the last build for a selected or default branch was successful.
+* Project: **all** of its configurations are green.
 
-The same configuration but in the "sandbox" branch has failed its last build, which turns the configuration icon red.
+</def>
 
-<img src="dk-confbuttons-red.png" width="706" alt="Red configuration icons"/>
+<def title="Red">
 
-However, since there were no builds in the default "main" branch, project icons on both screens above are gray. The same color is used for configuration icons when the version selector is not pointing to any branch.
+<img src="dk-icons-red.png" width="660" alt="Red project and configuration icons" style="block"/>
 
-<img src="dk-confbuttons-gray.png" width="706" alt="Gray configuration icons"/>
+* Build: failed or still running but encountered a problem.
+* Configuration: the last build for a selected or default branch failed.
+* Project: at least one of its configurations is red.
+
+</def>
+</deflist>
+
+The following images illustrate the same configuration with builds in three different branches: "main" (default branch), "development", and "sandbox".
+
+* The last "development" branch build was successful. If this branch is selected, the configuration icon is green.
+
+    <img src="dk-confbuttons-green.png" width="706" alt="Green configuration icons"/>
+
+* The last "sandbox" branch build failed. If this branch is selected, the configuration icon is red.
+
+    <img src="dk-confbuttons-red.png" width="706" alt="Red configuration icons"/>
+
+* The default "main" branch has no builds, so configuration icons in both side navigation tree and **&lt;All branches&gt;** view are gray. The same "unknown" status applies to the entire project, since this is its only configuration.
+
+    <img src="dk-confbuttons-gray.png" width="706" alt="Gray configuration icons"/>
+
+</snippet>
+
 
 
 <seealso>

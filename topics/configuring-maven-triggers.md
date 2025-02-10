@@ -93,6 +93,12 @@ Version or Version range
 
 Specify a version or version range of the artifact. The version range syntax is described in the [section](#Version+Ranges) below. SNAPSHOT versions can also be used.
 
+<snippet id="range-note">
+
+<note>Maven artifact trigger focuses on the latest available artifact version that fits the range, not the entire range. This means for <code>1.3 ~ 1.5</code> version range (or the open-end <code>[1.3,)</code> range), once fired for <code>v1.5</code>, it will track further changes to this "latest" version only, ignoring changes to "older" <code>v1.4</code> and <code>v1.3</code> versions.</note>
+
+</snippet>
+
 </td></tr><tr>
 
 <td>
@@ -202,6 +208,8 @@ TeamCity determines __effective settings__ as follows:
 For specifying version ranges use the following syntax, as [proposed in the Maven documentation](https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html).
 
 Note that Maven Artifact Dependency Trigger can be used not only for fixed-version artifacts but also for snapshots as a fine-grained alternative to the Maven Snapshots Dependency Trigger.
+
+<include from="configuring-maven-triggers.md" element-id="range-note"/>
 
 <table><tr>
 

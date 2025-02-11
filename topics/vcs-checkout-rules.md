@@ -29,12 +29,6 @@ Note that Perforce support in TeamCity treats checkout rules as case-sensitive. 
 </snippet>
 
 
-<note>
-
-Checkout rules can only be set to directories, files are __not__ supported.
-
-</note>
-
 ## Syntax
 
 In the examples below the paths in the repository (`VCSPath`) are relative to the configured VCS root, the paths on the agent (`AgentPath`) are relative to the build checkout directory.

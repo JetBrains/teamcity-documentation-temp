@@ -3,10 +3,21 @@
 This section focuses on **Project administration**. To learn more about other aspects of TeamCity, refer to the [](server-administrator-guide.md) and [](user-guide.md) sections.
 
 
+## Basic TeamCity Workflow
+
+The following diagram illustrates the basic TeamCity workflow:
+
+<img src="cicd-flow.png" width="711" alt="Basic CI flow with TeamCity"/>
+
+1. The TeamCity server [detects a change in your repository](#Collecting+Changes).
+2. The server writes this change to the database.
+3. A [trigger](configuring-build-triggers.md) attached to the build configuration detects the relevant change in the database and initiates a build.
+4. The triggered build appears in the [build queue](working-with-build-queue.md).
+5. The build is assigned to a free compatible build agent.
+6. The agent executes the build steps, described in the build configuration. While executing the steps, the agent reports the build progress to the TeamCity server. It sends all the log messages, test reports, code coverage results on the fly, so you can monitor the build process in real time.
+7. After finishing the build, the agent sends [build artifacts](build-artifact.md) to the server.
 
 ## Steps, Configurations and Projects
-
-
 
 In TeamCity, a building routine consists of the following blocks:
 
@@ -59,7 +70,9 @@ Although a VCS root is an existential part of any build configuration that works
 
 ## Build Features
 
-???
+<include from="adding-build-features.md" element-id="intro"/>
+
+Related article: [](adding-build-features.md)
 
 
 ## Working with Branches
@@ -223,26 +236,36 @@ Pipeline dependencies substitute classic TeamCity artifact and snapshot dependen
 
 ## Deployment
 
-???
+Deployment is typically the final stage of a CI/CD routine that delivers artifacts produced by a build to an external location. Depending on your scenario and needs, you can perform this action as a final build step, or a standalone [deployment configuration](deployment-build-configuration.md). 
+
+
+Ways to deploy artifacts in TeamCity:
+
+* __Via a command line__, using any general runner like [Command Line](command-line.md) or [PowerShell](powershell.md). This is the most straightforward approach. Just add a build step, select any such runner, and enter commands as if in a regular terminal. The benefits you get from TeamCity in this case are flexible automation, synchronization with the previous build stages, and a convenient view of build results in the TeamCity UI.  
+  This way, you can also update distribution files in a third-party storage, like Amazon S3.
+* __Using a specific runner for your platform__. For example, if you build .NET projects, the best way to deploy them is via our [.NET runner](net.md). It supports all the relevant .NET commands such as `pack` or `publish` and offers a variety of other features. Other runners are listed under [this section](configuring-build-steps.md).
+* __Using a deployer__. TeamCity offers several build runners dedicated to deployment: [SMB Upload](smb-upload.md), [FTP Upload](ftp-upload.md), [SSH Upload](ssh-upload.md), and [SSH Exec](ssh-exec.md). They can upload build artifacts via different protocols and let you configure this upload process in the TeamCity UI.
+* __Using the AWS CodeDeploy runner__ to deploy applications to AWS EC2 and on-premises instances. To use this runner, you need to download and install our [AWS CodeDeploy plugin](https://plugins.jetbrains.com/plugin/9018-aws-codedeploy) as described [here](installing-additional-plugins.md). See the related [blog posts](https://blog.jetbrains.com/teamcity/tag/codedeploy/).
+  {instance="tc"}
+
+>If you deploy products by means of third-party services, TeamCity allows [detaching builds from agents](detaching-build-from-agent.md) before starting the external deployment operations. This helps utilize agents more optimally.  
+> 
+>This method requires some advanced configuration, so we suggest trying it only after you feel comfortable configuring builds and agents in TeamCity.
 
 ## Investigations and Mutes
 
-??? end-user capabilities + auto-investigator
+<snippet id="investigations-and-mutes">
+
+Every build problem or test failure in TeamCity can be investigated as a separate incident. See the following article for more information: [](investigating-and-muting-build-failures.md).
+
+Build problems and failed tests can be [muted](investigating-and-muting-build-failures.md#Mutes) to allow builds finish successfully even when they encounter these problems. Note users with the default project developer [role](managing-roles-and-permissions.md) cannot mute issues, only project administrators are allowed to do this.
+
+</snippet>
+
+To automatically assign investigations to users whose changes likely failed a build, configure the [](investigations-auto-assigner.md) build feature.
 
 
-## Basic TeamCity Workflow
 
-The following diagram illustrates the basic TeamCity workflow:
-
-<img src="cicd-flow.png" width="711" alt="Basic CI flow with TeamCity"/>
-
-1. The TeamCity server [detects a change in your repository](#Collecting+Changes).
-2. The server writes this change to the database.
-3. A [trigger](configuring-build-triggers.md) attached to the build configuration detects the relevant change in the database and initiates a build.
-4. The triggered build appears in the [build queue](working-with-build-queue.md).
-5. The build is assigned to a free compatible build agent.
-6. The agent executes the build steps, described in the build configuration. While executing the steps, the agent reports the build progress to the TeamCity server. It sends all the log messages, test reports, code coverage results on the fly, so you can monitor the build process in real time.
-7. After finishing the build, the agent sends [build artifacts](build-artifact.md) to the server.
 
 ## Tutorial: Create Your First Project in TeamCity
 

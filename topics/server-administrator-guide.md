@@ -52,25 +52,38 @@ so the developers get faster feedback and more reliable testing results.
 {instance="tcc"}
 
 
-## Server Administrator Cheat Sheet
+## Database
 
-1. Initial setup
-   * Server installation
-     * [Install on Windows](install-teamcity-server-on-windows.md)
-     * [Install on Linux/macOS](install-teamcity-server-on-linux-or-macos.md)
-     * [Run as Docker image](https://hub.docker.com/r/jetbrains/teamcity-server)
-     * [Configure core installation settings](configure-server-installation.md) (port, server context, memory settings)
-     * Server [Data](teamcity-data-directory.md) and [Home](teamcity-home-directory.md) directories
-     * [](start-teamcity-server.md)
-   * Agent installation
-     * [Install an agent](install-teamcity-agent.md)
-     * [Run agents as Docker containers](agent-docker-images.md)
-     * [Set up cloud on-demand agents](teamcity-integration-with-cloud-solutions.md)
-     * [Configure core agent settings](configure-agent-installation.md) (IP, port, name, server and alternative fetch URLs)
-     * [](start-teamcity-agent.md)
-2. Post-installation setup
-   * ...
+<include from="set-up-external-database.md" element-id="intro"/>
 
+See this section for more information: [](set-up-external-database.md)
+
+
+## Multi-Node Setup
+
+<include from="multinode-setup.md" element-id="intro"/>
+
+See this article to learn more: [](multinode-setup.md)
+
+
+## Server and Agent Health
+
+<include from="teamcity-monitoring-and-diagnostics.md" element-id="intro"/>
+
+For more information, refer to these topics: [](teamcity-monitoring-and-diagnostics.md), [](build-agents-configuration-and-maintenance.md)
+
+
+## Security
+
+A CI/CD server is the backbone of modern software development, holding the keys to your internal processes, user credentials, and integrations with external services like AWS build agents, Google Cloud artifact storage, or HashiCorp Vault. A single security lapse can expose critical infrastructure, making robust protection essential. See the following articles to learn more about basic layers of TeamCity protection:
+
+* [](configuring-authentication-settings.md)
+* [](https-server-settings.md)
+* [](configuring-proxy-server.md)
+
+> For security reasons, we always recommend installing [minor bug-fix updates](teamcity-release-cycle.md) that are typically released monthly. These updates ship vulnerability patches, preventing potential security-related accidents. See our [security bulletin](https://www.jetbrains.com/privacy-security/issues-fixed/) to learn more.
+> 
+{style="warning"}
 
 
 

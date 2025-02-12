@@ -99,17 +99,22 @@ Related article: [](build-results-page.md)
 
 ## Working with Build Failures
 
-* Build Log: The primary tool for diagnosing build failures. Examine the log for error messages and stack traces.
+* [Build log](build-log.md) — The primary tool for diagnosing build failures. Examine the log for error messages and stack traces.
 
-* Tests: Check the "Tests" tab for failing tests, which can often point to the source of the problem.
+* [Tests](build-results-page.md#Tests+Tab) — Check the "Tests" tab for failing tests, which can often point to the source of the problem.
 
-* Changes: Review the changes included in the build to see if any recent code modifications might be responsible for the failure.
+* [Changes](build-results-page.md#Changes+Tab) — Review the changes included in the build to see if any recent code modifications might be responsible for the failure.
 
-* Reporting Issues: If you can't resolve the issue, report it to the development team, providing details from the build log, tests, and changes.
 
-## My Builds and Investigations
 
-This page provides a personalized overview of your builds.  You can see the status of your running and recently finished builds, as well as any investigations assigned to you.  It's a great way to keep track of your work in TeamCity.
+## Investigations and Mutes
+
+<include from="project-administrator-guide.md" element-id="investigations-and-mutes"/>
+
+To view currently active investigations assigned to you, click the **My investigations** button on a sidebar.
+
+<img src="dk-investigation-counter.png" width="706" alt="Investigations counter"/>
+
 
 ## Notifications
 

@@ -1,7 +1,11 @@
 [//]: # (title: Adding Build Features)
 [//]: # (auxiliary-id: Adding Build Features)
 
-A _build feature_ is a piece of functionality that can be added to a build configuration to affect running builds or reporting build results.
+<snippet id="intro">
+
+A _build feature_ is a piece of functionality that can be added to any build configuration to enable additional capabilities. For example, the [](commit-status-publisher.md) build feature publishes TeamCity build results to a VCS that stores your code files, and [](investigations-auto-assigner.md) identifies users whose latest changes broke the build and automatically tasks them with resolving these issues. Configured build features can be temporarily disabled at any moment without the need to remove them.
+
+</snippet>
 
 ## TeamCity Build Features
 

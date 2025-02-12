@@ -1,7 +1,9 @@
 [//]: # (title: Multinode Setup for High Availability)
 [//]: # (auxiliary-id: Multinode Setup for High Availability;Multinode Setup)
 
+<snippet id="intro">
 The TeamCity server can be configured to use multiple nodes (or servers) for high availability and flexible load distribution. It is possible to set up a cluster of TeamCity nodes, where each node is responsible for different tasks, like processing data from builds or collecting changes from VCS repositories. Or, to keep one main node that does all the work and a secondary node that provides a read-only interface. In case the main node goes down, all data processing can be switched to the secondary node with minimum downtime.
+</snippet>
 
 As the main use case of a multinode setup is to achieve high availability (HA), this article focuses on configuring a HA cluster. However, you can use the same methods for any setup with multiple TeamCity nodes: for example, to distribute load between several machines.
 

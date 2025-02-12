@@ -152,7 +152,6 @@
 
 
 		<toc-element toc-title="Manage Users and Roles" accepts-web-file-names-ref="managing-users-and-roles" topic="managing-users-and-roles.md">
-			<toc-element accepts-web-file-names-ref="configuring-your-user-profile" topic="configuring-your-user-profile.md"/>
 			<toc-element topic="viewing-users-and-user-groups.md"/>
 			<toc-element accepts-web-file-names-ref="creating-and-managing-users" topic="creating-and-managing-users.md"/>
 			<toc-element accepts-web-file-names-ref="creating-and-managing-user-groups" topic="creating-and-managing-user-groups.md"/>
@@ -441,6 +440,7 @@
 	<toc-element topic="user-guide.md">
 		<toc-element toc-title="TeamCity UI">
 			<toc-element toc-title="Sakura UI" accepts-web-file-names="teamcity-experimental-ui.html" topic="teamcity-sakura-ui.md"/>
+			<toc-element accepts-web-file-names-ref="configuring-your-user-profile" topic="configuring-your-user-profile.md"/>
 			<toc-element toc-title="Project, Build, and Configuration Icons" topic="build-state.md"/>
 			<toc-element toc-title="Change Icons" topic="change-state.md"/>
 		</toc-element>

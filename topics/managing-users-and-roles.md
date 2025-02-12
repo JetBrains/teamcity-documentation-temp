@@ -4,7 +4,6 @@
 This section contains articles concerning user management in TeamCity.
 
 Learn how to:
-* [Configure your own user profile](configuring-your-user-profile.md).
 * [View](viewing-users-and-user-groups.md) and manage [users](creating-and-managing-users.md) and [user groups](creating-and-managing-user-groups.md).
 * [Manage roles and permissions](managing-roles-and-permissions.md).
 * View the [audit of user actions](tracking-user-actions.md).
@@ -12,3 +11,5 @@ Learn how to:
 {instance="tc"}
 * Access TeamCity as a [Guest User](guest-user.md).
 {instance="tcc"}
+
+See also: [Configure your own user profile](configuring-your-user-profile.md) (user guide).

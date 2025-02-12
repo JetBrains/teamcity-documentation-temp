@@ -9,7 +9,7 @@ Depending on your environment, all the deployment processes can be executed on a
 
 ## Deployment Build Configuration
 
-When you create or edit a build configuration, you can change its type from _Regular_ to _Composite_ or _Deployment_. We talked about composite builds in the [previous tutorial](create-pipeline.md#Complete+Chain+with+Tests). Unlike them, _deployment builds_ work almost like regular ones: you can add the same steps and features or tweak the same settings. In addition to that, a deployment config offers several enhancements for an easier and transparent workflow:
+When you create or edit a build configuration, you can change its type from _Regular_ to _Composite_ or _Deployment_. We talked about composite builds in the [previous tutorial](create-build-chain.md#Complete+Chain+with+Tests). Unlike them, _deployment builds_ work almost like regular ones: you can add the same steps and features or tweak the same settings. In addition to that, a deployment config offers several enhancements for an easier and transparent workflow:
 * The __Run__ button of such a build changes to __Deploy__.
 * All dependency builds get an extra __Deployments__ section of __Build Results__, from where you can quickly deploy the product.
 * Personal builds are disabled to prevent any accidental deployment.

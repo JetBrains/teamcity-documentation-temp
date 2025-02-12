@@ -18,7 +18,7 @@ An investigator will be able to explore the build results, view the related stac
 
 ## Assign Investigations and Mute Problems
 
->If you want to try this on your server, make sure there is at least one failed build available. You can use the sample project from the [pipeline tutorial](create-pipeline.md#Import+Sample+Project).
+>If you want to try this on your server, make sure there is at least one failed build available. You can use the sample project from the [pipeline tutorial](create-build-chain.md#Import+Sample+Project).
 
 Let's begin with opening __[Build Results](view-build-results.md)__ of our failed build. Find the failure on the __Overview__ tab and open its context menu, as shown on the above screenshot. Select either _Assign investigation_ or _Mute problem/test_.
 

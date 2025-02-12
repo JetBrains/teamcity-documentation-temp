@@ -18,7 +18,7 @@ In this tutorial, you will create multiple build configurations, bind them in a 
 >
 > * [](creating-and-editing-projects.md)
 > * [](creating-and-editing-build-configurations.md)
-> * [](create-pipeline.md)
+> * [](create-build-chain.md)
 > * [](net.md)
 >
 {style="note"}

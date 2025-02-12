@@ -106,3 +106,13 @@ TeamCity provides a wide range of [licensing options](https://www.jetbrains.com/
 Server and agent licenses can be activated on the **Administration | Licenses** page. We recommend activating your server license, even for the free Professional version, to ensure system administrators receive timely email notifications about critical TeamCity server security updates.
 
 Learn more: [](licensing-policy.md), [](manage-teamcity-license.md)
+
+
+## What's Next
+
+After your server is up and running, you can proceed to creating your first project.
+
+* [](project-administrator-guide.md) — learn about basic TeamCity concepts, such as build configurations, build features, triggers, and VCS roots.
+* [](configure-and-run-your-first-build.md) — a step-by-step tutorial that walks you through the main stages of configuring a project.
+* [](create-build-chain.md) — learn how to link separate build configurations in a single chain where multiple builds can run in parallel.
+* [](user-guide.md) — explains how regular TeamCity users can run builds, inspect build results, and investigate problems.

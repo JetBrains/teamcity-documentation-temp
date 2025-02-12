@@ -12,31 +12,64 @@
         </description>
 
         <spotlight>
-            <a href="getting-started-with-teamcity.md" summary="Learn the basics of TeamCity features and capabilities and run your free trial setup." type="install">Set up TeamCity for evaluation</a>
-            <a href="install-and-start-teamcity-server.md" summary="When you are ready to use TeamCity for production purposes, learn how to install the server, build agents, and database." type="start">Set up TeamCity for production</a>
+            <a href="quick-setup-guide.md" summary="Set up a TeamCity server and one build agent on the same machine for evaluation purposes.">Set up TeamCity for evaluation</a>
+            <a href="install-and-start-teamcity-server.md" summary="When you are ready to use TeamCity for production purposes, learn how to install the server, build agents, and database.">Set up TeamCity for production</a>
         </spotlight>
 
         <primary>
-            <title>Learn basics</title>
-            <a href="introduction-to-teamcity-terminology.md" summary="Find out how (and if?) TeamCity builds are different from jobs and explore the main TeamCity concepts.">Terms and concepts</a>
-            <a href="https://www.jetbrains.com/teamcity/ci-cd-guide/" summary="Read about the principles of continuous integration and delivery.">CI/CD Guide</a>
-            <a href="supported-platforms-and-environments.md" summary="Explore a wide range of software supported by TeamCity.">Supported platforms and environments</a>
-            <a href="https://www.jetbrains.com/teamcity/tutorials/" summary="If you use Maven, Gradle, .NET, or Python, explore basic CI/CD tutorials on our website. Guidelines for many other tech stacks can be found in this documentation.">Tutorials</a>
+            <title>Main sections</title>
+            <a href="server-administrator-guide.md" type="settings" summary="This section explains how to perform regular server administrator duties: installing server and agents, configuring proxy settings and HTTPS access, setting up an external database, scheduling periodic data clean-ups, and more.">Server administrator guide</a>
+            <a href="project-administrator-guide.md" type="start" summary="Learn how to create and configure TeamCity projects and build configurations, configure team member accounts, set up project notifications, and more.">Project administrator guide</a>
+            <a href="user-guide.md" type="account" summary="Outlines regular day-to-day TeamCity operations, such as running builds and investigating failures.">User guide</a>
         </primary>
 
         <secondary>
-            <title>Explore features</title>
-            <a href="https://www.jetbrains.com/teamcity/features/" summary="Learn what are the most powerful features of TeamCity and why it can be used in any area, for a product of any scale.">Key features</a>
-            <a href="what-s-new-in-teamcity.md" summary="See the recently introduced features.">What's New in TeamCity 2024.12</a>
-            <a href="https://www.jetbrains.com/teamcity/roadmap/#teamcity-roadmap" summary="Learn about our plans for the future releases.">TeamCity Roadmap</a>
-            <a href="https://blog.jetbrains.com/teamcity/" summary="Follow our blog to get the freshest updates and tutorials.">TeamCity Blog</a>
-            <a href="https://www.jetbrains.com/help/teamcity/kotlin-dsl-documentation/%product-version%/index.html" summary="Use Kotlin DSL to define TeamCity settings programmatically.">TeamCity Kotlin DSL</a>
+            <title>Learn the basics</title>
+            <!--<a href="introduction-to-teamcity-terminology.md" summary="Find out how (and if?) TeamCity builds are different from jobs and explore the main TeamCity concepts.">Terms and concepts</a>-->
+            <a href="https://www.jetbrains.com/teamcity/ci-cd-guide/" summary="Read about the principles of continuous integration and delivery.">CI/CD Guide</a>
+            <a href="supported-platforms-and-environments.md" summary="Explore a wide range of software supported by TeamCity.">Supported platforms and environments</a>
+            <a href="https://www.jetbrains.com/teamcity/integrations/" summary="Integrate TeamCity with the tech stack that you already use for building great software.">Integrations</a>
+            <a href="https://www.jetbrains.com/teamcity/tutorials/" summary="If you use Maven, Gradle, .NET, or Python, explore basic CI/CD tutorials on our website. Guidelines for many other tech stacks can be found in this documentation.">Tutorials</a>
         </secondary>
 
 
 
+
+
         <misc>
-            <cards narrow="false">
+            <cards narrow="true">
+                <title>Explore features</title>
+                <a href="https://www.jetbrains.com/teamcity/features/" summary="Learn what are the most powerful features of TeamCity and why it can be used in any area, for a product of any scale.">Key features</a>
+                <a href="what-s-new-in-teamcity.md" summary="See the recently introduced features.">What's New in TeamCity 2024.12</a>
+                <a href="https://www.jetbrains.com/teamcity/roadmap/#teamcity-roadmap" summary="Learn about our plans for the future releases.">TeamCity Roadmap</a>
+                <a href="https://blog.jetbrains.com/teamcity/" summary="Follow our blog to get the freshest updates and tutorials.">TeamCity Blog</a>
+                <a href="https://www.jetbrains.com/help/teamcity/kotlin-dsl-documentation/%product-version%/index.html" summary="Use Kotlin DSL to define TeamCity settings programmatically.">TeamCity Kotlin DSL</a>
+            </cards>
+            <cards narrow="true">
+                <title>Extend TeamCity</title>
+                <a href="build-script-interaction-with-teamcity.md" summary="Use service messages to pass parameters from your scripts to TeamCity and vice versa.">Set up build scripts interaction with TeamCity</a>
+                <a href="https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html" summary="Use our API to get remote control over your TeamCity instance.">REST API</a>
+                <a href="https://plugins.jetbrains.com/" summary="Get extra functionality by installing external plugins.">Install plugins</a>
+                <a href="https://plugins.jetbrains.com/docs/teamcity/" summary="Visit TeamCity Plugin Development Help.">Develop your own plugins</a>
+            </cards>
+            <cards narrow="true">
+                <title>Solve problems</title>
+                <a href="how-to.md" summary="The place to go when you haven't found an answer elsewhere.">How to...</a>
+                <a href="known-issues.md" summary="See the current existing problems of TeamCity and how to work around them.">Known Issues</a>
+                <a href="troubleshooting.md" summary="See various instructions on how to find the cause of your problem.">Troubleshooting</a>
+                <a href="upgrade-notes.md" summary="If something broke up after an upgrade, this is the page to go.">Upgrade notes</a>
+                <a href="common-problems.md" summary="These problems might not be connected to TeamCity, but we still want to help.">Common problems</a>
+            </cards>
+            <links narrow="true">
+                <group>
+                    <title>Share feedback</title>
+                    <a href="feedback.md" summary="General recommendations on contacting us.">Feedback guide</a>
+                    <a href="https://youtrack.jetbrains.com/issues/TW" summary="Report a problem here.">Issue Tracker</a>
+                    <a href="https://jb.gg/teamcity-forum" summary="Contact us for a feedback or advice.">Forum</a>
+                    <a href="https://twitter.com/teamcity" summary="Official TeamCity Twitter">Follow TeamCity on Twitter</a>
+                </group>
+            </links>-->
+            <!--<cards narrow="false">
                 <title>Administer TeamCity</title>
                 <a href="teamcity-configuration-and-maintenance.md" summary="Learn how to set up your freshly installed server.">Configure and maintain TeamCity Server</a>
                 <a href="creating-and-editing-projects.md" summary="To integrate TeamCity with your source repositories and configure pipelines, read how to create and work with projects and build configurations.">Work with Projects and Build Configurations</a>
@@ -72,7 +105,7 @@
                     <a href="https://jb.gg/teamcity-forum" summary="Contact us for a feedback or advice.">Forum</a>
                     <a href="https://twitter.com/teamcity" summary="Official TeamCity Twitter">Follow TeamCity on Twitter</a>
                 </group>
-            </links>
+            </links>-->
         </misc>
     </section-starting-page>
 </topic>

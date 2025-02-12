@@ -3,9 +3,9 @@
 <instance-profile id="tc" name="TeamCity On-Premises" start-page="teamcity-documentation.topic" status="release">
 	<toc-element toc-title="TeamCity On-Premises Documentation Home" topic="teamcity-documentation.topic"/>
 
-	<toc-element topic="start-here.md"/>
+	<toc-element topic="quick-setup-guide.md"/>
 
-	<toc-element toc-title="Update Center">
+	<toc-element toc-title="Licensing and Updates">
 		<toc-element topic="what-s-new-in-teamcity.md">
 			<toc-element topic="teamcity-2024-12-release-notes.md"/>
 			<toc-element topic="teamcity-2024-12-1-release-notes.md"/>
@@ -244,7 +244,7 @@
 
 	<toc-element topic="project-administrator-guide.md">
 		<toc-element topic="configure-and-run-your-first-build.md"/>
-		<toc-element topic="create-pipeline.md"/>
+		<toc-element topic="create-build-chain.md"/>
 		<toc-element toc-title="Managing Projects">
 			<toc-element topic="creating-and-editing-projects.md"/>
 			<toc-element topic="project-export.md"/>
@@ -473,7 +473,7 @@
 
 	<toc-element hidden="true" topic="getting-started-with-teamcity.md">
 		<toc-element topic="continuous-integration-with-teamcity.md"/>
-		<toc-element topic="quick-setup-guide.md"/>
+
 
 		<toc-element topic="deploy-build.md"/>
 		<toc-element topic="view-build-results.md"/>

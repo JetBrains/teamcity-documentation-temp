@@ -39,6 +39,10 @@ The complete list of supported platforms and environments is available [here](su
 
 Check out our [CI/CD Guide](https://www.jetbrains.com/teamcity/ci-cd-guide/) for a curated collection of concise articles designed to help both new and experienced users quickly grasp key CI/CD concepts. The guide explores universal topics beyond just TeamCity, covering foundational CI/CD principles, the basics of DevOps, the importance of continuous integration in Agile teams, industry best practices, and much more. Whether you're new to CI/CD or looking to expand your understanding, this guide provides a solid starting point.
 
+## Tutorials
+
+This documentation includes a number of tutorials that walk you through the basic TeamCity operations. For more video guides on configuring TeamCity, visit the official tutorials page: [TeamCity Tutorials](https://www.jetbrains.com/teamcity/tutorials/). 
+
 ## Docs Navigation
 
 TeamCity is a powerful and scalable CI/CD solution, adaptable for businesses of any size — from small teams with simple setups to large enterprises managing thousands of build agents running diverse configurations. Whether your team consists of just a few people sharing equal responsibilities or a larger group with specialized roles, tasks typically fall into three main categories:

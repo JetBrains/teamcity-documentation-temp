@@ -18,9 +18,9 @@ The `.exe` TeamCity agent distribution comes bundled with 64-bit Amazon Corretto
 * the directory pointed to by the `TEAMCITY_JRE`, `JAVA_HOME`, or `JRE_HOME` environment variables (check that you only have one of the variables defined)
 * if you plan to run the agent as a Windows service, make sure to set the `wrapper.java.command` property in the `<agent home>\launcher\conf\wrapper.conf` file to a valid path to the Java executable
 
-<anchor name="SettingupandRunningAdditionalBuildAgents-UpgradingJavaonAgents"/>
 
 ## Upgrading Java on Agents
+{help-id="UpgradeJavaOnAgents"}
 
 If you are trying to launch an agent, and it is not able to find the required Java version in any of the [default locations](#Path+to+Java+on+Agent+Machine), the agent will report an error on starting, the process will not launch, and the agent will be shown as disconnected in the TeamCity UI.
 

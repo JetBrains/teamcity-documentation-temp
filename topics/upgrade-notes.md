@@ -19,6 +19,7 @@
 
 * The Perforce Helix Core client (p4) was updated to version 2022.2-2693782 in Agent and Server Docker images. 
 * The Git LFS version was bumped to 3.6.1 in Agent and Server Docker images.
+* The bundled Tomcat was updated to version 9.0.98.
 
 ### Known Issues
 {id="known-issues-2024-12-1"}

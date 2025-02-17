@@ -243,4 +243,4 @@ Set a verbosity level to `quiet`, `normal`, or `trace`.
 
 Supported arguments:
 * __arguments__ provided in the _Script parameters_ field and stored in the `Args` array (for example, `WriteLine(Args[0])` to write the value of the first script parameter);
-* __system parameters__ specified in __Build Configuration Settings | Parameters__ and stored in the `Props` dictionary (for example, `WriteLine(Props["version"])` to write the value of the `system.version` parameter).
+* __system parameters__ specified in __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Parameters__ and stored in the `Props` dictionary (for example, `WriteLine(Props["version"])` to write the value of the `system.version` parameter).

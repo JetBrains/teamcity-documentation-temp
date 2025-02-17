@@ -66,9 +66,9 @@ A build configuration can be attached to multiple templates using the _Attach to
 * detach the build configuration from some templates (the user marks those to be detached and then has to apply their changes).
 * detach the build configuration from all templates using the respectively named button in the same dialog window.
 
-You can view all the templates attached to a build configuration on the __Build Configuration Settings__ page.
+You can view all the templates attached to a build configuration on the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page.
 
-The settings from all templates the build configuration is attached to are inherited and you can view where they are inherited from in the view/edit __Build Configuration Settings__ pages.
+The settings from all templates the build configuration is attached to are inherited and you can view where they are inherited from in the view/edit __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__ pages.
 
 When a build configuration is detached from some of its templates, all the effective (that is not overridden in the config and not overlapped by some higher priority template) settings inherited from them are copied to the configuration. The copying build configuration logic is the same as extracting a template. On moving a build configuration/project, the logic checks all templates to which the build configuration is attached.
 
@@ -91,7 +91,7 @@ The older `template(...)` method and property __cannot__ be used multiple times 
 
 ## Detaching build configurations from template
 
-When you _detach a build configuration from a template_ using the __Detach from template__ option available in the __Actions__ menu of the __Build Configuration Settings__ page, all settings from the template will be copied to the build configuration and enabled for editing.   
+When you _detach a build configuration from a template_ using the __Detach from template__ option available in the __Actions__ menu of the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)s__ page, all settings from the template will be copied to the build configuration and enabled for editing.   
 Note that if a build configuration is attached to multiple templates, the __Detach from template__ option becomes unavailable — use __[Manage templates](#Associating+build+configuration+with+multiple+templates)__ instead.
 
 ## Redefining settings inherited from template

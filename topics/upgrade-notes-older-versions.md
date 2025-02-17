@@ -299,7 +299,7 @@ No noteworthy changes.
 {id="other-updates-202111"}
 
 * If you have added the `teamcity.nuget.feed.async.request.enabled` internal property to work around [this issue](#ki-202121) in 2021.1, remember to remove it on upgrading to 2021.1.1.
-* VCS roots of archived subprojects are now hidden by default on the __Project Settings | VCS Roots__ page. You can display them by enabling the _including archived_ filter option.
+* VCS roots of archived subprojects are now hidden by default on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | VCS Roots__ page. You can display them by enabling the _including archived_ filter option.
 
 ## Changes from 2020.2.x to 2021.1
 
@@ -1057,7 +1057,7 @@ If you have Built\-in authentication enabled with the "Allow user registration f
   * `teamcity.nuget.feed.server`
   * `system.teamcity.nuget.feed.auth.serverRootUrlBased.server`
   
-  You now need to explicitly specify the URL from the [NuGet Feed](using-teamcity-as-nuget-feed.md) page in the __Project Settings__.
+  You now need to explicitly specify the URL from the [NuGet Feed](using-teamcity-as-nuget-feed.md) page in the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__.
   
 * The enabled default NuGet feed with all published packages accessed by URL `/app/nuget/v1/FeedService.svc/` is now moved to the Root project feed `/app/nuget/feed/_Root/default/v2/`. It is recommended to switch to new URL in your projects.
 * .nupkg files are now indexed on the agent side instead of the server which could slightly increase the time of builds for projects with the NuGet Feed feature and the automatic package indexing enabled or for builds with NuGet Packages Indexer build feature.
@@ -1923,7 +1923,7 @@ If you have not [switched to 64 bit JVM](install-and-start-teamcity-server.md) y
 Some actions has moved under the "Actions" button available at the top\-right of the page, near Run button.   
 These include:"Label this build sources" on Changes tab of a build,   
 "Pause", "Copy", "Move", "Delete", "Associate with Template", "Extract Template", "Extract Meta\-Runner" on build configuration settings administration page,   
-"Copy", "Move", "Delete", "Archive", "Bulk edit IDs" on the __Project Settings__ administration page.
+"Copy", "Move", "Delete", "Archive", "Bulk edit IDs" on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__ administration page.
 
 #### Create Maven build configuration is not available by default
 

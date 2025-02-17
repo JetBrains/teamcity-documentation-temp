@@ -42,7 +42,7 @@ This has several implications:
 
 ### Configuring connection
 
-To enable integration, you need to create a connection to your issue tracker on the __Project Settings | Issue Trackers__ page.
+To enable integration, you need to create a connection to your issue tracker on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Issue Trackers__ page.
 
 The settings described below are common for all issue trackers:
 

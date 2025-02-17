@@ -126,7 +126,7 @@ If you want TeamCity to start an existing virtual machine and stop it after the 
 
 ### Configuring Cloud Profile
 
-A cloud profile is a collection of settings for TeamCity to start virtual machines with installed TeamCity agents on-demand. Cloud profiles are configured in the __Cloud Profiles__ section of __Project Settings__. See the detailed instruction for the [Amazon EC2](setting-up-teamcity-for-amazon-ec2.md), [Kubernetes](setting-up-teamcity-for-kubernetes.md), and [vSphere](setting-up-teamcity-for-vmware-vsphere-and-vcenter.md) profiles.
+A cloud profile is a collection of settings for TeamCity to start virtual machines with installed TeamCity agents on-demand. Cloud profiles are configured in the __Cloud Profiles__ section of __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__. See the detailed instruction for the [Amazon EC2](setting-up-teamcity-for-amazon-ec2.md), [Kubernetes](setting-up-teamcity-for-kubernetes.md), and [vSphere](setting-up-teamcity-for-vmware-vsphere-and-vcenter.md) profiles.
 
 ## Estimating Costs
 

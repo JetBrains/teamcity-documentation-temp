@@ -635,7 +635,7 @@ __Note:__ As shown by the last two examples, the comma operator (`,`) is equival
 
 Since the operator characters have special meaning, avoid creating a category that uses any of them in its name. For example, the category `db-tests` must not be used in the command line, as it appears to mean "run category db, except for category tests". The same limitation applies to the characters having a special meaning for the shell you are using.
 
-The following examples assume that the `teamcity.dotnet.nunitlauncher` property is set as a system property on the __[Parameters](configuring-build-parameters.md)__ page of __Build Configuration Settings__.
+The following examples assume that the `teamcity.dotnet.nunitlauncher` property is set as a system property on the __[Parameters](configuring-build-parameters.md)__ page of __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__.
 
 Run tests from an assembly:
 

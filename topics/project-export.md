@@ -6,7 +6,7 @@ It is possible to export settings of a project with its children to an archive t
 ## Exporting Project Settings
 
 To export the project settings, perform the following: 
-1. Go to __Project Settings__, from the __Actions__ menu in the upper right corner select __Export Project__: <img src="export1.png" width="1322" alt="Export a project"/>
+1. Go to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__, from the __Actions__ menu in the upper right corner select __Export Project__: <img src="export1.png" width="1322" alt="Export a project"/>
 2. The __Settings Export__ page is displayed allowing exporting the project and viewing all its dependencies. Click __Export__ to download a ZIP archive containing project settings. <img src="export2.png" width="1307" alt="Project export settings"/>
 
 The user exporting the project settings must have the "_View build configuration settings_" permission granted to the project developer role by default. External dependencies are exported only if the user has the required permission there, otherwise a warning will be shown before export.

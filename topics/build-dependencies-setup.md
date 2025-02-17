@@ -72,7 +72,7 @@ Typically, when adding a snapshot dependency, you also add an artifact dependenc
 As you noticed, there are 2 types of dependencies in TeamCity: __artifact__ dependencies and __snapshot__ dependencies. In two words, the first one allows using the output of one build in another, while the second one can trigger builds from several build configurations in a specific order, but on the same sources.   
 These two dependencies are often configured together because an artifact dependency doesn't affect the way builds are triggered, while a snapshot dependency itself doesn't reuse artifacts, and sometimes you may need only one of those.
 
-Dependencies are configured on the dedicated page of a build configuration settings.
+Dependencies are configured on the dedicated page of [Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes).
 
 Now, let's see what you can do with artifact and snapshot dependencies, and how exactly they work.
 

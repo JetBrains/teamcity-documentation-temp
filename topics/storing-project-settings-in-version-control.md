@@ -29,10 +29,10 @@ You can store project settings in the XML format or in the [Kotlin language](htt
 
 By default, the synchronization of the project settings with the version control system is disabled.
 
-To enable it, go to __Project Settings | Versioned Settings | Configuration__. The "_Enable/disable versioned settings_" permission is required (default for the [System Administrator](managing-roles-and-permissions.md#Per-Project+Authorization+Mode) role).
+To enable it, go to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Versioned Settings | Configuration__. The "_Enable/disable versioned settings_" permission is required (default for the [System Administrator](managing-roles-and-permissions.md#Per-Project+Authorization+Mode) role).
 {instance="tc"}
 
-To enable it, go to __Project Settings | Versioned Settings | Configuration__. The "_Enable/disable versioned settings_" permission is required (default for the [System Administrator](managing-roles-and-permissions.md#Default+User+Roles) role).
+To enable it, go to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Versioned Settings | Configuration__. The "_Enable/disable versioned settings_" permission is required (default for the [System Administrator](managing-roles-and-permissions.md#Default+User+Roles) role).
 {instance="tcc"}
 
 <img src="dk-versioned-settings-main.png" width="706" alt="Main versioned settings page"/>
@@ -53,7 +53,7 @@ The default mode is a _two-way synchronization_. This mode is enabled when the _
 
 The two-way synchronization works as follows:
 
-* Each administrative change made to the project settings in the TeamCity UI is committed to the version control system. The author of the commited changes matches the TeamCity user who made related project edits.
+* Each administrative change made to the [project settings](project-administrator-guide.md#Edit+and+View+Modes) in the TeamCity UI is committed to the version control system. The author of the commited changes matches the TeamCity user who made related project edits.
 
 * If the changes are applied on the VCS side (if a Kotlin or XML settings file is edited), the TeamCity server detects them and modifies the project on the fly.
   
@@ -114,7 +114,7 @@ To prevent unexpected errors caused by ambiguous settings source, TeamCity does 
 
 > When you create new projects, TeamCity currently detects existing project settings only if they are stored in the default `.teamcity` folder. If project settings are stored in a custom repository directory, TeamCity does not offer options to import these settings or start a new project from scratch. As a workaround, do the following:
 > 1. Create a new project from a remote repository.
-> 2. Navigate to project settings and enable synchronization on the **Versioned Settings** page.
+> 2. Navigate to [project settings](project-administrator-guide.md#Edit+and+View+Modes) and enable synchronization on the **Versioned Settings** page.
 > 3. Specify the path to existing project settings in the **Settings path in VCS** field.
 > 4. Click **Apply** to save your settings, then **Load project settings from VCS...** at the bottom of the page.
 >
@@ -194,9 +194,9 @@ To specify which settings TeamCity should apply when a build starts, choose a re
         // ...
     })
     ```
-4. <include from="common-templates.md" element-id="open-project-settings"/>
-5. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Versioned Settings"/></include>
-6. Choose the following options:
+
+4. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Versioned Settings"/></include>
+5. Choose the following options:
 
    * **Synchronization enabled**: On
    * **Project settings VCS root**: Choose your project's VCS root
@@ -204,19 +204,19 @@ To specify which settings TeamCity should apply when a build starts, choose a re
    * **When build starts**: Select "use settings from VCS"
    * **Apply changes in snapshot dependencies and version control settings**: On (see the [](#Apply+Changes+in+Snapshot+Dependencies+and+Version+Control+Settings) section)
    
-7. Click **Apply** to save your new settings. TeamCity will verify the validity of your build configuration and push the [project settings directory](#Custom+Settings+Path) with your settings to the related VCS repository.
-8. Clone TeamCity settings from a remote repository to local storage.
+6. Click **Apply** to save your new settings. TeamCity will verify the validity of your build configuration and push the [project settings directory](#Custom+Settings+Path) with your settings to the related VCS repository.
+7. Clone TeamCity settings from a remote repository to local storage.
     
     ```Shell
     git clone <Clone_URL> .
     ```
 
-9. Create a new repository branch.
+8. Create a new repository branch.
 
     ```Shell
     git checkout -b custom-branch
     ```
-10. Edit the local copy of your [`<project settings directory>`](#Custom+Settings+Path)`/settings.kts` (`.teamcity/settings.kts` by default) file as follows:
+9. Edit the local copy of your [`<project settings directory>`](#Custom+Settings+Path)`/settings.kts` (`.teamcity/settings.kts` by default) file as follows:
 
     ```Kotlin
     import jetbrains.buildServer.configs.kotlin.*
@@ -237,7 +237,7 @@ To specify which settings TeamCity should apply when a build starts, choose a re
     
     ```
 
-11. Push your new branch to the remote repository.
+10. Push your new branch to the remote repository.
 
     ```Shell
     git add *
@@ -245,9 +245,9 @@ To specify which settings TeamCity should apply when a build starts, choose a re
     git push --set-upstream origin custom-branch
     ```
    
-12. TeamCity should collect your new changes shortly. You can manually trigger this process by clicking **Load project settings from VCS...** on the **Versioned Settings** tab of your project settings page.
+11. TeamCity should collect your new changes shortly. You can manually trigger this process by clicking **Load project settings from VCS...** on the **Versioned Settings** tab of your project settings page.
 
-13. If you have a default [trigger](configuring-build-triggers.md) set up to launch new builds whenever a remote repository changes, a new build for your new custom-branch will start automatically. Otherwise, choose the required branch on the build configuration page and run a new build manually.
+12. If you have a default [trigger](configuring-build-triggers.md) set up to launch new builds whenever a remote repository changes, a new build for your new custom-branch will start automatically. Otherwise, choose the required branch on the build configuration page and run a new build manually.
     
     <img src="dk-versionedSettingsBranch.png" width="706" alt="Trigger custom branch build"/>
 
@@ -483,7 +483,7 @@ The aforementioned setting allows TeamCity to automatically generate missing con
 
 ## Storing Secure Settings 
 
-It is recommended to store security data outside of VCS. The _Store passwords and API tokens outside of VCS_ option is available on the __Project Settings | Versioned Settings | Configuration__ page if the [two-way synchronization](#two-way-sync) is enabled. By default, this option is enabled if versioned settings are enabled for a project for the first time, and disabled for projects already storing their settings in the VCS.
+It is recommended to store security data outside of VCS. The _Store passwords and API tokens outside of VCS_ option is available on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Versioned Settings | Configuration__ page if the [two-way synchronization](#two-way-sync) is enabled. By default, this option is enabled if versioned settings are enabled for a project for the first time, and disabled for projects already storing their settings in the VCS.
 
 If this option is enabled, TeamCity stores randomly generated IDs in XML configuration files instead of the scrambled passwords. Actual passwords are stored on the disk under the [TeamCity Data Directory](teamcity-data-directory.md) and are not checked into the version control system.
 
@@ -504,7 +504,8 @@ If this option is disabled, the [security implications](#Implications+of+Storing
 [//]: # (AltHead: tokensGen)
 
 If you need to add a password (or other secure value) to the versioned settings not via the TeamCity UI (for example, via Kotlin DSL), you can generate a token to be used in the settings instead of this password.   
-In the __Project Settings__, select _Generate token for a secure value_ in the __Actions__ drop-down menu. Enter the password and click __Generate Token__. The generated token will be stored on the server. You can copy and [use it in the project configuration files](kotlin-dsl.md#Working+with+secure+values+in+DSL) instead of the password.
+
+In the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)s__, select _Generate token for a secure value_ in the __Actions__ drop-down menu. Enter the password and click __Generate Token__. The generated token will be stored on the server. You can copy and [use it in the project configuration files](kotlin-dsl.md#Working+with+secure+values+in+DSL) instead of the password.
 
 ```Kotlin
 params {
@@ -569,7 +570,7 @@ title="TeamCity Terraform Provider"/>
 ## Settings Format
 [//]: # (AltHead: settingsFormat)
 
-To be able to select the settings format, click __Show advanced options__ in __Project Settings | Versioned Settings | Configuration__. 
+To be able to select the settings format, click __Show advanced options__ in __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Versioned Settings | Configuration__. 
 
 TeamCity stores project settings:
 * in the XML format
@@ -577,7 +578,7 @@ TeamCity stores project settings:
 
 <note>
 
-To test Kotlin-based settings in a sandbox project, you can download the settings as a ZIP archive without disabling the UI: on the __Project Settings__ page, click the __Actions__ menu and select __Download settings in Kotlin format.__ A ZIP archive will be downloaded.
+To test Kotlin-based settings in a sandbox project, you can download the settings as a ZIP archive without disabling the UI: on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page, click the __Actions__ menu and select __Download settings in Kotlin format.__ A ZIP archive will be downloaded.
 
 </note>
 
@@ -602,7 +603,7 @@ When TeamCity commits settings into a VCS, it uses the standard commit message n
 
 ## Displaying Changes
 
-TeamCity will not only synchronize the settings, but will also automatically display changes to the project settings the same way it is done for regular changes in the version control. You can configure the changes to be displayed for the affected build configurations: on the __Project Settings | Versioned Settings | Configuration__ tab, click __Show advanced options__ and check the _Show settings changes in builds_ box. This option is only effective if you store versioned settings in a VCS root that is not directly attached to the current build configuration. If a VCS root is attached to this configuration, its changes will be displayed by default, unless specific [build triggering rules](configuring-build-triggers.md) are configured.
+TeamCity will not only synchronize the settings, but will also automatically display changes to the project settings the same way it is done for regular changes in the version control. You can configure the changes to be displayed for the affected build configurations: on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Versioned Settings | Configuration__ tab, click __Show advanced options__ and check the _Show settings changes in builds_ box. This option is only effective if you store versioned settings in a VCS root that is not directly attached to the current build configuration. If a VCS root is attached to this configuration, its changes will be displayed by default, unless specific [build triggering rules](configuring-build-triggers.md) are configured.
 
 If you store versioned settings in a separate VCS root, not the one which is directly attached to your build configurations, then when turned ON this checkbox starts showing changes made to these VCS roots. If VCS root is already attached to your configuration, then it does nothing.
 

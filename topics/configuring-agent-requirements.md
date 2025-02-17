@@ -24,16 +24,16 @@ You can add custom agent requirements in both TeamCity UI and in [](kotlin-dsl.m
 <tabs>
 <tab title="TeamCity UI">
 
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Agent Requirements"/></include>. This page displays which agents are <a href="#Build+Step+Requirements">currently eligible</a> to run your build configuration based on which building routines it performs.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Agent Requirements"/></include>. This page displays which agents are <a href="#Build+Step+Requirements">currently eligible</a> to run your build configuration based on which building routines it performs.
    
    <img src="dk-agentrequirements-tab.png" width="706" alt="Agent Requirements Tab"/>
 
-3. Click the **Add new requirement** button.
-4. Choose a parameter, a condition, and enter a value to create a new expression. Since TeamCity scans parameters reported by agents, it shows suggestions as you type parameter names and values.
+2. Click the **Add new requirement** button.
+3. Choose a parameter, a condition, and enter a value to create a new expression. Since TeamCity scans parameters reported by agents, it shows suggestions as you type parameter names and values.
 
    <img src="dk-agentrequirements-addnew.png" width="706" alt="Add new requirement"/>
-5. Click **Save**. Your list of compatible and incompatible agents will be updated. If TeamCity is unable to find agents that satisfy your new condition, a corresponding warning is displayed next to the requirement. Running such build configuration results in the build waiting in the [queue](working-with-build-queue.md) with the "There are no idle compatible agents which can run this build" status.
+4. Click **Save**. Your list of compatible and incompatible agents will be updated. If TeamCity is unable to find agents that satisfy your new condition, a corresponding warning is displayed next to the requirement. Running such build configuration results in the build waiting in the [queue](working-with-build-queue.md) with the "There are no idle compatible agents which can run this build" status.
    
    <img src="dk-invalid-agent-requirement.png" width="706" alt="No compatible agents"/>
 

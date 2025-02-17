@@ -31,9 +31,8 @@ In the _Shell script_ field, enter all Node.js commands to be executed in this s
 
 To access a private npm registry during a build (for example, to download a package), you need to:
 1. Configure an _NPM Registry_ connection as described [here](configuring-connections.md#npm-registry-settings).
-2. <include from="common-templates.md" element-id="open-configuration-settings"/>
-3. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
-4. Add an _NPM Registry Connection_ build feature and select the connection created in step 1.
+2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+3. Add an _NPM Registry Connection_ build feature and select the connection created in step 1.
 
 As a result, a TeamCity agent will authenticate in this registry during the build.
 

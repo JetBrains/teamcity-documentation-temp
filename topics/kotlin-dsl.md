@@ -67,7 +67,7 @@ You can create, edit, and debug TeamCity Kotlin DSL projects in IntelliJ IDEA (b
 To add the `.teamcity` settings directory as a new module to an existing project in IntelliJ IDEA, follow the step below:
 
 1. Go to __File | Project Structure__, or press __Ctrl+Shift+Alt+S__.
-2. Select __Modules__ under the __Project Settings__ section.
+2. Select __Modules__ under the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__ section.
 3. Click the plus sign, select __Import module__ and choose the directory containing your project settings. Click __OK__ and follow the wizard.
 4. Click __Apply__. The new module is added to your project structure.
 
@@ -261,7 +261,7 @@ the new build configuration will not contain the builds' history anymore.
 TeamCity will keep the history of builds for 5 days until [cleaning it up](teamcity-data-clean-up.md), and the history can still be restored manually during this period.
 
 To manually restore the builds' history after changing the build configuration ID, 
-go to the __Build Configuration Settings__ of the build configuration whose ID was changed, 
+go to the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__ of the build configuration whose ID was changed, 
 open the __Actions__ menu, and click __Attach build history__. 
 You will be redirected to the __Attach Build History__ tab. 
 Select the detached build history and click __Attach__.

@@ -7,7 +7,7 @@ Automatic build clean-up has been present in TeamCity since the early versions. 
 
 With this release, we are introducing more options for flexible control of the clean-up process. In addition to existing "_base rule_" for a project or build configuration, you can now create multiple "_keep rules_" to specify what builds and data to preserve during the clean-up. The keep rules are more fine-grained and can cover cases like keeping all the builds with a certain tag (for example, `release`) or in a certain branch. While using the new keep rules requires a better understanding of different kinds of builds and their data, it also offers greater flexibility. 
 
-The __Clean-up Rules__ section of __Project Settings__ allows managing base and keep rules for the current project and for its subprojects and build configurations.
+The __Clean-up Rules__ section of __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__ allows managing base and keep rules for the current project and for its subprojects and build configurations.
 
 <img src="clean-up-rules.png" width="1000" alt="Clean-Up Rules page"/>
 

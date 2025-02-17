@@ -54,7 +54,7 @@ If you enable the [feature branches support](integrating-teamcity-with-perforce.
 
 <anchor name="perforce-admin-access"/>
 
-To establish direct access to your Perforce server, go to __Project Settings | Connections__ in TeamCity and add a _Perforce Administrator Access_ connection. In its settings, enter the host and user credentials for accessing the Perforce server (the user must have the [`admin` permission](https://www.perforce.com/manuals/p4sag/Content/P4SAG/protections.set.html#protections.set.access_levels)), and TeamCity will connect to it.
+To establish direct access to your Perforce server, go to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Connections__ in TeamCity and add a _Perforce Administrator Access_ connection. In its settings, enter the host and user credentials for accessing the Perforce server (the user must have the [`admin` permission](https://www.perforce.com/manuals/p4sag/Content/P4SAG/protections.set.html#protections.set.access_levels)), and TeamCity will connect to it.
 {id="P4AdminAccessConnection" help-id="P4AdminAccessConnection"}
 
 During every [clean-up](teamcity-data-clean-up.md), TeamCity will detect and delete workspaces that have been inactive for more than 7 days. You can also delete them anytime by clicking _Delete workspaces_ right in the connection settings. Note that workspaces are deleted only on the server — not on build agents — and only if they were created by TeamCity.

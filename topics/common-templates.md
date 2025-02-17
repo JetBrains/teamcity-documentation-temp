@@ -2,17 +2,14 @@
 
 ## Project and Configuration Settings
 
-<snippet id="open-project-settings">Navigate to <b>Administration | &lt;Your Project&gt;</b> to access project settings.</snippet>
+
 
 <var name="tab-name" value="tab-name"/>
-<snippet id="open-project-settings-tab">Open the <b>%tab-name%</b> settings tab.</snippet>
-
-
-<snippet id="open-configuration-settings">Navigate to <b>Administration | &lt;Your Configuration&gt;</b> to access build configuration settings.</snippet>
+<snippet id="open-project-settings-tab">Open <a href="project-administrator-guide.md#Edit+and+View+Modes">project settings</a> and navigate to the <b>%tab-name%</b> settings tab.</snippet>
 
 
 <var name="configuration-tab-name" value="configuration-tab-name"/>
-<snippet id="open-configuration-settings-tab">Open the <b>%configuration-tab-name%</b> settings tab.</snippet>
+<snippet id="open-configuration-settings-tab">Open <a href="project-administrator-guide.md#Edit+and+View+Modes">configuration settings</a> and navigate to the <b>%configuration-tab-name%</b> settings tab.</snippet>
 
 
 
@@ -24,7 +21,7 @@
 
 ## Connections
 
-<snippet id="create-new-connection">Switch to the <b>Connections</b> tab and click <b>Add Connection</b>. Note that connections can be used only in their parent projects and their subprojects. If you want a connection to be available globally, add it to the <b>Root</b> project.</snippet>
+<snippet id="create-new-connection">Click <b>Add Connection</b>. Note that connections can be used only in their parent projects and their subprojects. If you want a connection to be available globally, add it to the <b>Root</b> project.</snippet>
 
 <var name="connection-type" value="connection-type"/>
 <snippet id="choose-connection-type">Select "%connection-type%" in the <b>Connection Type</b> drop-down menu.</snippet>

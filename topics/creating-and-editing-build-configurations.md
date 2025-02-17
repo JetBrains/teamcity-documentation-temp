@@ -24,8 +24,8 @@ title="Improving your first build configuration"/>
 To find the build configuration creation wizard:
 1. Go to __Administration | Projects__ and open the required project.  
    Alternatively, open the project using the __Projects__ pop-up menu and click __Edit Project Settings__.  
-   The __Project Settings__ page will open.
-2. On the __Project Settings__ page, click __Create build configuration__ under the __Build Configurations__ section.
+   The __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page will open.
+2. On the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)s__ page, click __Create build configuration__ under the __Build Configurations__ section.
 3. Follow the instructions specific to your preferred method:
    * [manually](#Creating+Build+Configuration+Manually)
    * [pointing to a repository URL](#Creating+Build+Configuration+from+URL)
@@ -83,8 +83,8 @@ In the build configuration creation wizard:
 Creating a new [build configuration template](build-configuration-template.md) is similar to creating a new configuration:
 1. On the __Administration | Projects__ page, select the target project in the list.  
   Alternatively, open the project using the __Projects__ pop-up menu and click __Edit Project Settings__.  
-  The __Project Settings__ page opens.
-2. On the __Project Settings__ page, click __Create template__ under the __Build Configuration Templates__ section.
+  The __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page opens.
+2. On the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page, click __Create template__ under the __Build Configuration Templates__ section.
 3. Proceed with configuring [general settings](configuring-general-settings.md), [VCS settings](configuring-vcs-settings.md), and [build steps](configuring-build-steps.md).
 
 Alternatively, you can create a build configuration template from an existing build configuration:

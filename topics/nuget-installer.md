@@ -97,7 +97,7 @@ Packages Sources
 
 Specify the NuGet package sources. If left blank, [`https://nuget.org`](https://nuget.org/) is used to search for your packages.
 
-If you are using a [TeamCity NuGet feed](using-teamcity-as-nuget-feed.md), select it using the 'magic wand' icon <img src="magic-wand.png" alt="Switch to the Sakura UI" height="20" width="20"/> or manually specify the URL from the NuGet Feed section of __Project Settings__.
+If you are using a [TeamCity NuGet feed](using-teamcity-as-nuget-feed.md), select it using the 'magic wand' icon <img src="magic-wand.png" alt="Switch to the Sakura UI" height="20" width="20"/> or manually specify the URL from the NuGet Feed section of [project settings](project-administrator-guide.md#Edit+and+View+Modes).
 {instance="tc"}
 
 If you use packages from an authenticated feed, configure the [NuGet Feed Credentials](nuget-feed-credentials.md) build feature.   

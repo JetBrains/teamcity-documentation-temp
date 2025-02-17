@@ -5,7 +5,7 @@ TeamCity allows storing presets of connections to external services. You can reu
 
 To add a connection, do the following:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. Select the connection type, set its _Display name_ to distinguish it from the others, and configure it as described below.
 
@@ -35,7 +35,7 @@ This connection can be used for [authenticating users via Azure DevOps](configur
 
 To configure an Azure DevOps OAuth 2.0 connection:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. <include from="common-templates.md" element-id="choose-connection-type"><var name="connection-type" value="Azure DevOps OAuth 2.0"/></include>
 4. <include from="common-templates.md" element-id="connections-unique-callback-URL"><var name="unique-url-sample" value="/oauth/azuredevops/rid:your-unique-id/accessToken.html"/></include>
@@ -54,7 +54,7 @@ This type of connection uses personal access tokens. It allows creating a [proje
 
 To configure an Azure DevOps PAT connection:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. <include from="common-templates.md" element-id="choose-connection-type"><var name="connection-type" value="Azure DevOps PAT"/></include> The page that opens provides the parameters to be used when connecting TeamCity to Azure DevOps Services.
 4. Log in to your Azure DevOps Services account to create a personal access token with _All scopes_ as described in the [Microsoft documentation](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/use-personal-access-tokens-to-authenticate).
@@ -107,7 +107,7 @@ Integration with Bitbucket Server and Data Center currently allows you to:
 To allow TeamCity to access Bitbucket data, you need to create an incoming application link in Bitbucket to grant TeamCity required permissions.
 
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. <include from="common-templates.md" element-id="choose-connection-type"><var name="connection-type" value="Bitbucket Server / Data Center"/></include>
 4. <include from="common-templates.md" element-id="connections-unique-callback-URL"><var name="unique-url-sample" value="/oauth/bitbucketserver/rid:your_unique_id/accessToken.html"/></include>
@@ -165,7 +165,7 @@ If you do not already have a suitable GitHub App, you can allow TeamCity to regi
 <ol>
 
 <li>
-<include from="common-templates.md" element-id="open-project-settings"/>
+<include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 </li>
 
 <li>
@@ -257,7 +257,7 @@ To create a TeamCity connection that utilizes a GitHub OAuth Application:
 
 <ol>
 
-<li><include from="common-templates.md" element-id="open-project-settings"/></li>
+<li><include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include></li>
 
 <li><include from="common-templates.md" element-id="create-new-connection"/></li>
 
@@ -310,7 +310,7 @@ OAuth Applications generate user access tokens and allow third-party services li
 
 To create a TeamCity connection that uses a GitLab OAuth Application:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. <include from="common-templates.md" element-id="choose-connection-type"><var name="connection-type" value="GitLab.com or GitLab CE/EE"/></include>
 4. <b>GitLab CE/EE</b> connections only: <include from="common-templates.md" element-id="connections-unique-callback-URL"><var name="unique-url-sample" value="/oauth/gitlab/rid:your_unique_id/accessToken.html"/></include>
@@ -350,7 +350,7 @@ Before configuring a Google connection, you need to [create a new Google project
 To configure a Google connection in TeamCity:
 
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. <include from="common-templates.md" element-id="choose-connection-type"><var name="connection-type" value="Google"/></include>
 4. Copy redirect URLs shown by TeamCity; these URLs are required to register an OAuth client.
@@ -376,7 +376,7 @@ The Amazon Web Services (AWS) connection allows defining AWS credentials once an
 
 To configure an AWS connection in TeamCity:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. <include from="common-templates.md" element-id="choose-connection-type"><var name="connection-type" value="Amazon Web Services (AWS)"/></include>
 4. Provide a name to distinguish this connection from others.
@@ -760,7 +760,7 @@ You only need a single organization connection configured in a parent TeamCity p
 
 To configure an organization connection:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. <include from="common-templates.md" element-id="choose-connection-type"><var name="connection-type" value="JetBrains Space"/></include>
 4. Choose **Automatic: Organization Connection** under **Creation mode**.
@@ -849,7 +849,7 @@ Save the connection and proceed with adding a [Commit Status Publisher](commit-s
 
 Kubernetes connections allow TeamCity to access your Kubernetes resources. These connections can be used to [offload building tasks to K8s clusters](kubernetes-executor.md).
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
    
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 

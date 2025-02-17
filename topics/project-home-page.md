@@ -16,7 +16,7 @@ This page has the following tabs:
 * __Flaky Tests__: shows [flaky tests](investigating-and-muting-build-failures.md#Flaky+Tests) of the current project.
 
 From __Project Home__, you can switch to other view modes:
-* To switch to __Project Settings__, use the __Edit project__ link in the upper right corner. To access a particular section of the settings, open the context menu to the right of this link.
+* To switch to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__, use the __Edit project__ link in the upper right corner. To access a particular section of the settings, open the context menu to the right of this link.
 * To open __Build Configuration Home__ of a particular nested build configuration, click its name in the list or its trends card.
 * To open __Build Results__ of a particular build, expand its build configuration in a list and click the build's number. Or, when in the __Trends__ mode, click the respective bar on a chart. Note that only a limited number of most recent builds are displayed in the __Project Home__ mode. To see more builds, open the __Build Configuration Home__ view.
 

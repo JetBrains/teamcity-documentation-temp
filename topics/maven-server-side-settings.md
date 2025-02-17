@@ -5,7 +5,7 @@
 
 The TeamCity server invokes Maven on the server side for functionality like Maven dependency triggers and the Maven model display on the __Maven__ build configuration tab.
 
-You can upload Maven settings using the **Maven Settings** tab of project settings, and then select one of the uploaded settings on the [Maven step](maven.md) settings.
+You can upload Maven settings using the **Maven Settings** tab of [project settings](project-administrator-guide.md#Edit+and+View+Modes), and then select one of the uploaded settings on the [Maven step](maven.md) settings.
 
 During the process, TeamCity uses the usual Maven logic for finding the `settings.xml` files with several differences (see below). 
 
@@ -69,7 +69,7 @@ Uploaded settings name
 
 <td>
 
-TeamCity automatically uses the specified file content both on the server and agents. Maven settings are defined on the project level: the __Project Settings__ | __Maven Settings__ tab. The settings are stored in the [`<TeamCity Data Directory>`](teamcity-data-directory.md)`/config/projects/<projectID>/pluginData/mavenSettings` directory.
+TeamCity automatically uses the specified file content both on the server and agents. Maven settings are defined on the project level: the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Maven Settings__ tab. The settings are stored in the [`<TeamCity Data Directory>`](teamcity-data-directory.md)`/config/projects/<projectID>/pluginData/mavenSettings` directory.
 
 <note>
 

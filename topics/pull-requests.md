@@ -652,8 +652,9 @@ The members of your [organization](https://help.github.com/en/articles/about-org
 TeamCity can detect each pull request sent to the `master` branch and build the web application based on the updated sources.
 
 To configure the described workflow for the `web-app` build configuration in TeamCity:
+
 1. Add a [VCS root](vcs-root.md) to the build configuration:   
-    * <include from="common-templates.md" element-id="open-configuration-settings"/>
+    
     * <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Version Control Settings"/></include>
    * Click __Attach VCS root__.
    * Configure the root parameters:
@@ -665,7 +666,7 @@ To configure the described workflow for the `web-app` build configuration in Tea
       - __Authentication Settings__ of the GitHub user that has access rights to the `web-app` repository
    * Test the connection and, if successful, click __Create__.
 2. Add the _Pull Requests_ [build feature](adding-build-features.md) to the build configuration:
-    * <include from="common-templates.md" element-id="open-configuration-settings"/>
+    
     * <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
     * Click __Add build feature__.
     * Configure the feature parameters:

@@ -40,9 +40,9 @@ Now, your TeamCity builds can detect pull requests in on-premises and cloud Azur
 
 To configure the [respective build feature](pull-requests.md):
 
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
-3. Click __Add build feature__ and choose _Pull Requests_.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+2. Click __Add build feature__ and choose _Pull Requests_.
 
 Note that in case with Azure DevOps TeamCity detects requests on a merge branch — not on the pull request itself as with other VCSs. Each build will be launched on a virtual branch showing an actual result of the build after merging the PR. Thus, the build will contain both the commit with changes and the virtual merge commit.
 
@@ -102,7 +102,7 @@ If you generate tokens for a DSL-based project in TeamCity, these tokens are sav
  
 To take care of this procedure, TeamCity now automatically looks for [missing secure values](storing-project-settings-in-version-control.md#Managing+Tokens) of the project's tokens in other projects.
 
-On the __Project Settings | Versioned Settings | Tokens__ tab, you can enter the required secure values manually. If TeamCity finds the same tokens in other projects you are permitted to edit, you will have an option to copy the values used in these projects.
+On the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Versioned Settings | Tokens__ tab, you can enter the required secure values manually. If TeamCity finds the same tokens in other projects you are permitted to edit, you will have an option to copy the values used in these projects.
 
 <img src="wn-tokens-tab.png" alt="TeamCity Tokens tab" width="1000"/>
 
@@ -167,7 +167,7 @@ The __Project Home__ page, introduced in the experimental UI in TeamCity 2019.1,
 * Java 11 has been bundled with the TeamCity server Windows installer and server Docker images instead of Java 8.
 * Automatic assignment of investigations on second failure has been optimized (read more in [our documentation](investigations-auto-assigner.md#delay-auto-assign)).
 * TeamCity now uses the BCrypt algorithm to make user password storage safer.
-* The __Project Settings | Build Schedule__ tab now has an alternative filter option: hide triggers with the enabled "_Trigger only if there are pending changes_" option. This helps to quickly find all triggers where this option is disabled if you need to investigate the builds' behavior.
+* The __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Build Schedule__ tab now has an alternative filter option: hide triggers with the enabled "_Trigger only if there are pending changes_" option. This helps to quickly find all triggers where this option is disabled if you need to investigate the builds' behavior.
 * To comply with recommended security and performance practices, the TeamCity agent Docker images now:
    * run under a non-root user;
    * use Docker volumes for directories that require writing large amounts of data.

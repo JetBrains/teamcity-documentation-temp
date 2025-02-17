@@ -3,7 +3,7 @@
 
 The _schedule trigger_ allows defining a schedule for automatically running builds in a given configuration. Multiple schedule triggers can be added to a single build configuration.
 
-The __[Builds Schedule](builds-schedule.md)__ section of the current __Project Settings__ displays the configured build times.
+The __[Builds Schedule](builds-schedule.md)__ section of the current [project settings](project-administrator-guide.md#Edit+and+View+Modes) displays the configured build times.
 
 ## Triggering Conditions
 

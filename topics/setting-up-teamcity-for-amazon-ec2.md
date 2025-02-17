@@ -75,7 +75,7 @@ After you have created a required instance or AMI, you can set up cloud profiles
 
 A **cloud profile** is a collection of general settings for TeamCity to start virtual machines.
 
-1. <include from="common-templates.md" element-id="open-project-settings"/> If you want cloud agents in this profile to be available globally, choose the &lt;Root project&gt;. Profiles owned by individual projects can be used to spawn agents that can be used only in these projects.
+1. Navigate to the required project. If you want cloud agents in this profile to be available globally, choose the **Root project**. Profiles owned by individual projects can be used to spawn agents that can be used only in these projects.
 2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Cloud Profiles"/></include>
 3. Click **Create new profile**.
 4. Set **Cloud type** to "Amazon EC2".

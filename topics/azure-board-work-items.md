@@ -25,9 +25,9 @@ Enabling TeamCity integration with Azure Board Work Items requires Project Admin
 
 To enable the integration, do the following: 
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
-2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Issue Trackers"/></include>
-3. Create a new connection of the **Team Foundation Work Items** type with the following settings:
+
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Issue Trackers"/></include>
+2. Create a new connection of the **Team Foundation Work Items** type with the following settings:
     * **Display Name** — Specify the connection name to distinguish it from the other connections.
     * **Server URL** — Enter Azure DevOps Server URL in either `https://dev.azure.com/<organization>/<project>` (Azure DevOps Services) or `http[s]://<host>:<port>/tfs/<collection>/<project>` (Azure DevOps Server) format.
     * **Username** — Specify a user to access the Azure DevOps Server. This can be a username or `DOMAIN\UserName` string. Leave empty to let Azure DevOps select a user account that is used to run the TeamCity Server.

@@ -18,9 +18,8 @@ Let's see how the build chain mechanism works in details. On triggering a depend
 
 To specify dependencies in your build configuration:
 
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Dependencies"/></include>
-3. Click the __Add new snapshot dependency__ button.
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Dependencies"/></include>
+2. Click the __Add new snapshot dependency__ button.
 
 See also [Build Dependencies Setup](build-dependencies-setup.md) for details and an example.
 
@@ -63,7 +62,7 @@ Build Chains are visible in various places in the TeamCity web UI:
 
 ### Dependencies page of build configuration settings
 
-If a build configuration is a part of a build chain, the corresponding information is displayed in __Build Configuration Settings | Dependencies | Snapshot Dependencies__. Clicking the build chain link opens the preview of the build chain and its configuration in a separate window. The preview shows builds of the chain; the builds with automatic triggering configured are marked with ths icon: ![v.png](v.png).
+If a build configuration is a part of a build chain, the corresponding information is displayed in __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Dependencies | Snapshot Dependencies__. Clicking the build chain link opens the preview of the build chain and its configuration in a separate window. The preview shows builds of the chain; the builds with automatic triggering configured are marked with ths icon: ![v.png](v.png).
 
 <img src="snapshotDepPreview.png" alt="Preview of snapshot dependencies"/>
 

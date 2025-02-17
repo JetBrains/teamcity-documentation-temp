@@ -33,10 +33,10 @@ You can install a meta-runner using the TeamCity web UI. Alternatively, you can 
 <deflist>
 <def title="Install a meta-runner via the Web UI">
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
-2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Meta-Runners"/></include>
-3. Click __Upload Meta-Runner__, and select the meta-runner definition file.
-4. Save your changes.
+
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Meta-Runners"/></include>
+2. Click __Upload Meta-Runner__, and select the meta-runner definition file.
+3. Save your changes.
 
 </def>
 
@@ -54,7 +54,7 @@ Once you place the file on the disk, TeamCity will detect it and load the meta-r
 
 If the meta-runner is loaded successfully, you will see it listed on the __Meta-Runners__ page in the project settings; if you have appropriate permissions, you can modify the definition directly in the TeamCity UI.
 
-The runner is now available in the list of build runners on the __Build Configuration Settings | Build Steps__ page and is represented as a native TeamCity runner with a convenient UI.
+The runner is now available in the list of build runners on the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Build Steps__ page and is represented as a native TeamCity runner with a convenient UI.
 
 A meta-runner placed into a project will be available to all its subprojects and build configurations. To make a meta-runner available to all projects, place it in the Root project.
 
@@ -105,7 +105,7 @@ Once the build steps and parameters are defined, we need to make sure our build 
 
 ### Extracting and Using Meta-Runner
 
-If the build configuration works properly, we can create a meta-runner by clicking the __Actions__ button in the upper right corner of the __Build Configuration Settings__ page and selecting the __Extract meta-runner__ option:
+If the build configuration works properly, we can create a meta-runner by clicking the __Actions__ button in the upper right corner of the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page and selecting the __Extract meta-runner__ option:
 
 <img src="extract-meta-runner.png" width="650" alt="Extract Meta-Runner"/>
 

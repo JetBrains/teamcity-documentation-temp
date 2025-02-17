@@ -44,7 +44,7 @@ The location is important, as the [Free disk space](free-disk-space.md) feature 
 
 ## Docker Registry Automatic Login/Logout
 
-If you need to log in to a registry requiring authentication before a build, select the corresponding option and a connection to Docker configured in the __Project Settings__. Automatic logout will be performed after the build finishes.
+If you need to log in to a registry requiring authentication before a build, select the corresponding option and a connection to Docker configured in the [project settings](project-administrator-guide.md#Edit+and+View+Modes). Automatic logout will be performed after the build finishes.
 
 >[See also](integrating-teamcity-with-container-managers.md#Conforming+with+Docker+Download+Rate+Limits) how to use this functionality to double the number of pulls allowed to a Free Docker Hub user profile.
 
@@ -209,9 +209,8 @@ object MyBuildConfig : BuildType({
 ```
 
 > To quickly get an ID of a target [Docker Registry](configuring-connections.md#Docker+Registry):
-> 1. <include from="common-templates.md" element-id="open-project-settings"/>
-> 2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
-> 3. Copy a connection ID from the overview table.
+> 1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
+> 2. Copy a connection ID from the overview table.
 > <img src="dk-copy-connection-id.png" alt="Copy connection ID" width="706"/>
 >
 {style="tip"}

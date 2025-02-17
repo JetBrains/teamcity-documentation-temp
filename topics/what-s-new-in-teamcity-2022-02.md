@@ -5,7 +5,7 @@
 
 TeamCity can now store Docker images produced by a build to both private and — since this update — public ECR registries.
 
-To be able to use this functionality, you need to add an [Amazon ECR connection](configuring-connections.md#Amazon+ECR) in __Project Settings__ and choose the _ECR Public_ registry type:
+To be able to use this functionality, you need to add an [Amazon ECR connection](configuring-connections.md#Amazon+ECR) in [project settings](project-administrator-guide.md#Edit+and+View+Modes) and choose the _ECR Public_ registry type:
 
 <img src="amazon-ecr-public.png" alt="Connecting to public ECR registry" width="750"/>
 
@@ -19,7 +19,7 @@ It is possible to upload a different avatar in the TeamCity user profile setting
 
 ## Getting project SSH keys via UI
 
-You can now copy the public part of an uploaded non-encrypted SSH key from the project settings. To do this, go to **Project Settings | SSH keys** and click **Copy the public key** under the key name.
+You can now copy the public part of an uploaded non-encrypted SSH key from the [project settings](project-administrator-guide.md#Edit+and+View+Modes). To do this, go to **Project Settings | SSH keys** and click **Copy the public key** under the key name.
 
 <img src="copy-public-ssh-keys.png" alt="Copying public SSH keys" width="750"/>
 

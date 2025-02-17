@@ -931,7 +931,7 @@ If the .NET runner executes `test` or `vstest` commands, TeamCity can split the 
 
 ### How to pass parameters containing spaces
 
-The best way to pass a parameter value containing space characters is to use [system properties](configuring-build-parameters.md#System+Properties). For example, you can add the `system.Platform` parameter with the `Any CPU` value in __Build Configuration Settings | Parameters__ and then refer to this value as `%\system.Platform%` inside the .NET step.
+The best way to pass a parameter value containing space characters is to use [system properties](configuring-build-parameters.md#System+Properties). For example, you can add the `system.Platform` parameter with the `Any CPU` value in __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Parameters__ and then refer to this value as `%\system.Platform%` inside the .NET step.
 
 An alternative approach is to wrap the command-line parameter as follows: `"/p:Platform=Any CPU"`.
 

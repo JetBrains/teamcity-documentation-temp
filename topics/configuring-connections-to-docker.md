@@ -7,7 +7,7 @@ A preconfigured Docker connection allows you to:
 
 >This type of connection is a part of the TeamCity-Docker/Podman integration toolset. Refer to this documentation article for information on software requirements, supported environments, and other common aspects of this integration: [](integrating-teamcity-with-container-managers.md).
 
-You can configure a _Docker Registry_ connection on the __Project Settings | Connections__ page. TeamCity supports connections to [docker.io](https://docker.io/) (default) or private Docker registries. More than one connection can be added to a project. The connection will be available in all the subprojects and build configurations of the current project.
+You can configure a _Docker Registry_ connection on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Connections__ page. TeamCity supports connections to [docker.io](https://docker.io/) (default) or private Docker registries. More than one connection can be added to a project. The connection will be available in all the subprojects and build configurations of the current project.
 
 >After configuring the Docker Registry connection for a TeamCity project, you need to select it when adding a [](docker-support.md) feature to the respective build configuration.
 > 

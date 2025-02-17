@@ -9,7 +9,7 @@ VCS roots are created in a project and are available to all the build configurat
 
 <anchor name="SharedVCSRoots"/>
 
-To view and manage all VCS roots configured within a project, go to __Project Settings | VCS Roots__.
+To view and manage all VCS roots configured within a project, go to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | VCS Roots__.
 
 Here, you can filter the project's roots by name and modify other filter options.
 

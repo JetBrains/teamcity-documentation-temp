@@ -9,7 +9,7 @@ TeamCity allows running builds:
 * Automatically, with various [build triggers](configuring-build-triggers.md).
 * Manually, on demand.
 
-To run a build manually, click __Run__ in the upper right corner of the screen. This action is available in both __Build Configuration Settings__ and __Build Configuration Home__ modes. If the __Run__ button does not appear for a certain build configuration, it means you do not have enough permissions to start builds in it.
+To run a build manually, click __Run__ in the upper right corner of the screen. This action is available in both __[Edit and View modes](project-administrator-guide.md#Edit+and+View+Modes)__ modes. If the __Run__ button does not appear for a certain build configuration, it means you do not have enough permissions to start builds in it.
 
 The context menu next to the __Run__ button opens the build's settings menu, so you can initiate a <tooltip term="custom-build-run">_custom build run_</tooltip>. A custom run allows using different settings or/and source code than if running a regular build in the current configuration. This is handy if you want to try different build parameters or pretest local code without affecting common build settings or committing the code to the common repository. Read more about this functionality [here](running-custom-build.md).
 

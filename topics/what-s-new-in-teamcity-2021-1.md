@@ -85,7 +85,7 @@ Alternatively to the local Lucene-based search, TeamCity now provides a search m
 The new mode has two advantages: (1) it saves disk space on the TeamCity server machine and (2) it is better for the TeamCity performance. It is especially effective for multinode installations, as nodes spend fewer resources on maintaining a single remote index than on multiple local indexes.  
 For relatively small installations, you may continue using Lucene search, with no need to reconfigure anything.
 
-You can select the search mode on the Root project level in __Project Settings | Builds Search__. To connect to your Elastic host or cluster, enter its URL and credentials.
+You can select the search mode on the Root project level in __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Builds Search__. To connect to your Elastic host or cluster, enter its URL and credentials.
 
 After you save the new settings, TeamCity will spend some time reindexing builds. The exact duration depends on the size of your server. You can track or control the progress in the _Diagnostics_ table.
 
@@ -99,7 +99,7 @@ When the synchronization of a project's settings is enabled, all changes made in
 
 To address these and any similar cases, we've added a new option: _Allow editing project settings via UI_. If you disable it in a project, this will make this project's settings read-only in the UI and prevent TeamCity commits to the settings' repository.
 
-To toggle the new option, go to __Project Settings | Versioned Settings | Configuration__:
+To toggle the new option, go to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Versioned Settings | Configuration__:
 
 <img src="versioned-settings-sync.png" width="460" alt="Read-only project settings"/>
 
@@ -152,9 +152,8 @@ TeamCity allows using [Perforce streams as feature branches](integrating-teamcit
 
 To configure this integration:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
-2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
-3. Add a new connection with the _Perforce Administrator Access_ type. Enter the host and user credentials for accessing the Perforce server (the user must have the [admin permission](https://www.perforce.com/manuals/p4sag/Content/P4SAG/protections.set.html#protections.set.access_levels)), and TeamCity will connect to it.
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
+2. Add a new connection with the _Perforce Administrator Access_ type. Enter the host and user credentials for accessing the Perforce server (the user must have the [admin permission](https://www.perforce.com/manuals/p4sag/Content/P4SAG/protections.set.html#protections.set.access_levels)), and TeamCity will connect to it.
 
 <img src="p4-admin-connect.png" width="460" alt="Perforce Administrator Access connection"/>
 
@@ -257,7 +256,7 @@ TeamCity will show the structured information about the agent processes:
 
 Our [build status widget](configuring-general-settings.md#Enable+Status+Widget) shows the status of the last build in a configuration. As the widget doesn't require authentication, you can feature the build status icon anywhere outside TeamCity: for example, on GitHub. Now, you can quickly access this widget from the __Build Overview__.
 
->Make sure the widget support is enabled in __Build Configuration Settings | Build Options__.
+>Make sure the widget support is enabled in __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Build Options__.
 >
 {style="note"}
 

@@ -5,7 +5,7 @@ Once a build configuration is created, builds can be triggered manually by click
 
 A _build trigger_ is a rule which initiates a new build on certain events. The build is put into the [build queue](working-with-build-queue.md) and is started when there are agents available to run it.
 
-While creating/editing a build configuration, you can configure triggers using the __Triggers__ sections of the __Build Configuration Settings__ page: click __Add new trigger__ and specify the trigger settings. For configuration details on each trigger, refer to the corresponding sections. It is possible to disable a configured build trigger temporarily or permanently using the option in the last column of the trigger list.
+While creating/editing a build configuration, you can configure triggers using the __Triggers__ sections of the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page: click __Add new trigger__ and specify the trigger settings. For configuration details on each trigger, refer to the corresponding sections. It is possible to disable a configured build trigger temporarily or permanently using the option in the last column of the trigger list.
 
 For each build configuration the following triggers can be configured:
 * [VCS trigger](configuring-vcs-triggers.md): the build is triggered when changes are detected in the version control system roots attached to the build configuration.

@@ -74,7 +74,7 @@ Now, you can return to TeamCity and add a connection to JetBrains Space.
 >TeamCity allows you to configure all settings of your _connection_ to a service in one place and then reuse these settings in different projects and build configurations. If you add such a _connection_ on the <tooltip term="root-project">_Root project_</tooltip> level, this will allow using its settings to connect any other project on the server. To make a connection available only in a certain project, you need to add it in this project.
 
 To create a connection to your JetBrains Space instance:
-1. Go to __Project Settings | Connections__ and click __Add Сonnection__.
+1. Go to __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Connections__ and click __Add Сonnection__.
 2. Choose the _JetBrains Space_ connection type.  
    <img src="connection-to-space.png" width="460" alt="Create a connection to Space"/>
 4. Enter the settings as follows:
@@ -130,14 +130,14 @@ A build's checkout scope usually consists of the following items: the default br
 
 To add this feature:
 
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
-3. Click __Add build feature__ and choose _Pull Requests_.
-4. Choose the recently created VCS root.
-5. Select _JetBrains Space_ as the VCS hosting type and specify the settings as follows:
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+2. Click __Add build feature__ and choose _Pull Requests_.
+3. Choose the recently created VCS root.
+4. Select _JetBrains Space_ as the VCS hosting type and specify the settings as follows:
    * _Connection_: choose the [connection to Space](#Step+2%3A+Establish+Connection+to+JetBrains+Space).
    * _By target branch_: define the [branch filter](branch-filter.md) to monitor merge requests only on branches that match the specified criteria. If left empty, no filters apply.
-6. Save the settings.
+5. Save the settings.
 
 >Note that the scope of branches you define in this feature should not overlap with the branch specification of the VCS root. This measure will ensure that no conflicts occur when starting builds on merge requests.
 >
@@ -154,24 +154,24 @@ Read more about the Pull Requests build feature in [this article](pull-requests.
 ### Automatically Merging Request if Build is Successful
 
 TeamCity can automatically merge a request into a target branch if the respective build finishes successfully. To achieve this:
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
-3. Click __Add build feature__ and choose _Automatic Merge_.
-4. Specify what branches to monitor and to merge into.
-5. Choose a merge policy. You can find more information about advanced settings of this feature [here](automatic-merge.md).
-6. Save the settings.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+2. Click __Add build feature__ and choose _Automatic Merge_.
+3. Specify what branches to monitor and to merge into.
+4. Choose a merge policy. You can find more information about advanced settings of this feature [here](automatic-merge.md).
+5. Save the settings.
 
 Each time a build satisfies the conditions of the selected merge policy, TeamCity will merge it to the specified target branch.
 
 ## Reporting Build Statuses to JetBrains Space
 
 TeamCity can report statuses of builds to JetBrains Space. To achieve this:
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
-3. Click __Add build feature__ and choose _Commit Status Publisher_.
-4. Select the _JetBrains Space_ publisher and the [connection to Space](#Step+2%3A+Establish+Connection+to+JetBrains+Space).
-5. Specify the name that will be displayed for this service in Space.
-6. Save the settings.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+2. Click __Add build feature__ and choose _Commit Status Publisher_.
+3. Select the _JetBrains Space_ publisher and the [connection to Space](#Step+2%3A+Establish+Connection+to+JetBrains+Space).
+4. Specify the name that will be displayed for this service in Space.
+5. Save the settings.
 
 Now, whenever you run a build in this configuration, TeamCity will report the build status to JetBrains Space.
 

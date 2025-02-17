@@ -168,7 +168,7 @@ It is also possible to manually set up the Commit Status Publisher feature. You 
 * you want to set up a custom publisher name and/or Space project key;
 * TeamCity is unable to publish build statuses automatically (for example, this may happen if you utilize an on-premises instance of JetBrains Space with a custom configuration).
 
-To manually set up the Commit Status Publisher, you will need a predefined [Space connection](configuring-connections.md#jetbrains-space-connection). If you do not have a suitable connection and your project was created manually or from the repository URL, go to **Project Settings | Connections** and create a new one.
+To manually set up the Commit Status Publisher, you will need a predefined [Space connection](configuring-connections.md#jetbrains-space-connection). If you do not have a suitable connection and your project was created manually or from the repository URL, go to **[Project settings](project-administrator-guide.md#Edit+and+View+Modes) | Connections** and create a new one.
 
 Then, in the build configuration's settings:
 

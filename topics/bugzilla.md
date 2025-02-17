@@ -19,7 +19,7 @@ Follow these recommendations to get the maximum benefit from the Bugzilla integr
 
 >Enabling TeamCity integration with Bugzilla requires Project Administrator permissions as it is configured at a project level. Note that enabling integration for a project enables it for all its subprojects as well. If the settings are different in a subproject, they have priority over the parent project's settings.
 
-To enable the integration, create a connection to Bugzilla on the __Project Settings | Issue Trackers__ page and specify the following settings:
+To enable the integration, create a connection to Bugzilla on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Issue Trackers__ page and specify the following settings:
 
 <table>
 

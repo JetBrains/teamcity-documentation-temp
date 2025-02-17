@@ -7,10 +7,9 @@ The _Docker_ [build runner](build-runner.md) allows launching the `build`, `push
 
 If you need to push the newly built image to a registry, you can authorize to a Docker or Podman registry by configuring the _Docker Support_ build feature, as follows:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
-2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
-3. Add a new [Docker or Podman connection](configuring-connections-to-docker.md)to your project.
-4. In your build configuration settings, follow the instructions in [](docker-support.md) to configure the **Docker Support** build feature, adding the connections created in the previous step.
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
+2. Add a new [Docker or Podman connection](configuring-connections-to-docker.md) to your project.
+3. In your [build configuration settings](project-administrator-guide.md#Edit+and+View+Modes), follow the instructions in [](docker-support.md) to configure the **Docker Support** build feature, adding the connections created in the previous step.
 
 If a [Dockerfile](https://docs.docker.com/engine/reference/builder/) is present in your VCS repository and you create a TeamCity project based on this repository, TeamCity will [autodetect it](configuring-build-steps.md#Autodetecting+Build+Steps) and offer creating a build step using this runner.
 

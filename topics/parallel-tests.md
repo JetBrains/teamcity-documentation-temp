@@ -14,10 +14,10 @@ The _Parallel tests_ build feature solves the task of parallel tests execution o
 
 To enable this feature in an existing build configuration:
 
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
-3. Click **Add build feature** and choose the _Parallel tests_ type.
-4. Set the number of test batches, which also means the number of parallel agents to use in a build.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Build Features"/></include>
+2. Click **Add build feature** and choose the _Parallel tests_ type.
+3. Set the number of test batches, which also means the number of parallel agents to use in a build.
 
 > Note: Only tests methods from different classes (or test cases) can run in parallel on different agents.
 

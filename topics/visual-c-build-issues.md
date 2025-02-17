@@ -34,7 +34,7 @@ If none of the steps is helpful for your case, please contact us via any [feedba
 * Try using the `devenv` command of the with [.NET](net.md) build runner instead of the [Visual Studio (sln)](visual-studio-sln.md) runner.
 * Ensure all paths to sources do not contain spaces.
 * Set `VCBuildUserEnvironment=true` in the runner properties.
-* Specify the `VCBuildAdditionalOptions` property with the value `/useenv` in the build configuration settings to instruct MSBuild to add the `/useenv` command-line argument for spawned VCBuild processes.
+* Specify the `VCBuildAdditionalOptions` property with the value `/useenv` in the [Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) to instruct MSBuild to add the `/useenv` command-line argument for spawned VCBuild processes.
 
  __See also:__
 

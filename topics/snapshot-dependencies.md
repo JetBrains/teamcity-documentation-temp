@@ -3,7 +3,7 @@
 
 By setting a [snapshot dependency](dependent-build.md#Snapshot+Dependency) of a build (for example, build B) on another build's (build A) sources, you can ensure that build B will start only after build A is run and finished. We call build A a _dependency_ build, whereas build B is a _dependent_ build.
 
-The __Build Configuration Settings | Dependencies__ page displays the configured dependencies; the __Snapshot Dependencies__ section of this page allows previewing the build chain and its configuration. The preview shows builds of the chain; the builds with configured automatic triggers are marked with ![v.png](v.png) icon.
+The __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Dependencies__ page displays the configured dependencies; the __Snapshot Dependencies__ section of this page allows previewing the build chain and its configuration. The preview shows builds of the chain; the builds with configured automatic triggers are marked with ![v.png](v.png) icon.
 
 A snapshot dependency has the following options:
 

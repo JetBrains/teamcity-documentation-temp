@@ -60,8 +60,8 @@ TeamCity improves VCS integrations and provides the following new features.
 TeamCity integration with JetBrains Space now includes the [Pull Requests](pull-requests.md) build feature. If you enable this feature in a build configuration, TeamCity will automatically detect changes in merge requests submitted to your Space repository. For a build run on these changes, it will display the merge request details in the build's overview and send the build statuses back to JetBrains Space.
 
 To enable this functionality in TeamCity:
-1. In the project settings, configure a [connection to JetBrains Space](configuring-connections.md#connect-to-jetbrains-space) and create a Git [VCS root](configuring-vcs-roots.md) with your Space repository URL and an empty branch specification.
-2. In the build configuration settings, add the [Pull Requests](pull-requests.md) build feature with the _JetBrains Space_ VCS hosting type:  
+1. In the [project settings](project-administrator-guide.md#Edit+and+View+Modes), configure a [connection to JetBrains Space](configuring-connections.md#connect-to-jetbrains-space) and create a Git [VCS root](configuring-vcs-roots.md) with your Space repository URL and an empty branch specification.
+2. In the [build configuration settings](project-administrator-guide.md#Edit+and+View+Modes), add the [Pull Requests](pull-requests.md) build feature with the _JetBrains Space_ VCS hosting type:  
    <img src="pull-requests-feature.png" alt="Pull Requests build feature" width="706"/>  
    You can specify the [branch filter](branch-filter.md) to monitor merge requests only on target branches that match the specified criteria. For example, if you set the `+:refs/heads/feature-*` filter, TeamCity will monitor merge requests sent only to branches whose names start with `feature-`.
 3. To allow publishing build statuses to the commit details in JetBrains Space, you also need to add the [Commit Status Publisher](commit-status-publisher.md) feature to this build configuration.
@@ -158,7 +158,7 @@ The new [Changes page](viewing-user-changes-in-builds.md) comes with filters pro
 
 TeamCity can now store Docker images produced by a build to both private and — since this update — public ECR registries.
 
-To be able to use this functionality, you need to add an [Amazon ECR connection](configuring-connections.md#Amazon+ECR) in __Project Settings__ and choose the _ECR Public_ registry type:
+To be able to use this functionality, you need to add an [Amazon ECR connection](configuring-connections.md#Amazon+ECR) in [project settings](project-administrator-guide.md#Edit+and+View+Modes) and choose the _ECR Public_ registry type:
 
 <img src="amazon-ecr-public.png" alt="Connecting to public ECR registry" width="750"/>
 

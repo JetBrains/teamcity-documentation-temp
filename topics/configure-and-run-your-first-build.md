@@ -67,7 +67,7 @@ Further reading: [](configuring-connections.md)
    >
    {style="tip"}
 
-3. The next page allows you to set up basic project settings:
+3. The next page allows you to set up basic [project settings](project-administrator-guide.md#Edit+and+View+Modes):
 
     * Whether to apply versioned settings, if any were found.
     * Project and build configuration names are public names in TeamCity.
@@ -239,7 +239,7 @@ Congratulations! You are now ready to run the first build based on the just crea
 To run builds in TeamCity, you need [build agents](build-agent.md). A fresh TeamCity server, installed as described [here](quick-setup-guide.md), has one registered build agent that runs on the same computer. Let's use this agent to run a build on the sample project.
 {instance="tc"}
 
-On the __Build Configuration Settings__ page, click __Run__ in the upper right corner:
+On the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__ page, click __Run__ in the upper right corner:
 
 <img src="RunBuild.png" alt="Run a build" width="706" border-effect="line"/>
 
@@ -260,7 +260,7 @@ For other settings, see this [chapter](creating-and-editing-build-configurations
 
 ### Artifacts
 
-If your build produces installers, WAR files, reports, log files, and so on, you might want to publish them on the TeamCity server after finishing the build. You can specify the paths to such artifacts in __Build Configuration Settings | General Settings__. As you already have a finished build, the build agent has checked out the sources already. Next to the _Artifact paths_ field, click the tree icon to open the checkout directory browser. You can select artifacts from this tree:
+If your build produces installers, WAR files, reports, log files, and so on, you might want to publish them on the TeamCity server after finishing the build. You can specify the paths to such artifacts in __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | General Settings__. As you already have a finished build, the build agent has checked out the sources already. Next to the _Artifact paths_ field, click the tree icon to open the checkout directory browser. You can select artifacts from this tree:
 
 <img src="artifactPaths.png" alt="Artifact paths" width="706" border-effect="line"/>
 
@@ -290,7 +290,7 @@ Automatic build triggering on a change in the repository is essential to any CI.
 
 ### Build Number Format
 
-Each build in TeamCity has a build number, that is a string identifier. It is composed according to the pattern defined in __Build Configuration Settings | General Settings__ (click _Show advanced options_ to display it). If you leave the default value, the build number format will be maintained by TeamCity; the number will be resolved into a next integer value on each new build start. Or, you can customize the pattern as described [here](configuring-general-settings.md#Build+Number+Format).
+Each build in TeamCity has a build number, that is a string identifier. It is composed according to the pattern defined in __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | General Settings__ (click _Show advanced options_ to display it). If you leave the default value, the build number format will be maintained by TeamCity; the number will be resolved into a next integer value on each new build start. Or, you can customize the pattern as described [here](configuring-general-settings.md#Build+Number+Format).
 
 ## Takeaway
 

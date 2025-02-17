@@ -41,6 +41,26 @@ In TeamCity, a building routine consists of the following blocks:
     Each project can be owned by another project for the same benefits: subprojects can access entities owned by their parent projects. The topmost project, called the **Root project**, is created automatically by TeamCity. This Root project cannot be removed and is ideal for setting up globally accessible parameters, connections, cloud profiles, and other shared resources.
 
 
+## Edit and View Modes
+
+When viewing TeamCity configurations and projects, you can switch between two modes:
+
+<deflist>
+<def title="View Mode">
+The view mode for regular day-to-day operations that displays the build history. Users can navigate to individual builds to inspect a build log, view dependent configurations that were triggered along with this build, download produced artifacts, and so on. See the <a href="user-guide.md">User guide</a> for more information.
+</def>
+
+<def title="Edit Mode">
+Allows you to modify project or configurations settings: configured build steps, active and disabled build features, build triggers, and more. Depending on user <a href="managing-roles-and-permissions.md">permissions</a>, some of these settings can be unavailable.
+</def>
+</deflist>
+
+To switch between the two modes, use the **Settings** toggle in the top right corner.
+
+TeamCity sticks to the selected mode unless you manually toggle it. This means if you view/edit settings of one configuration, navigating to another one will show reveal its settings as well.
+
+For more information on available project and configuration settings, refer to the [](creating-and-editing-projects.md) and [](creating-and-editing-build-configurations.md) sections.
+
 
 
 ## VCS Roots
@@ -186,9 +206,9 @@ Artifacts are files produced during a build. These files are available to:
 
 To choose which files should be available as build artifacts:
 
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="General Settings"/></include>
-3. Set up **Artifact paths** property. You can first run a build that produces required files. Then, you will be able to click the "Select files from the latest build" button and choose files from the drop-down menu instead of manually entering their paths.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="General Settings"/></include>
+2. Set up **Artifact paths** property. You can first run a build that produces required files. Then, you will be able to click the "Select files from the latest build" button and choose files from the drop-down menu instead of manually entering their paths.
 
 Related article: [](build-artifact.md)
 

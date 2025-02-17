@@ -21,13 +21,13 @@ If a [connection](integrating-teamcity-with-vcs-hosting-services.md) to some VCS
 
 >After you create a project from a URL or VCS, you can edit the project description. To add a link to your project description, use the Markdown format: \[My Project \](https://www.example.com).
 
-To create a subproject, go to the __Project Settings__ page of the parent project and use one of the available options, similarly to creating a project.
+To create a subproject, go to the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page of the parent project and use one of the available options, similarly to creating a project.
 
 ### Creating project pointing to repository URL
 
 1\. On the __Create project__ page, click the "From a repository URL" tile.
 
-2\. Specify the project settings:
+2\. Specify the [project settings](project-administrator-guide.md#Edit+and+View+Modes):
 
 <table><tr>
 
@@ -211,7 +211,7 @@ Before creating a project from a JetBrains Space, you need to configure a [dedic
 ### Creating project manually
 1\. Click the __Create project__ button and select __Manually__.
 
-2\. On the __Create New Project__ page, specify the project settings:
+2\. On the __Create New Project__ page, specify the [project settings](project-administrator-guide.md#Edit+and+View+Modes):
 
 <table><tr>
 
@@ -292,7 +292,7 @@ Optional description for the project. You can add a link in the Markdown format 
 
 <tip>
 
-To configure an existing project, select the desired project in the list, and click the __Edit Project Settings__ link on the right.
+To configure an existing project, select the desired project in the list and [open its settings](project-administrator-guide.md#Edit+and+View+Modes).
 </tip>
 
 4\. [Create build configurations](creating-and-editing-build-configurations.md) (select build settings, [configure VCS settings](configuring-vcs-settings.md), and choose [build runners](build-runner.md)) for the project.
@@ -303,13 +303,13 @@ To configure an existing project, select the desired project in the list, and cl
 
 You can view all available projects and subprojects on the __Projects__ page listed in the alphabetical order by default. Administrators can [customize the default order](ordering-projects-and-build-configurations.md).
 
-When you select a project from the list, TeamCity displays the __Project Home__ page where you can preview its nested build configurations and recent build results. To access the project's settings, click __Edit Project Settings__ in the upper right corner of the screen.
+When you select a project from the list, TeamCity displays the __Project Home__ page where you can preview its nested build configurations and recent build results. To access the project's settings, click the corresponding toggle in the top right corner to switch to the [edit mode](project-administrator-guide.md#Edit+and+View+Modes).
 
-To copy, move, delete or [archive](archiving-projects.md) a project, use the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page. These options are not available for the Root project.
+To copy, move, delete or [archive](archiving-projects.md) a project, use the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page. These options are not available for the Root project.
 
 ### Copying Project
 
-Use the corresponding item from the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page.
+Use the corresponding item from the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page.
 
 Projects can be copied and moved to another project by project administrators.
 
@@ -340,13 +340,13 @@ Before moving the project, consider the following:
 </warning>
 
 
-To move a project, use the corresponding item from the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page.
+To move a project, use the corresponding item from the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page.
 
 When moving a project, TeamCity preserves all its settings, [subprojects](project.md#Project+Hierarchy), [build configurations](managing-builds.md)/[templates](build-configuration-template.md), and associated data, as well as the [build history](build-results-page.md#Build+History+in+Classic+UI).
 
 ### Archiving Project
 
-Use the corresponding item from the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page. Refer to the dedicated [page](archiving-projects.md).
+Use the corresponding item from the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page. Refer to the dedicated [page](archiving-projects.md).
 
 ### Bulk Editing IDs
 
@@ -355,21 +355,21 @@ Use the corresponding item from the __Actions__ menu in the upper right corner o
 Care must be taken when performing this action. Modifying the ID will change all the URLs related to the project. It is highly recommended to update the ID in any of the URLs bookmarked or hard\-coded in the scripts. The corresponding configuration and artifacts directory names on the disk will change too and it can take time.
 </warning>
 
-1. Use the corresponding item from the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page.
+1. Use the corresponding item from the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page.
 2. The current project and build configuration [IDs](identifier.md) are displayed. You can modify or reset the IDs for all subproject, VCS roots, build configurations and templates. Click __Regenerate__ to get new Ids automatically or edit them manually.
 3. Click __Submit__.
 
 ### Pausing / Activating Triggers
 
-You can [pause triggers](changing-build-configuration-status.md#Pausing+Several+Build+Configurations+in+Project) for all or selected build configurations of a project. Use the corresponding item from the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page.
+You can [pause triggers](changing-build-configuration-status.md#Pausing+Several+Build+Configurations+in+Project) for all or selected build configurations of a project. Use the corresponding item from the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page.
 
 ### Exporting Project 
 
-You can [export configuration files](project-export.md) of a project with its children to move it to a different TeamCity server. Use the corresponding item from the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page.
+You can [export configuration files](project-export.md) of a project with its children to move it to a different TeamCity server. Use the corresponding item from the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page.
 
 ### Deleting Project
 
-Use the corresponding item from the __Actions__ menu in the upper right corner of the __Project Settings__ page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent __Project Settings__ page.
+Use the corresponding item from the __Actions__ menu in the upper right corner of the [project settings](project-administrator-guide.md#Edit+and+View+Modes) page or the _More_ button ![moreButton.PNG](moreButton.PNG) next to the project on the parent [project settings](project-administrator-guide.md#Edit+and+View+Modes) page.
 
 When you delete a project, TeamCity will remove its `.xml` configuration files. After the deletion, the project is moved to the \<[TeamCity Data Directory](teamcity-data-directory.md)\>/config/_trash/.ProjectID.projectN directory. There is a [configurable](teamcity-data-clean-up.md#Deleted+Build+Configurations+Clean-up) timeout (5 days by default) before all project-related data stored in the database (build history, artifacts, and so on) of the deleted project is completely removed during the next build history clean-up.
 

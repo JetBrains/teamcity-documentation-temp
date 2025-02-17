@@ -5,9 +5,9 @@ _Agent requirements_ are special conditions that define whether a [build configu
 
 To create an explicit agent requirement for a given build configuration:
 
-1. <include from="common-templates.md" element-id="open-configuration-settings"/>
-2. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Agent Requirements"/></include>
-3. Click __Add new requirement__. Each requirement represents a conditional rule for a certain parameter. While you are entering a parameter name or value, TeamCity will show you related suggestions.
+
+1. <include from="common-templates.md" element-id="open-configuration-settings-tab"><var name="configuration-tab-name" value="Agent Requirements"/></include>
+2. Click __Add new requirement__. Each requirement represents a conditional rule for a certain parameter. While you are entering a parameter name or value, TeamCity will show you related suggestions.
 
 To temporarily disable or delete a requirement, use its context menu.
 
@@ -31,7 +31,7 @@ For example, if you want to select the agent by matching various parts of the ag
 * Condition: `matches`
 * Value: `(macos|linux|win)-(m|l|xl).*`
 
-Both compatible and incompatible agents are listed in __Build Configuration Settings | Agent Requirements__.
+Both compatible and incompatible agents are listed in __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Agent Requirements__.
 
 You can add multiple agent requirements for a single parameter. The agent will be considered compatible only if it satisfies all these requirements.
 
@@ -48,7 +48,7 @@ The priority of the build configuration's value is higher than of the value defi
 For example, if you define a build runner parameter as a reference to another property: `%\env.JDK_16%/lib/*.jar`, this will implicitly add an agent requirement for the referenced property: that is, `env.JDK_16` must be defined. To define such properties on the agent, you can:
 * Specify them in the [`buildAgent.properties`](configure-agent-installation.md) file.
 * Set the [environment variable](predefined-build-parameters.md#Java-Related+Environment+Variables) `JDK_16` on the build agent.
-* Specify the value on the __Parameters__ page of a build configuration (or in the __Project Settings__). The same value of the property will be used for all build agents.
+* Specify the value on the __Parameters__ tab of a [project or configuration settings](project-administrator-guide.md#Edit+and+View+Modes). The same value of the property will be used for all build agents.
 
 ## Agent Requirements Video Guide
 

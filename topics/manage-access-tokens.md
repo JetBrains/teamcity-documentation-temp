@@ -24,7 +24,7 @@ To issue a token, TeamCity communicates with a VCS hosting provider using a conn
 
 The **VCS Auth Tokens** page provides centralized access to all refreshable tokens issued for this project and its subprojects. To open this page:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/> To view all tokens used on this server, open the Root project settings.
+1. Navigate to an individual or **Root** project.
 2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="VCS Auth Tokens"/></include>
 
 <img src="dk-vcs-auth-tokens-overview.png" width="706" alt="VCS Auth Tokens Overview"/>

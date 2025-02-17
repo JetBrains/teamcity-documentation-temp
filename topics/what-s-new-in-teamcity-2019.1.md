@@ -141,7 +141,7 @@ You can enable/disable the Token-Based Authentication module in the advanced mod
 
 If you are using the TeamCity integration with YouTrack, you should know that the login-password authentication is deprecated and soon will no longer be supported by YouTrack.   
 
-The TeamCity-YouTrack integration now supports for token-based authorization in REST API calls. It is recommended that you obtain a token and specify it in the connection settings to your issue tracker on the __Project Settings | Issue Trackers__ page. 
+The TeamCity-YouTrack integration now supports for token-based authorization in REST API calls. It is recommended that you obtain a token and specify it in the connection settings to your issue tracker on the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Issue Trackers__ page. 
 
 ## Canceling build via service message
 

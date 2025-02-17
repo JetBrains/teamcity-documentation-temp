@@ -28,7 +28,7 @@ Since all communication with Vault is orchestrated by the TeamCity server, this 
 
 <img src="dk-vaultConnection.png" width="460" alt="Vault connection settings"/>
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
 2. <include from="common-templates.md" element-id="create-new-connection"/>
 3. Choose **HashiCorp Vault** as the connection type.
 4. Specify the basic connection settings: the connection name, Vault URL and namespace, and an optional ID.

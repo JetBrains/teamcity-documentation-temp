@@ -29,9 +29,9 @@ When committing changes to your version control, __always mention the issue ID__
 
 To enable the integration:
 
-1. <include from="common-templates.md" element-id="open-project-settings"/>
-2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Issue Trackers"/></include>
-3. Create a new connection with the following settings:
+
+1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Issue Trackers"/></include>
+2. Create a new connection with the following settings:
     * **Connection Type** — Select __YouTrack__ from the list.
     * **Display Name** — Specify the connection name to distinguish it from the other connections.
     * **Server URL** — Enter the base URL of your YouTrack instance.

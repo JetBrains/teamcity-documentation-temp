@@ -12,7 +12,7 @@ TeamCity running on any of the supported operating systems (Windows, Linux, macO
 
 ## Enabling NuGet Feed
 
-To start using TeamCity as a NuGet Server, you need to add a NuGet feed at the project level — in __Project Settings | NuGet Feed__. Multiple NuGet feeds can be configured for a project.
+To start using TeamCity as a NuGet Server, you need to add a NuGet feed at the project level — in __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | NuGet Feed__. Multiple NuGet feeds can be configured for a project.
 
 Click __Add new NuGet Feed__ to create a feed. Optionally, enable _Automatic packages indexing_ for the current project and its subprojects.
 
@@ -92,7 +92,7 @@ Current reference
 
 By default, TeamCity will not add `.nupkg` artifacts published by builds into the project NuGet feed. You can select one of the following options:
 * To index packages published by the selected build configurations only, add the [NuGet packages indexer](nuget-packages-indexer.md) build feature to these build configurations.
-* To index all `.nupkg` files published as build artifacts in the project, enable _Automatic Packages Indexing_ in the __NuGet Feed__ section of the __Project Settings__.
+* To index all `.nupkg` files published as build artifacts in the project, enable _Automatic Packages Indexing_ in the __NuGet Feed__ section of the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes)__.
 * Use the [NuGet Pack](nuget-pack.md) build step with the _Publish created packages to build artifacts_ checkbox.  
 An agent indexes the `.nupkg` files while publishing build artifacts.
 

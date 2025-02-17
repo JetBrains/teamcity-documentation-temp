@@ -14,7 +14,7 @@ Report tabs support project hierarchy. There are two types of tabs available:
 * __Build-level__: appears on the __[Build Results](working-with-build-results.md)__ page for each build that produced an artifact with the specified name. These report tabs are defined in a project and are inherited in its subprojects. To override an inherited __Report__ tab in a subproject, create a new report tab with the same name as the inherited one in the subproject.
 * __Project-level__: appears on the __Project Home__ page for a particular project only if a build within the project produces the specified reports' artifact.
 
-To configure a report tab, go to the __Project Settings | Report Tabs__ and select the type of report tab you want to add.
+To configure a report tab, go to the __[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Report Tabs__ and select the type of report tab you want to add.
 
 For a __project report tab__, specify the following:
 

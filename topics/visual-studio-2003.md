@@ -207,7 +207,7 @@ Command line parameters
 
 Specify any additional parameters for `NAnt.exe`.
 
-TeamCity passes automatically to NAnt all defined [system properties](configuring-build-parameters.md), so you do not need to specify all of the properties here via `-D` option. You can create necessary properties at the __Build Parameters__ section of the build configuration settings.
+TeamCity passes automatically to NAnt all defined [system properties](configuring-build-parameters.md), so you do not need to specify all of the properties here via `-D` option. You can create necessary properties at the __Build Parameters__ section of the [Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes).
 
 
 </td></tr><tr>

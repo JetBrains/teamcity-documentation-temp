@@ -545,7 +545,7 @@ To do this, you need to output the following line:
 
 ```
 
-The `<path>` has to adhere to the same rules as the [Build Artifact specification](configuring-general-settings.md#Artifact+Paths) of the __Build Configuration Settings__. The files matching the `<path>` will be uploaded and visible as the artifacts of the running build.
+The `<path>` has to adhere to the same rules as the [Build Artifact specification](configuring-general-settings.md#Artifact+Paths) of the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes)__. The files matching the `<path>` will be uploaded and visible as the artifacts of the running build.
 
 The message should be printed after all the files are ready and no file is locked for reading.
 
@@ -1091,7 +1091,7 @@ You can use TeamCity service messages to send Slack direct messages and post upd
 
 <img src="dk-slack-service-message.png" width="706" alt="Custom TeamCity messages in Slack"/>
 
-TeamCity utilizes [Slack connections](configuring-connections.md#Slack) to send Slack messages. If you do not already have a Slack connection, go to **Administration | Project Settings | Connections** and create one.
+TeamCity utilizes [Slack connections](configuring-connections.md#Slack) to send Slack messages. If you do not already have a Slack connection, go to **[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Connections** and create one.
 
 1. Open the settings of a Slack connection and set the **Notifications limit** to any positive number. This value specifies the maximum number of messages that build configurations can send per run.
 
@@ -1114,9 +1114,8 @@ TeamCity utilizes [Slack connections](configuring-connections.md#Slack) to send 
    * `connectionID` — the optional parameter that allows you to choose a specific Slack connection that TeamCity should use to send this message. Accepts connection IDs as values. If this parameter is not specified, TeamCity will retrieve all Slack connections available for the current project and choose the one whose **Notifications limit** is not zero.
    
       > To quickly get an ID of a target [Slack connection](configuring-connections.md#Slack):
-      > 1. <include from="common-templates.md" element-id="open-project-settings"/>
-      > 2. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
-      > 3. Copy a connection ID from an overview table.
+      > 1. <include from="common-templates.md" element-id="open-project-settings-tab"><var name="tab-name" value="Connections"/></include>
+      > 2. Copy a connection ID from an overview table.
       >
       >     <img src="dk-copy-connection-id.png" alt="Copy connection ID" width="706"/>
       >

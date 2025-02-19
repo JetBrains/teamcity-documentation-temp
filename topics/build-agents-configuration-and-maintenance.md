@@ -35,7 +35,7 @@ Refer to a separate page for information on [viewing the agents workload](viewin
 
 ### Cloud
 
-Lists all configured [agent cloud profiles](agent-cloud-profile.md).
+Lists all configured [agent cloud profiles](teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images).
 {instance="tc"}
 
 Lists all configured [JetBrains-hosted agents](teamcity-cloud-subscription-and-licensing.md#cloud-jb-hosted-agents).

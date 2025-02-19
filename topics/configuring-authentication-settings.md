@@ -370,7 +370,7 @@ This list limits the set of users who can register or authenticate in TeamCity w
 </table>
 
 
->If you reconnect a TeamCity server from one GitHub Enterprise server to another, TeamCity might not be able to recognize external users after this operation. This case requires reconfiguring user profiles manually. If you encounter any issues, [contact our support](feedback.md).
+>If you reconnect a TeamCity server from one GitHub Enterprise server to another, TeamCity might not be able to recognize external users after this operation. This case requires reconfiguring user profiles manually. If you encounter any issues, [contact our support](troubleshooting.md).
 >
 {style="warning"}
 
@@ -504,7 +504,7 @@ This list limits the set of users who can register or authenticate in TeamCity w
 
 </table>
 
->If you reconnect a TeamCity server from one GitLab CE/EE server to another, TeamCity might not be able to recognize external users after this operation. This case requires reconfiguring user profiles manually. If you encounter any issues, please [contact our support](feedback.md).
+>If you reconnect a TeamCity server from one GitLab CE/EE server to another, TeamCity might not be able to recognize external users after this operation. This case requires reconfiguring user profiles manually. If you encounter any issues, please [contact our support](troubleshooting.md).
 >
 {style="warning"}
 

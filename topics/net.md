@@ -879,7 +879,7 @@ Consider the following notes before migrating:
 * The .NET runner provides code coverage only for [dotCover](jetbrains-dotcover.md).
 * Mono is not supported with this runner.
 
-If you are actively using either Mono or NCover/PartCover in your MSBuild steps, please let us know about it via any of the [feedback channels](feedback.md).
+If you are actively using either Mono or NCover/PartCover in your MSBuild steps, please let us know about it via any of the [feedback channels](troubleshooting.md).
 
 ### Migrating from Visual Studio (sln) Runner
 {id="migrating-to-net-from-sln"}
@@ -917,7 +917,7 @@ Additional features you will get in the .NET runner are:
 Consider the following notes before migrating:
 * The .NET runner supports the new [`.runsettings`](https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file) format of the VSTest settings file. However, it does not support the obsolete run configuration file format used in the Visual Studio Tests runner.
 * Instead of the framework version, the .NET runner requests to specify the VSTest version.
-* The .NET runner provides code coverage only for [dotCover](jetbrains-dotcover.md). If you are actively using NCover or PartCover in your MSBuild steps, please let us know about it via any of the [feedback channels](feedback.md).
+* The .NET runner provides code coverage only for [dotCover](jetbrains-dotcover.md). If you are actively using NCover or PartCover in your MSBuild steps, please let us know about it via any of the [feedback channels](troubleshooting.md).
 * The .NET runner does not support the MSTest tool since all features of its framework are covered by VSTest. If you were using MSTest as the engine of the Visual Studio Tests runner, we suggest that you switch to VSTest when migrating to the .NET runner.
 
 

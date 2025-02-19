@@ -33,9 +33,9 @@ If you face problems regarding CSRF protection in TeamCity (for example, you get
 * If your "unsafe" (`PUT`, `POST`, `DELETE`) requests utilize [access tokens](configuring-your-user-profile.md#Managing+Access+Tokens) to employ the Bearer authentication scheme, consider clearing your session cookies. Doing so allows TeamCity to skip validating CSRF tokens entirely.
 * If your environment or scenario mandates that session cookies are present, ensure your requests are not using CSRF tokens that correspond to expired sessions. As a workaround, you may want to reuse session cookies of the first HTTP request for the following ones. To do so in cURL, use the `--cookie-jar` and `--cookie` [command-line options](https://curl.se/docs/http-cookies.html) to save and read cookies to/from a file. In addition, add the `teamcity.tokenAuth.setSessionCookie=true` [internal property](server-startup-properties.md#TeamCity+Internal+Properties) to force TeamCity to create a session (and expect session cookies for the following requests).
 
-In case none of the listed steps help to resolve your problem, please contact our [support](feedback.md) and provide your `teamcity-auth.log` logs with the enabled teamcity-auth [logging preset](reporting-issues.md#Logging+events).
+In case none of the listed steps help to resolve your problem, please contact our [support](troubleshooting.md) and provide your `teamcity-auth.log` logs with the enabled teamcity-auth [logging preset](reporting-issues.md#Logging+events).
 
 ## Troubleshooting
 {instance="tcc"}
 
-If you face problems regarding CSRF protection in TeamCity, please contact our [support](feedback.md).
+If you face problems regarding CSRF protection in TeamCity, please contact our [support](troubleshooting.md).

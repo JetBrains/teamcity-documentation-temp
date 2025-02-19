@@ -116,6 +116,8 @@ With the agentless approach, the agent does not need to handle the final deploym
 <video src="https://youtu.be/O7LdxtiBkLY"
 title="New in TeamCity 2020.2: Agentless Build Steps"/>
 
+See also: [](detaching-build-from-agent.md)
+
 ## Autodetecting Build Steps
 
 TeamCity can scan the source VCS repository of a project and autodetect build steps in Node.js, Kotlin, Python, Ant, NAnt, Gradle, Maven, MSBuild, Visual Studio solution files, PowerShell, Xcode project files, Rake, and IntelliJ IDEA projects.

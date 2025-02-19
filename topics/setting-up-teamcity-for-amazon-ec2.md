@@ -609,7 +609,7 @@ Commented out, see TW-85775
 
 ### Amazon EBS-Optimized Instances
 
-The behavior of [EBS optimization](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in TeamCity is similar to that offered by EC2 console. When configuring an image of the Amazon [cloud profile](agent-cloud-profile.md), the optimization can be set using the corresponding box of the Instance Type. Note that:
+The behavior of [EBS optimization](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in TeamCity is similar to that offered by EC2 console. When configuring an image of the Amazon [cloud profile](teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images), the optimization can be set using the corresponding box of the Instance Type. Note that:
 * EBS optimization is turned on by default for `c4.*`, `d2.*`, and `m4.*` (non-configurable);
 * EBS optimization is turned off by default for any other instance types and  can be turned on for instances that support it (such as `c3.xlarge`).
 

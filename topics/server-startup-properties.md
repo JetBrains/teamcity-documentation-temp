@@ -5,7 +5,7 @@ Various aspects of a TeamCity server behavior can be customized through options 
 * Internal properties affecting TeamCity itself
 * Java Virtual Machine (JVM) properties
 
->Be cautious when altering the TeamCity behavior. If you are not sure in the consequences, contact the [TeamCity support](feedback.md) first.
+>Be cautious when altering the TeamCity behavior. If you are not sure in the consequences, contact the [TeamCity support](troubleshooting.md) first.
 >
 {style="warning"}
 

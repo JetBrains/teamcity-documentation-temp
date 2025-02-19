@@ -2,7 +2,7 @@
 [//]: # (auxiliary-id: TeamCity Tweaks)
 
 This article lists some of the TeamCity [server startup properties](server-startup-properties.md) which can be used to tweak certain aspects of the TeamCity behavior. __It is not recommended using any of them, unless you face an issue which you expect to address by changing the properties__.  
-Please note that the support for any of these properties can be abandoned in the future versions of TeamCity without any notice. Thus, if you find a property useful in your environment, we suggest that you let us know about that. Detail your case and used properties/values in your [support request](feedback.md).
+Please note that the support for any of these properties can be abandoned in the future versions of TeamCity without any notice. Thus, if you find a property useful in your environment, we suggest that you let us know about that. Detail your case and used properties/values in your [support request](troubleshooting.md).
 
 ## Web Page Refresh Interval
 

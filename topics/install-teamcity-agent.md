@@ -28,7 +28,7 @@ You can choose to download full or minimal agent distributions.
 * The **minimal agent distribution** is a regular build agent with no plugins. The minimal agent downloads all required plugins upon its first startup.
 * The **full agent distribution** includes relevant versions of all plugins currently enabled on the server. This makes the full distribution archive larger but significantly reduces the time spent on the first agent run.
 
-Full agents are preferable if you use scripts for creating agent images (for example, [in cloud profiles](agent-cloud-profile.md)). All cloud instances with full agents are synchronized with the server from the moment they start, and can run builds right away.
+Full agents are preferable if you use scripts for creating agent images (for example, [in cloud profiles](teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images)). All cloud instances with full agents are synchronized with the server from the moment they start, and can run builds right away.
 {instance="tc"}
 
 Full agents are preferable if you use scripts for creating agent images. All cloud instances with full agents are synchronized with the server from the moment they start, and can run builds right away.
@@ -170,6 +170,6 @@ Note that to access the __Agent Push__ page, a user needs to have the _Administe
 2. In the _Install agent_ dialog, either select a saved preset or choose "_Use custom settings_", specify the target host platform, and configure corresponding settings. Agent Push to a Linux system via SSH supports custom ports (the default is 22) specified as the _SSH port_ parameter. The port specified in a preset can be overridden in the host name (for example, `hostname.domain:2222`), during the actual agent installation.
 3. You may need to download `Sysinternals psexec.exe`, in which case you will see the corresponding warning and a link to __Administration | Tools__ where you can download it.
 
->You can use Agent Push presets in [Agent Cloud profile](agent-cloud-profile.md) settings to automatically install a build agent to a started cloud instance.
+>You can use Agent Push presets in [Agent Cloud profile](teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images) settings to automatically install a build agent to a started cloud instance.
 > 
 {instance="tc"}

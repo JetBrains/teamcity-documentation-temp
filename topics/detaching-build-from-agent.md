@@ -1,7 +1,7 @@
 [//]: # (title: Detaching Build from Agent)
 [//]: # (auxiliary-id: Detaching Build from Agent)
 
-If a final step of a build triggers some external service and the build does not require a [build agent](build-agent.md) anymore, the respective runner can detach the build from the agent. This makes this agent available to other builds. The build then continues running on the TeamCity server, and the external service reports its progress directly to the server. Such build steps are called _[agentless steps](agentless-build-step.md)_.
+If a final step of a build triggers some external service and the build does not require a [build agent](build-agent.md) anymore, the respective runner can detach the build from the agent. This makes this agent available to other builds. The build then continues running on the TeamCity server, and the external service reports its progress directly to the server. Such build steps are called _[agentless steps](configuring-build-steps.md#Agentless+Build+Steps)_.
 
 ## Releasing build agent
 
@@ -32,7 +32,7 @@ An agent should send these parameters to the external software in advance, befor
 
 To log messages, use the following call:
 
-```shell script
+```Shell
 POST /app/rest/builds/id:<build_id>/log 
 (curl -v --basic --user <username>:<password> --request POST <teamcity.url>/app/rest/builds/id:<build_id>/log --data <message> --header "Content-Type: text/plain")
 ```
@@ -41,7 +41,7 @@ Here, you can send any [service message](service-messages.md) as `<message>`.
 
 An example request to send a warning:
 
-```shell script
+```Shell
 POST /app/rest/builds/id:TestBuild/log 
 (curl -v --basic --user TeamCityBuildId=87065:lqmT22NStn4ulqmT22NStn4ulqmT22NStn4u --request POST http://localhost:8111/app/rest/builds/id:TestBuild/log --data "##teamcity[message text='Deployment failed' errorDetails='stack trace' status='ERROR']" --header "Content-Type: text/plain")
 ```
@@ -54,14 +54,14 @@ It is important to ensure that a build, executed externally, delivers a finishin
 
 To finish a build, use the following call:
 
-```shell script
+```Shell
 PUT /app/rest/builds/id:<build_id>/finish
 (curl -v --basic --user <username>:<password> --request PUT <teamcity.url>/app/rest/builds/id:<build_id>/finish)
 ```
 
 Alternatively, you can finish it by sending the exact finish date as a non-empty string in the `yyyyMMdd'T'HHmmssZ` format:
 
-```shell script
+```Shell
 PUT /app/rest/builds/id:<build_id>/finishDate
 (curl -v --basic --user <username>:<password> --request PUT <teamcity.url>/app/rest/builds/id:<build_id>/finishDate --data "20201231T235959+0000" --header "Content-Type: text/plain")
 ```
@@ -80,7 +80,7 @@ The number of builds that can simultaneously run without an agent is limited by 
 
 <seealso>
         <category ref="concepts">
-            <a href="agentless-build-step.md">Agentless Build Step</a>
+            <a href="configuring-build-steps.md#Agentless+Build+Steps">Agentless Build Step</a>
         </category>
 </seealso>
 

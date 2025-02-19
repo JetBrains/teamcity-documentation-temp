@@ -29,7 +29,7 @@ For Apple ARM systems (for example, Apple M1 or M2), consider using a different 
 
 >The core features of TeamCity Server are platform-independent. See [considerations](system-requirements.md#Choosing+Server+OS%2FPlatform) on choosing the server platform.
 
-Generally, __all the recent versions of Windows, Linux, and macOS are supported__. If you find any compatibility issues with any of the operating systems, [let us know](feedback.md).
+Generally, __all the recent versions of Windows, Linux, and macOS are supported__. If you find any compatibility issues with any of the operating systems, [let us know](troubleshooting.md).
 
 TeamCity Server is tested under the following operating systems:
 * Linux (Ubuntu, Debian, RedHat, SUSE, and others)

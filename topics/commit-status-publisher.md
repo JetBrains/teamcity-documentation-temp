@@ -188,7 +188,7 @@ See this help article for more information: [](integrating-with-helix-swarm.md).
 
 ### Gerrit
 
-Commit Status Publisher supports Gerrit versions 2.6+. For configuring integration with earlier Gerrit versions, contact our [support](feedback.md).
+Commit Status Publisher supports Gerrit versions 2.6+. For configuring integration with earlier Gerrit versions, contact our [support](troubleshooting.md).
 
 ## Using Commit Status Publisher
 

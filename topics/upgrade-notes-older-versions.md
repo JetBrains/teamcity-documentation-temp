@@ -140,7 +140,7 @@ Download newer versions of these plugins from JetBrains Marketplace:
 {id="bundled-tools-updates-2022-04"}
 
 * Versions 2017.1 and 2017.2 of [TeamCity REST API](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html) have been unbundled. 
-If you have been using any of these versions in your scripts, consider switching to the latest protocol version as described [here](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html#REST+API+Versions). If switching is not an option and this is a breaking change for your setup, please contact us via any convenient [feedback channel](feedback.md).
+If you have been using any of these versions in your scripts, consider switching to the latest protocol version as described [here](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html#REST+API+Versions). If switching is not an option and this is a breaking change for your setup, please contact us via any convenient [feedback channel](troubleshooting.md).
 * Updates in TeamCity Agent Docker images:
   * The bundled .NET Core SDK has been updated to 6.0.100.
   * The two bundled versions of .NET Core Runtime are 3.1.21 and 5.0.12.
@@ -226,7 +226,7 @@ TeamCity 2021.2 does not introduce any new data formats compared to version 2021
   Running a build with [C# Script](c-script.md) steps on .NET with enabled [profiling](https://docs.microsoft.com/en-us/dotnet/core/run-time-config/debugging-profiling) may result in the "_Failed to create CoreCLR, HRESULT: 0x80004005_" error. This issue can occur only if .NET is launched inside a Docker container or in Windows Subsystem for Linux (WSL).  
   To work around it, add an [environment variable](configuring-build-parameters.md#Environment+Variables) `COMPlus_EnableDiagnostics=0` to your build configuration.
 * __TeamCity fails to initialize a cloud client when creating an Amazon EC2 spot fleet profile__  
-  When creating a [cloud profile](agent-cloud-profile.md) for an Amazon EC2 spot fleet, users might get the "_Failed to initialize cloud client 'amazon'. An exception occurred while parsing config._" error. This error only occurs if the "_Specify instance attributes that match your compute requirements_" option is enabled in the current fleet's _[instance type requirements](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html#abs-create-spot-fleet)_.  
+  When creating a [cloud profile](teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images) for an Amazon EC2 spot fleet, users might get the "_Failed to initialize cloud client 'amazon'. An exception occurred while parsing config._" error. This error only occurs if the "_Specify instance attributes that match your compute requirements_" option is enabled in the current fleet's _[instance type requirements](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html#abs-create-spot-fleet)_.  
   To work around this issue, please remove the `InstanceRequirements` block from the fleet's JSON configuration file before uploading it to TeamCity. This issue will be fixed in TeamCity 2022.1.
 * __Builds might fail to publish artifacts to Amazon S3 if AWS KMS is used__  
   After updating to 2021.2, builds might start failing on an attempt to publish artifacts to an Amazon S3 bucket encrypted with an [AWS KMS](https://docs.aws.amazon.com/kms/index.html) key. This issue is caused by the recently added integrity check for build artifacts. To temporarily disable it in a project and workaround the issue, set the `teamcity.internal.storage.s3.upload.enableConsistencyCheck=false` property on a [project level](levels-and-priority-of-build-parameters.md).  
@@ -335,7 +335,7 @@ To get a PNG icon, use the `statusIcon.png` endpoint.
 
 ### Unbundled old versions of REST API
 
-The following old versions of [REST API](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html) have been unbundled: 6.0, 7.0, 8.1, 9.0, 9.1. If this change causes any problems for your setup, please contact us via any [feedback channel](feedback.md).
+The following old versions of [REST API](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html) have been unbundled: 6.0, 7.0, 8.1, 9.0, 9.1. If this change causes any problems for your setup, please contact us via any [feedback channel](troubleshooting.md).
 
 ### Bundled Tools Updates
 {id="bundled-tools-updates-20211"}
@@ -654,7 +654,7 @@ See the [.NET description](net.md) for more information about the new .NET step 
 >
 {type="note"}
 
-If you face any problems with migration to the .NET runner or encounter other related issues, do not hesitate to contact us via any convenient [feedback channel](feedback.md).
+If you face any problems with migration to the .NET runner or encounter other related issues, do not hesitate to contact us via any convenient [feedback channel](troubleshooting.md).
 
 ### Known Issues
 {id="known-issues-201923"}
@@ -1076,11 +1076,11 @@ Requests which used "value:&lt;text&gt;" locators (e.g. for matching properties)
 
 ### VSS plugin is unbundled
 
-The Visual SourceSafe plugin is no longer bundled with TeamCity but is available as a [separate download](https://plugins.jetbrains.com/plugin/10902-vcs-support-vss). Please contact our [support](feedback.md), if you still use this VSS for your builds.
+The Visual SourceSafe plugin is no longer bundled with TeamCity but is available as a [separate download](https://plugins.jetbrains.com/plugin/10902-vcs-support-vss). Please contact our [support](troubleshooting.md), if you still use this VSS for your builds.
 
 ### Other
 
-* Commit Status Publisher supports Gerrit 2.6\+ versions. For support for older Gerrit versions, please turn to our [support](feedback.md).
+* Commit Status Publisher supports Gerrit 2.6\+ versions. For support for older Gerrit versions, please turn to our [support](troubleshooting.md).
 * When upgrading from TeamCity versions before 9.1, if TeamCity 2018.1 starts and agents are upgraded, but then you decide to roll back the server to the previous TeamCity version, the agents will not be able to connect back to the old server and will need to be reinstalled manually.
 * Make sure that no HTTP requests from the agents to the server are blocked (e.g. requests to .../app/agents/... URLs)
 * Since 2018.1, TeamCity uses the full project name with "/" instead of "::" as the separator for Project \- Subproject wherever the full project name is present.
@@ -1193,7 +1193,7 @@ __build entity__ No longer expose boolean "running" attribute, textual "state" a
 
 ### Windows Versions Support
 
-Windows XP and Vista are no longer the supported versions of Windows for the TeamCity Server and Agent. While the server and agent will still most probably work on these old versions, we do not target the versions during our development. [Let us know](feedback.md) if the support for the versions is important for your TeamCity usage or you find any issues with the systems support.
+Windows XP and Vista are no longer the supported versions of Windows for the TeamCity Server and Agent. While the server and agent will still most probably work on these old versions, we do not target the versions during our development. [Let us know](troubleshooting.md) if the support for the versions is important for your TeamCity usage or you find any issues with the systems support.
 
 ### J2EE Servlet 2.5 container is no longer supported
 
@@ -1965,7 +1965,7 @@ Password properties of the VCS roots are now included into the responses, just w
 
 CCTray\-format XML (`app/rest/cctray/projects.xml`) does not include paused build configurations now.
 
-Response to the experimental request `/app/rest/buildTypes/XXX/investigations` has changed the format and got additional fields to cover tests and problem investigations. There is an internal property `rest.beans.buildTypeInvestigationCompatibility` to include removed sub\-items. Please let us know via [support email](feedback.md) if you need to use the internal property.
+Response to the experimental request `/app/rest/buildTypes/XXX/investigations` has changed the format and got additional fields to cover tests and problem investigations. There is an internal property `rest.beans.buildTypeInvestigationCompatibility` to include removed sub\-items. Please let us know via [support email](troubleshooting.md) if you need to use the internal property.
 
 ## Changes from 8.0.5 to 8.0.6
 
@@ -2038,7 +2038,7 @@ TFS now prefers Team Explorer 2012 to Team Explorer 2010 (if both are installed)
 #### Compatibility with YouTrack
 
 If you use JetBrains YouTrack and use its TeamCity integration features, please note that only YouTrack version 4.2.4 and later are compatible with TeamCity 8.0.   
-If you need earlier YouTrack versions to work with TeamCity 8.0, please [let us know](feedback.md).
+If you need earlier YouTrack versions to work with TeamCity 8.0, please [let us know](troubleshooting.md).
 
 
 [//]: # (Internal note. Do not delete. "Upgrade Notesd333e2793.txt")    
@@ -2154,7 +2154,7 @@ __Windows domain login module__
 When TeamCity server runs under Windows and Windows domain user authentication is used, TeamCity now uses another library (Waffle) to talk to the Windows domain. Under Linux the behavior is unchanged: jCIFS library is used as it were.
 
 Unless you specified specific settings for jCIFS library in ntlm\-config.properties file, your installation should not be affected.   
-If you experience any issues with login into TeamCity with your Windows username/password after upgrade, please provide details [to us](feedback.md). In the mean time you can switch to using old jCIFS library. For this, add `teamcity.ntlm.use.jcifs=true` line into [internal properties file](server-startup-properties.md).   
+If you experience any issues with login into TeamCity with your Windows username/password after upgrade, please provide details [to us](troubleshooting.md). In the mean time you can switch to using old jCIFS library. For this, add `teamcity.ntlm.use.jcifs=true` line into [internal properties file](server-startup-properties.md).   
 Please note that jCIFS library approach can be depricated in future versions of TeamCity, so the property specification is not recommended if you can go without it.
 
 __Checkout directory change for Git and Mercurial__   

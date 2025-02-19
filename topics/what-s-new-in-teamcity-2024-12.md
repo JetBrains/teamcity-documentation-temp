@@ -365,6 +365,6 @@ See the [TeamCity roadmap](https://www.jetbrains.com/teamcity/roadmap/#teamcity-
 
 ## Your Feedback Matters
 
-We place a high value on your feedback and encourage you to share your thoughts and suggestions. See this link for more information: [Feedback](feedback.md).
+We place a high value on your feedback and encourage you to share your thoughts and suggestions. See this link for more information: [Feedback](troubleshooting.md).
 
 

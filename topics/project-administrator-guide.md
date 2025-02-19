@@ -36,7 +36,7 @@ In TeamCity, a building routine consists of the following blocks:
     You can also incorporate configurations from the same or different projects into one [unified workflow](build-chain.md).
 
 
-* <snippet id="project-overview">**Project** — a collection of independent build configurations. These configurations can be run separately but are grouped under a single project to share common resources: [connections](configuring-connections.md), [parameters](configuring-build-parameters.md), [artifact storages](configuring-artifacts-storage.md), [cloud agent profiles](agent-cloud-profile.md), and so on.</snippet>
+* <snippet id="project-overview">**Project** — a collection of independent build configurations. These configurations can be run separately but are grouped under a single project to share common resources: [connections](configuring-connections.md), [parameters](configuring-build-parameters.md), [artifact storages](configuring-artifacts-storage.md), [cloud agent profiles](teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images), and so on.</snippet>
 
     Each project can be owned by another project for the same benefits: subprojects can access entities owned by their parent projects. The topmost project, called the **Root project**, is created automatically by TeamCity. This Root project cannot be removed and is ideal for setting up globally accessible parameters, connections, cloud profiles, and other shared resources.
 

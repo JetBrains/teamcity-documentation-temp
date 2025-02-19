@@ -103,7 +103,7 @@ For example, if a configuration has the `echo "%\myParam%"` [command-line build 
 
 In other words, an implicit requirement can be interpreted as "a configuration uses an unknown parameter" warning. To resolve this issue, you need to either provide a parameter value on a configuration/project level, or define this parameter inside a build agent [`buildAgent.properties`](configure-agent-installation.md) file.
 
-```Plain Text
+```Text
 ## TeamCity build agent configuration file
 
 ######################################
@@ -126,12 +126,3 @@ Along with configuration-wide requirements, you can define requirements to agent
 
 <include from="requirement-conditions.md" element-id="combining-conditions"/>
 
-
-
- <seealso>
-        <category ref="concepts">
-            <a href="configuring-agent-requirements.md">TeamCity Data Backup</a>
-            <a href="build-agent.md">Build Agent</a>
-            <a href="managing-builds.md">Build Configuration</a>
-        </category>
-</seealso>

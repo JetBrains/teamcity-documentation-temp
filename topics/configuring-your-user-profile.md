@@ -46,7 +46,7 @@ and select particular permissions for it. The list of available projects and the
 
 <img src="create-access-token.png" alt="Create an access token"/>
 
-Note that some operations allowed by enabled permissions might be blocked by the absence of other permissions. Please make sure to thoroughly manage the token's scope to get predictable results of your requests. In case of any issues, you can contact us via any convenient [feedback channel](feedback.md).
+Note that some operations allowed by enabled permissions might be blocked by the absence of other permissions. Please make sure to thoroughly manage the token's scope to get predictable results of your requests. In case of any issues, you can contact us via any convenient [feedback channel](troubleshooting.md).
 
 ## Managing Version Control Username Settings
 

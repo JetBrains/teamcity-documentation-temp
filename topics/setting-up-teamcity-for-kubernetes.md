@@ -411,7 +411,7 @@ See [KubernetesCloudProfile](https://www.jetbrains.com/help/teamcity/kotlin-dsl-
 
 <seealso>
         <category ref="concepts">
-            <a href="agent-cloud-profile.md">Agent Cloud Profile</a>
+            <a href="teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images">Agent Cloud Profile</a>
         </category>
         <category ref="installation">
             <a href="teamcity-integration-with-cloud-solutions.md">TeamCity Integration with Cloud Solutions</a>

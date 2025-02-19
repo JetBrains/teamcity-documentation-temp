@@ -63,7 +63,7 @@
             <links narrow="true">
                 <group>
                     <title>Share feedback</title>
-                    <a href="feedback.md" summary="General recommendations on contacting us.">Feedback guide</a>
+                    <a href="troubleshooting.md" summary="General recommendations on contacting us.">Feedback guide</a>
                     <a href="https://youtrack.jetbrains.com/issues/TW" summary="Report a problem here.">Issue Tracker</a>
                     <a href="https://jb.gg/teamcity-forum" summary="Contact us for a feedback or advice.">Forum</a>
                     <a href="https://twitter.com/teamcity" summary="Official TeamCity Twitter">Follow TeamCity on Twitter</a>
@@ -100,7 +100,7 @@
                 </group>
                 <group>
                     <title>Give feedback</title>
-                    <a href="feedback.md" summary="General recommendations on contacting us.">Feedback guide</a>
+                    <a href="troubleshooting.md" summary="General recommendations on contacting us.">Feedback guide</a>
                     <a href="https://youtrack.jetbrains.com/issues/TW" summary="Report a problem here.">Issue Tracker</a>
                     <a href="https://jb.gg/teamcity-forum" summary="Contact us for a feedback or advice.">Forum</a>
                     <a href="https://twitter.com/teamcity" summary="Official TeamCity Twitter">Follow TeamCity on Twitter</a>

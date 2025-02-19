@@ -416,7 +416,7 @@ Learn more: [Start and Stop Cloud Instances](https://www.jetbrains.com/help/team
 * The [](commit-status-publisher.md) build feature now correctly publishes build statuses for configurations that target `refs/(merge-requests/*)/head` branches of GitLab repositories (the "merge result" branches). Previously, running TeamCity builds for merge result revisions caused the Publisher to encounter HTTP 404 errors.
 * If users log into TeamCity using credentials of an external 2FA-protected service, TeamCity does not send additional 2FA requests. Learn more: [](managing-two-factor-authentication.md#Reduce+Excessive+Authorization+Requests).
 * You can now add the `dateFormat=<value>` parameter to URLs used by your log analysis tools to retrieve build logs. Learn more: [](build-log.md#Modify+the+DateTime+Pattern).
-* In addition to `builds_queued`, `builds_started`, `builds_running` and `builds_queued` [metrics](teamcity-monitoring-and-diagnostics.md#Metrics), TeamCity now reports an experimental `builds_detached` metric that allows you to view the number of [builds detached from their agents](agentless-build-step.md).
+* In addition to `builds_queued`, `builds_started`, `builds_running` and `builds_queued` [metrics](teamcity-monitoring-and-diagnostics.md#Metrics), TeamCity now reports an experimental `builds_detached` metric that allows you to view the number of [builds detached from their agents](configuring-build-steps.md#Agentless+Build+Steps).
 
 
 
@@ -633,6 +633,6 @@ See the [TeamCity roadmap](https://www.jetbrains.com/teamcity/roadmap/#teamcity-
 ## Your Feedback Matters
 
 
-We place a high value on your feedback and encourage you to share your thoughts and suggestions. See this link for more information: [Feedback](feedback.md).
+We place a high value on your feedback and encourage you to share your thoughts and suggestions. See this link for more information: [Feedback](troubleshooting.md).
 
 

@@ -12,7 +12,7 @@ Users familiar with TeamCity On-Premises might already know that TeamCity integr
 
 To integrate your TeamCity Cloud project with your cloud infrastructure:
 1. On the cloud side, configure a virtual machine image with an [installed TeamCity agent](install-and-start-teamcity-agents.md).
-2. In the TeamCity project's settings, create a [cloud profile](agent-cloud-profile.md). If you want it to be available around the whole server, create it in the Root project's settings.
+2. In the TeamCity project's settings, create a [cloud profile](teamcity-integration-with-cloud-solutions.md#Agent+Cloud+Profiles+and+Images). If you want it to be available around the whole server, create it in the Root project's settings.
   >You can add an indefinite number of cloud profiles with different settings.
 3. Configure the profile's common settings as described [here](teamcity-integration-with-cloud-solutions.md) and then follow the guidelines specific to your provider:
    * [Amazon EC2](setting-up-teamcity-for-amazon-ec2.md)

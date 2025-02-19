@@ -3,7 +3,7 @@
 
 As an obsolete approach to collect the build script collect information, you can generate an XML file called `teamcity-info.xml` in the root build directory. When the build finishes, this file will automatically be uploaded as a build artifact and processed by the TeamCity server.
 
-Note that this approach __can be discontinued__ in the future TeamCity versions, so [service messages](service-messages.md) approach is recommended instead. In case service messages do not work for you, let us know the details and describe the case via [email](feedback.md).
+Note that this approach __can be discontinued__ in the future TeamCity versions, so [service messages](service-messages.md) approach is recommended instead. In case service messages do not work for you, let us know the details and describe the case via [email](troubleshooting.md).
 
 ## Modifying Build Status
 

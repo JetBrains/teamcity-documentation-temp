@@ -1,7 +1,7 @@
 [//]: # (title: Working with Build Queue)
 [//]: # (auxiliary-id: Working with Build Queue;Ordering Build Queue;Build Queue)
 
-In TeamCity, _build queue_ is a list of builds that were [triggered](configuring-build-triggers.md), or launched manually, and are waiting to be started. TeamCity distributes them to [compatible](agent-requirements.md) build agents as soon as they become idle. A queued build is assigned to an agent at the moment it is started on the agent; no preassignment is made while the build is waiting in the build queue.
+In TeamCity, _build queue_ is a list of builds that were [triggered](configuring-build-triggers.md), or launched manually, and are waiting to be started. TeamCity distributes them to [compatible](configuring-agent-requirements.md) build agents as soon as they become idle. A queued build is assigned to an agent at the moment it is started on the agent; no preassignment is made while the build is waiting in the build queue.
 
 ## Queue Page
 

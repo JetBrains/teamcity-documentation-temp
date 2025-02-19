@@ -64,7 +64,7 @@ TeamCity checks the following [parameters](configuring-build-parameters.md) to i
 Depending on the exact Docker/Podman integration you utilize, TeamCity specifies different [agent compatibility requirements](configuring-agent-requirements.md). For instance, if your [build configuration](managing-builds.md) uses the [Docker runner](docker.md), this configuration can only run on agents that meet the `docker.server.version exists` requirement.
 
 
-> If you are using the [Command Line](command-line.md) build step instead of the [](docker.md) runner, these parameters can be used as [agent requirements](agent-requirements.md) to ensure your build is run only on the agents with Docker installed.
+> If you are using the [Command Line](command-line.md) build step instead of the [](docker.md) runner, these parameters can be used as [agent requirements](configuring-agent-requirements.md) to ensure your build is run only on the agents with Docker installed.
 > 
 {style="tip"}
 

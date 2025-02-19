@@ -1,6 +1,6 @@
 # Server Administrator Guide
 
-This section focuses on **Server administration**. To learn more about other aspects of TeamCity, refer to the [](project-administrator-guide.md) and [](user-guide.md) sections.
+This section focuses on **server administration**: installing TeamCity server and agents, configuring multi-node setup, setting up user permissions, and more.
 
 ## Major Concepts
 

@@ -116,7 +116,7 @@ Starting with version 2023.05, you can connect to image registries, run build st
 
 * The [](container-wrapper.md) extension (previously known as "Docker Wrapper") now pulls images via either `docker pull` or `podman pull`, depending on which Container Manager is installed on the build agent.
 * The [](docker-support.md) build feature can now use Podman to log in to container registries.
-* If you use the [](command-line.md) runner to execute `podman ...` commands, utilize new `container.engine`, `podman.version`, and `podman.osType` [parameters](configuring-build-parameters.md) to specify [agent requirements](agent-requirements.md) that ensure your builds run only on build agents with installed Podman.
+* If you use the [](command-line.md) runner to execute `podman ...` commands, utilize new `container.engine`, `podman.version`, and `podman.osType` [parameters](configuring-build-parameters.md) to specify [agent requirements](configuring-agent-requirements.md) that ensure your builds run only on build agents with installed Podman.
 
 Learn more: [](integrating-teamcity-with-container-managers.md).
 

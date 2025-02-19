@@ -45,6 +45,12 @@ title="TeamCity tutorial — How to connect local agents to your TeamCity server
 >
 {type="warning" instance="tc"}
 
+
+## Cloud Agents
+
+Hosting TeamCity agents in the cloud allows you implement a highly scalable solutions with new agents spinning up on demand and winding down when there are no builds to process. See the [](teamcity-integration-with-cloud-solutions.md) section for more information on cloud-hosted TeamCity agents.
+
+
 ### Generating Authentication Token
 {instance="tcc"}
 

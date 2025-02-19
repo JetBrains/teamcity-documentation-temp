@@ -21,7 +21,7 @@ TeamCity supports two types of integrations:
 * Agentless integrations. In this scenario, a cloud provider serves as a "contractor" that handles TeamCity builds. TeamCity server sends queued builds to the "executor" and does not interfere in how it handles this queue.
 
 
-Both options are available from the **Project Settings | Cloud Profiles** page.
+Both options are available from the **[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Cloud Profiles** page.
 
 <img src="dk-k8s-integration-overview.png" alt="K8S integration" width="706"/>
 
@@ -68,7 +68,7 @@ For each queued build, TeamCity first tries to start it on one of the self-hoste
 The regular cloud agent integration requires:
 
 * A configured virtual machine with an installed TeamCity agent in your cloud. It should be preconfigured to start the TeamCity agent on boot.
-* A configured [cloud profile](agent-cloud-profile.md) in TeamCity.
+* A configured [cloud profile](#Agent+Cloud+Profiles+and+Images) in TeamCity.
 
 Once a cloud profile is configured in TeamCity with one or several images, TeamCity does a test start of one instance for all the newly added images to learn about the agents configured on them. When the agents are connected, TeamCity stores their parameters to be able to correctly process build configurations-to-agents compatibility. An agent connected from a cloud instance started by TeamCity is automatically authorized, provided there are available agent licenses: the number of cloud agents is limited by the total number of agent licenses you have in TeamCity. After that, the agent is processed as a regular agent.
 
@@ -82,6 +82,36 @@ The disconnected agent will be removed from the authorized agents list and delet
 The disconnected agent will be removed from the authorized agents list and deleted from the system. On removal, one self-hosted slot will be released.
 {instance="tcc"}
 
+## Agent Cloud Profiles and Images
+
+A _cloud profile_ is a collection of settings for TeamCity to start virtual machines with installed TeamCity agents on-demand while distributing a build queue. A cloud profile stores such general settings as:
+
+* Credentials required to connect to a cloud provider.
+* The maximum number of simultaneously active cloud agents.
+* Conditions that specify when active agents should be terminated or stopped.
+* TeamCity server URL that should be passed to new cloud agents when they start.
+
+Each profile has one or multiple **cloud images** that store the following settings:
+
+* An ID of a cloud instance to start or instance image to use.
+* The container image to pull when an instance/node starts.
+* Post-launch scripts.
+* An [agent pool](configuring-agent-pools.md) that should own cloud agents spawned from this image.
+
+  > You can only select the pool that contains the current project and/or its subprojects. Pools containing projects other than the current one and its subprojects will not be available for assignment. If the selected agent pool is changed in the future so that the criteria are not met or if the agent pool is not specified (or if this field is blank), TeamCity will automatically assign the cloud agents to the _project pool_.
+  >
+  > TeamCity automatically composes the project pool containing agents from all cloud profiles of the current project and all its subprojects. Thus, the added image will be available to all the subprojects as well. On the __Agents | Pools__ page, this pool is marked as "_\<Project name\> project pool_". Project pools cannot be deleted or modified.
+  >
+  {style="note"}
+
+### Shared Profiles
+
+A cloud profile configured in a project is available for all subprojects as well. That is, if you configure a profile in the *&lt;Root project&gt;*, all TeamCity projects will be able to start new cloud agents.
+
+You can prevent all or individual subprojects from using cloud profiles inherited from a parent project. To do this, go to **[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Cloud profiles** and click **Change cloud integration status**.
+
+* For a parent project: uncheck **Enable cloud integration in subprojects**.
+* For a child a subproject: uncheck **Enable cloud integration in this project**.
 
 ## TeamCity Setup for Cloud Integration
 

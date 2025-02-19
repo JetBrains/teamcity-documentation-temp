@@ -63,7 +63,7 @@ This information can be used when migrating to TeamCity from other Continuous In
 
 <tr>
 <td><p>Requirement</p></td>
-<td><p><a href="agent-requirements.md">Agent Requirement</a></p></td>
+<td><p><a href="configuring-agent-requirements.md">Agent Requirement</a></p></td>
 </tr>
 
 <tr>

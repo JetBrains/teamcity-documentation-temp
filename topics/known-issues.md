@@ -373,7 +373,7 @@ On Windows 10, the Docker server depends on Hyper-V service and its start may ta
 
 The [](container-wrapper.md) works on Windows when Windows-based containers are started.
 
-If a Linux container is started on a Windows machine, TeamCity displays the error message "Starting Linux Docker containers under Windows is not supported. To avoid this problem, add the [`teamcity.agent.jvm.os.name`](integrating-teamcity-with-container-managers.md#Build+Parameters+and+Agent+Requirements) does not contain Windows [agent requirement](agent-requirements.md).
+If a Linux container is started on a Windows machine, TeamCity displays the error message "Starting Linux Docker containers under Windows is not supported. To avoid this problem, add the [`teamcity.agent.jvm.os.name`](integrating-teamcity-with-container-managers.md#Build+Parameters+and+Agent+Requirements) does not contain Windows [agent requirement](configuring-agent-requirements.md).
 
 If you need to support a use case when the [](container-wrapper.md) runs Linux containers under Windows platform, vote for the related comment in [TW-51820](https://youtrack.jetbrains.com/issue/TW-51820).
 

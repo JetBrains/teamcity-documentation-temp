@@ -1,7 +1,7 @@
 [//]: # (title: Configure and Run Your First Build)
 [//]: # (auxiliary-id: Configure and Run Your First Build)
 
-This tutorial guides you through the basic features of TeamCity and shows you how to set up a typical project.
+<!--This tutorial guides you through the basic features of TeamCity and shows you how to set up a typical project.
 
 > To configure and run your first build, complete the [](#Create+a+TeamCity+Project) and [](#Set+Up+a+Build+Configuration) sections. The remaining sections are optional but worth reviewing to familiarize yourself with key TeamCity concepts and features.
 >
@@ -20,17 +20,17 @@ In some cases you may also want to set up a project that targets a third-party r
 
 1. The simplest way to create projects, configurations, and VCS roots is by utilizing a permanent [connection to a VCS hosting](configuring-connections.md). This approach is particularly efficient when you intend to create multiple projects for repositories hosted under the same VCS account, as it saves you from repeatedly configuring the same access settings.
 
-   This tutorial utilizes a GitHub-hosted repository, so start by navigating to **Administration | Root Project | Connections** and creating a new [GitHub.com connection](configuring-connections.md#GitHub). You can choose between a GitHub App or GitHub OAuth connections.
+   This tutorial utilizes a GitHub-hosted repository, so start by navigating to **[Root Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Connections** and creating a new [GitHub.com connection](configuring-connections.md#GitHub). You can choose between a GitHub App or GitHub OAuth connections.
 
 2. Fork the `https://github.com/JetBrains/Maven-Configuration-TeamCity-Samples` repository to your personal account.
 
 3. Click the "+" icon next to the **Projects** menu item to navigate to the **Create Project** page.
 
-    <!--<img src="dk-create-project-main.png" alt="Main new project menu" width="706"/>-->
+    <img src="dk-create-project-main.png" alt="Main new project menu" width="706"/>
 
 4. The **Create Project** page displays all available connections that you can utilize to access repositories. Click a **From GitHub.com** tile and TeamCity will display the list of all repositories owned by or shared with you.
 
-    <!--<img src="dk-repositories-list.png" alt="Repositories list" width="706"/>-->
+    <img src="dk-repositories-list.png" alt="Repositories list" width="706"/>
 
 5. Select your forked repository and leave all settings in their default state.
 
@@ -53,11 +53,11 @@ Further reading: [](configuring-connections.md)
 
 1. Click the "+" icon next to the **Projects** menu item to navigate to the **Create Project** page.
 
-    <!--<img src="dk-create-project-main.png" alt="Main new project menu" width="706"/>-->
+    <img src="dk-create-project-main.png" alt="Main new project menu" width="706"/>
 
 2. Click the **From a repository URL** tile and enter `https://github.com/JetBrains/Maven-Configuration-TeamCity-Samples` to the **Repository URL** field.
 
-     <!--<img src="CreateProject1.png" alt="Create a project from a repository URL, Step 1" width="706"/>-->
+     <img src="CreateProject1.png" alt="Create a project from a repository URL, Step 1" width="706"/>
 
    The target repository is public and available without authentication, so leave the rest of the properties unchanged and click **Proceed**.
 
@@ -90,7 +90,7 @@ After you set core project and configuration settings at the end of the [](#Crea
 
 You can check the suggested step and click **Use selected**, or add your custom steps:
 
-1. Navigate to configuration settings (**Administration | &lt;Your Configuration&gt;**) and click **Build Steps** in the side menu.
+1. Navigate to [Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) and click **Build Steps** in the side menu.
 2. Click **Add build step** and choose a required step type. Since this sample tutorial targets the Java application with Maven, choose "Maven" from the list and type a required command in the **Goals** field (for example, `clean test`).
 
    > You can perform almost any build action using the **Command Line** step, which runs custom scripts on the agent machine's terminal. For example, creating a CLI step with the command `mvn clean test` in the **Custom script** field will perform the same actions as a Maven step.
@@ -122,7 +122,7 @@ In this tutorial we will slightly modify an existing root to alter the checkout 
 
 <video src="../media/ssh-root-sd.mp4" preview-src="../media/ssh-root-sd-cover.png"/>
 
-1. Open the **Administration | Your Project | VCS Roots** page and click your root to edit its settings. When editing a root from the project level, you edit its core properties common to any configuration that uses this root.
+1. Open the **[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | VCS Roots** page and click your root to edit its settings. When editing a root from the project level, you edit its core properties common to any configuration that uses this root.
 2. In the **General Settings** section, change the **Fetch URL** to an SSH format. For example, `git@github.com:JetBrains/Maven-Configuration-TeamCity-Samples.git`.
 3. Scroll down to **Authentication Settings** and set **Authentication method** to "Custom Private Key". Private keys are typically [uploaded to the Root project](ssh-keys-management.md) so that you can easily reuse them, but since we have none at the moment, we will just specify the key manually.
 4. Enter the path to your private SSH key. For example, `/Users/John.Doe/.ssh/id_ed25519`.
@@ -135,7 +135,7 @@ In this tutorial we will slightly modify an existing root to alter the checkout 
 
 <video src="../media/checkout-rules.mp4" preview-src="../media/checkout-rules-cover.png"/>
 
-1. Go to **Administration | Your Configuration | Version Control Settings** page. This page lists all VCS roots attached to this specific configuration. You can click any root to edit same settings as on the project level, with an option to save your edits for this configuration only.
+1. Go to **[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Version Control Settings** page. This page lists all VCS roots attached to this specific configuration. You can click any root to edit same settings as on the project level, with an option to save your edits for this configuration only.
 
     The **Additional Options** section below the list of attached roots includes settings that control how these roots are used by this configuration. For example, the **Clean build** option allows you to force TeamCity to clean the agent checkout directory and re-acquire files from the remote repository whenever a new build starts. Normally TeamCity does not pull remote files if the repository has no new commits.
 
@@ -179,15 +179,7 @@ Further reading: ??? VCS ROOT ADVANCED SETTINGS LINKS
 ## Store Project Settings in a VCS
 
 
-
-
-
-
-
-
-
-
-
+-->
 
 
 
@@ -243,7 +235,7 @@ On the __[Build Configuration Settings](project-administrator-guide.md#Edit+and+
 
 <img src="RunBuild.png" alt="Run a build" width="706" border-effect="line"/>
 
-TeamCity will always assign a build to the first available and [suitable](agent-requirements.md) build agent.
+TeamCity will always assign a build to the first available and [suitable](configuring-agent-requirements.md) build agent.
 
 You will be automatically redirected to the __Build Results__ page, where you can watch the build progress and review its results upon the build finish. You can also access your build configuration settings from this page and edit them as necessary:
 

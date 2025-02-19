@@ -151,7 +151,7 @@ object StepExecutionConditions : BuildType({
 
 ### Specify Agent Requirements
 
-[](agent-requirements.md) allow you to specify `parameter-operator-value` conditions. Only those agents that meet these conditions are allowed to build this build configuration.
+[Agent requirements](configuring-agent-requirements.md) allow you to specify `parameter-operator-value` conditions. Only those agents that meet these conditions are allowed to build this build configuration.
 
 You can define agent requirements using only those parameters whose values agents can report before the build starts. These parameters are:
 
@@ -163,7 +163,7 @@ You can define agent requirements using only those parameters whose values agent
 
 TeamCity automatically adds agent requirements depending on the configured build steps. For example, if a build step should be executed inside a Linux container, TeamCity adds requirements that specify an agent must have [either Docker or Podman](integrating-teamcity-with-container-managers.md) running on a Linux machine.
 
-To define custom agent requirements in TeamCity UI, navigate to the **Administration | &lt;Build Configuration&gt; | Agent Requirements** tab.
+To define custom agent requirements in TeamCity UI, navigate to the **[Build Configuration Settings](project-administrator-guide.md#Edit+and+View+Modes) | Agent Requirements** tab.
 
 <img src="dk-params-AgentRequirements.png" width="706" alt="Set agent requirements in TeamCity UI"/>
 

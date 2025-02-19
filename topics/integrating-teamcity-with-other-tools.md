@@ -299,7 +299,7 @@ The tables below are updated in accordance with the newly introduced integration
 
 * [Running an Xcode scheme within a build](xcode-project.md)
 * A structured build log output based on Xcode build stages, compilation errors, and test reports
-* Automatically added [agent requirements](agent-requirements.md) to a specific version of Xcode or IDE
+* Automatically added [agent requirements](configuring-agent-requirements.md) to a specific version of Xcode or IDE
 
 </td><td>
 </td></tr>

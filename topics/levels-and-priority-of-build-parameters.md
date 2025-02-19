@@ -18,7 +18,7 @@ TeamCity parameters can obtain their values from one or multiple sources listed 
 
 * Values specified in a regular [build configuration template](build-configuration-template.md).
 
-* Values specified in a build agent's [configuration file](configure-agent-installation.md) (the `<AGENT_HOME>/conf/buildAgent.properties` file). For example, the following sample demonstrates how to implement a custom build agents' ranking system that you can use in [](agent-requirements.md):
+* Values specified in a build agent's [configuration file](configure-agent-installation.md) (the `<AGENT_HOME>/conf/buildAgent.properties` file). For example, the following sample demonstrates how to implement a custom build agents' ranking system that you can use in [agent requirements](configuring-agent-requirements.md):
 
   <img src="dk-params-agentTiers.png" width="706" alt="Custom Agent Ranking system"/>
 

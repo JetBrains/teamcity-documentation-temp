@@ -167,7 +167,7 @@ __JetBrains-hosted build agent__
 
 <td>
 
-A [build agent](build-agent.md) that can be used out of the box, without any additional configuration. Such build agents are configured, maintained, and hosted by [JetBrains](https://www.jetbrains.com/). When a build is added to the [queue](working-with-build-queue.md), a new JetBrains-hosted agent, matching the [build requirements](agent-requirements.md), automatically launches and starts your build. See this section for the configuration of x86 and ARM agents hosted by JetBrains: [](supported-platforms-and-environments.md#JetBrains-Hosted+Agents).
+A [build agent](build-agent.md) that can be used out of the box, without any additional configuration. Such build agents are configured, maintained, and hosted by [JetBrains](https://www.jetbrains.com/). When a build is added to the [queue](working-with-build-queue.md), a new JetBrains-hosted agent, matching the [build requirements](configuring-agent-requirements.md), automatically launches and starts your build. See this section for the configuration of x86 and ARM agents hosted by JetBrains: [](supported-platforms-and-environments.md#JetBrains-Hosted+Agents).
 
 JetBrains-hosted build agents come with a preinstalled set of commonly used build software. You can view a complete list [here](supported-platforms-and-environments.md#TeamCity+Agent). Additionally, TeamCity can run certain [build steps](configuring-build-steps.md) within a [Docker container](container-wrapper.md). This allows executing steps that require software that may not be on the build agents by default.
 

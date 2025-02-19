@@ -83,7 +83,7 @@ Favorite pools are user-specific, meaning that each TeamCity user can have their
         <category ref="concepts">
             <a href="build-agent.md">Build Agent</a>
             <a href="working-with-build-queue.md">Working with Build Queue</a>
-            <a href="agent-requirements.md">Agent Requirements</a>
+            <a href="configuring-agent-requirements.md">Agent Requirements</a>
         </category>
         <category ref="admin-guide">
             <a href="viewing-agents-workload.md">Viewing Agents Workload</a>

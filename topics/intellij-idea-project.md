@@ -454,7 +454,7 @@ Click this link to open a text area, where you can define templates for the `.ja
 
 <note>
 
-You can use references to external properties when defining the values, like `%\system.idea_home%` or `%\env.JDK_1_3%`. This will add a [requirement](agent-requirements.md) for the corresponding property.
+You can use references to external properties when defining the values, like `%\system.idea_home%` or `%\env.JDK_1_3%`. This will add a [requirement](configuring-agent-requirements.md) for the corresponding property.
 </note>
 
 </snippet>

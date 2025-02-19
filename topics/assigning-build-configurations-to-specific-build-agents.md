@@ -4,7 +4,7 @@
 It is sometimes necessary to manage the [Build Agents](build-agent.md)' workload more effectively. For example, if the time-consuming performance tests are run, the Build Agents with low hardware resources may slow down. As a result, more builds will enter the [build queue](working-with-build-queue.md), and the feedback loop can become longer than desired. To avoid such situation, you can:
 
 1. [Establish a run configuration policy](#Agent+pools) for an agent, which defines the build configurations to run on this agent.
-2. Define special [Agent Requirements](agent-requirements.md), to restrict the pool of agents, on which a build configuration can run the builds. These requirements are:			
+2. Define special [Agent Requirements](configuring-agent-requirements.md), to restrict the pool of agents, on which a build configuration can run the builds. These requirements are:			
    * [Build Agent name](#Agent+pools). If the name of a build agent is made a requirement, the build configuration will run builds on this agent only.		
    * [Build Agent property](#Agent+pools). If a certain property, for example, a capability to run builds of a certain configuration or an operating system, is made a requirement, the build configuration will run builds on the agents that meet this requirement.
    
@@ -63,7 +63,7 @@ Depending on your needs, you can modify this requirement as follows:
  <seealso>
         <category ref="concepts">
             <a href="build-agent.md">Build Agent</a>
-            <a href="agent-requirements.md">Agent Requirements</a>
+            <a href="configuring-agent-requirements.md">Agent Requirements</a>
         </category>
         <category ref="admin-guide">
             <a href="running-custom-build.md">Triggering a Custom Build</a>

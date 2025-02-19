@@ -206,7 +206,7 @@ object Build : BuildType({
 
 ### Configuring Agent Requirements
 
-You can reference matrix parameters in [agent requirements](agent-requirements.md) to ensure TeamCity chooses the right build agent for each value
+You can reference matrix parameters in [agent requirements](configuring-agent-requirements.md) to ensure TeamCity chooses the right build agent for each value
 
 For example, when setting up automated UI testing against different browser types, you might define the following `Browser` matrix parameter:
 

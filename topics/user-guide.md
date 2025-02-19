@@ -1,6 +1,6 @@
 # User Guide
 
-This section focuses on **regular TeamCity usage**. To learn more about other aspects of TeamCity, refer to the [](project-administrator-guide.md) and [](project-administrator-guide.md) sections.
+This section focuses on daily TeamCity operations: running builds, investigating problems, configuring notifications, and more.
 
 
 ## Authorization

@@ -9,7 +9,7 @@ A build agent can be configured by adjusting in the `<TeamCity Agent Home>/conf/
 
 ## General Agent Configuration
 
-This [Java properties](https://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html#load(java.io.InputStream)) configuration file can store properties that will be published on the server as _agent properties_ and can participate in the [Agent Requirements](agent-requirements.md) expressions. All [system and environment properties](predefined-build-parameters.md#Predefined+Agent+Build+Parameters) defined in the file will be passed to every build run on the agent.
+This [Java properties](https://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html#load(java.io.InputStream)) configuration file can store properties that will be published on the server as _agent properties_ and can participate in the [Agent Requirements](configuring-agent-requirements.md) expressions. All [system and environment properties](predefined-build-parameters.md#Predefined+Agent+Build+Parameters) defined in the file will be passed to every build run on the agent.
 
 Syntax reference:
 * Use `property_name=value<newline>` syntax.

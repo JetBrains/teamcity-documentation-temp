@@ -15,7 +15,7 @@ Configuring a cloud provider profile is one of the steps required to [enable age
 
 ## Profiles and Images
 
-To configure a cloud profile, go to **Administration | Project | Cloud Profiles**. A cloud profile stores such settings as:
+To configure a cloud profile, go to **[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Cloud Profiles**. A cloud profile stores such settings as:
 
 * Credentials required to connect to a cloud provider.
 * The maximum number of simultaneously active cloud agents.
@@ -95,7 +95,7 @@ The <b>Google Cloud Agents</b> plugin allows using Google Compute Engine to star
 
 A cloud profile configured in a project is available for all subprojects as well. That is, if you configure a profile in the *&lt;Root project&gt;*, all TeamCity projects will be able to start new cloud agents.
 
-You can prevent all or individual subprojects from using cloud profiles inherited from a parent project. To do this, go to **Administration | Project | Cloud profiles** and click **Change cloud integration status**.
+You can prevent all or individual subprojects from using cloud profiles inherited from a parent project. To do this, go to **[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Cloud profiles** and click **Change cloud integration status**.
 
 * For a parent project: uncheck **Enable cloud integration in subprojects**.
 * For a child a subproject: uncheck **Enable cloud integration in this project**.

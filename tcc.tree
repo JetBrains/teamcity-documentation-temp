@@ -3,10 +3,13 @@
 <instance-profile id="tcc" name="TeamCity Cloud" start-page="teamcity-cloud-documentation.topic" status="release">
 	<toc-element toc-title="TeamCity Cloud Documentation Home" topic="teamcity-cloud-documentation.topic"/>
 	<toc-element topic="getting-started-with-teamcity-cloud.md">
+		<toc-element topic="glossary.md"/>
 		<toc-element topic="continuous-integration-with-teamcity.md"/>
+		<toc-element topic="project-administrator-guide.md"/>
+		<toc-element topic="user-guide.md"/>
 		<toc-element topic="migrate-from-teamcity-on-premises-to-teamcity-cloud.md"/>
 		<toc-element topic="configure-and-run-your-first-build.md"/>
-		<toc-element topic="create-pipeline.md"/>
+		<toc-element topic="create-build-chain.md"/>
 		<toc-element topic="deploy-build.md"/>
 		<toc-element topic="view-build-results.md"/>
 		<toc-element topic="solve-build-problems.md"/>
@@ -50,20 +53,17 @@
 		</toc-element>
 	</toc-element>
 	<toc-element topic="introduction-to-teamcity-terminology.md">
-		<toc-element topic="glossary.md"/>
-		<toc-element topic="agent-cloud-profile.md"/>
-		<toc-element topic="agent-home-directory.md"/>
-		<toc-element topic="agentless-build-step.md"/>
-		<toc-element topic="agent-requirements.md"/>
-		<toc-element topic="agent-work-directory.md"/>
+
+
+
 		<toc-element topic="authentication-modules.md"/>
 		<toc-element topic="build-agent.md"/>
 		<toc-element topic="build-artifact.md"/>
 		<toc-element topic="build-chain.md"/>
-		<toc-element topic="build-checkout-directory.md"/>
+
 		<toc-element topic="build-configuration-template.md"/>
 		<toc-element topic="build-runner.md"/>
-		<toc-element topic="build-working-directory.md"/>
+
 		<toc-element topic="change.md"/>
 		<toc-element topic="change-state.md"/>
 		<toc-element topic="clean-checkout.md"/>
@@ -72,8 +72,7 @@
 		<toc-element topic="notifier.md"/>
 		<toc-element topic="project.md"/>
 		<toc-element topic="revision.md"/>
-		<toc-element topic="teamcity-data-directory.md"/>
-		<toc-element topic="teamcity-home-directory.md"/>
+
 		<toc-element topic="vcs-root.md"/>
 	</toc-element>
 	<toc-element toc-title="System Administration">
@@ -358,6 +357,14 @@
 		</toc-element>
 	</toc-element>
 	<toc-element toc-title="Reference">
+		<toc-element toc-title="TeamCity Directories">
+			<toc-element topic="teamcity-data-directory.md"/>
+			<toc-element topic="teamcity-home-directory.md"/>
+			<toc-element topic="agent-home-directory.md"/>
+			<toc-element topic="agent-work-directory.md"/>
+			<toc-element topic="build-working-directory.md"/>
+			<toc-element topic="build-checkout-directory.md"/>
+		</toc-element>
 		<toc-element topic="how-to.md"/>
 		<toc-element topic="cron-expressions-in-teamcity.md"/>
 		<toc-element topic="build-state.md"/>
@@ -367,14 +374,14 @@
 		<toc-element topic="teamcity-specific-directories.md"/>
 		<toc-element topic="wildcards.md"/>
 		<toc-element accepts-web-file-names="teamcity-experimental-ui.html" topic="teamcity-sakura-ui.md"/>
+		<toc-element topic="applying-patches.md"/>
+		<toc-element topic="visual-c-build-issues.md"/>
 	</toc-element>
 	<toc-element topic="troubleshooting.md">
 		<toc-element topic="common-problems.md"/>
 		<toc-element topic="known-issues.md"/>
+		<toc-element topic="ticket-based-support.md"/>
 		<toc-element topic="reporting-issues.md"/>
-		<toc-element topic="applying-patches.md"/>
-		<toc-element topic="visual-c-build-issues.md"/>
-		<toc-element topic="feedback.md"/>
 	</toc-element>
 	<toc-element topic="ci-tutorials.md">
 		<toc-element toc-title="CI/CD Guide" href="https://www.jetbrains.com/teamcity/ci-cd-guide/"/>

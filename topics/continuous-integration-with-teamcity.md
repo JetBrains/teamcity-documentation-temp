@@ -228,7 +228,7 @@ __Build queue__
 
 <td>
 
-A list of builds that were triggered and are waiting to be started. TeamCity will distribute them to _[compatible](agent-requirements.md)_ build agents as soon as the agents become idle. A queued build is assigned to an agent at the moment when it is started on the agent; no pre-assignment is made while the build is waiting in the build queue.
+A list of builds that were triggered and are waiting to be started. TeamCity will distribute them to _[compatible](configuring-agent-requirements.md)_ build agents as soon as the agents become idle. A queued build is assigned to an agent at the moment when it is started on the agent; no pre-assignment is made while the build is waiting in the build queue.
 
 
 </td></tr><tr>

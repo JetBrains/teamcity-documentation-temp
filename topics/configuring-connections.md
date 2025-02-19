@@ -796,7 +796,7 @@ You should now see all repositories added to this project. Space projects with i
 
 <img src="dk-space-projectConnection.png" width="706" alt="Space Project Connection"/>
 
-You can add more project connections to allow TeamCity to access additional Space projects within the same organization. To do this, navigate to **Administration | &lt;Your Project&gt; | Connections** and create new Space connections with the **Automatic: Project Connection** creation type. This option becomes available once you add an organization connection to this project (or its parent).
+You can add more project connections to allow TeamCity to access additional Space projects within the same organization. To do this, navigate to **[Project Settings](project-administrator-guide.md#Edit+and+View+Modes) | Connections** and create new Space connections with the **Automatic: Project Connection** creation type. This option becomes available once you add an organization connection to this project (or its parent).
 
 <img src="dk-space-newProjectConnection.png" alt="New Space Project Connection" width="706"/>
 

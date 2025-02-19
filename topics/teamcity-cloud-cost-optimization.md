@@ -46,7 +46,7 @@ This allows detecting potential bottlenecks by analyzing build results. An examp
 
 <img src="performance-monitor.png" width="750" alt="Performance monitor"/>
 
-To use a build agent of a more powerful specification, you can define [Agent Requirements](agent-requirements.md) for the build configuration. For example, to define a minimum amount of memory (RAM), set the `teamcity.agent.hardware.memorySizeMb` [parameter](configuring-build-parameters.md). Builds under this build configuration will only run on a build agent that has a minimum of 30 GB RAM: 
+To use a build agent of a more powerful specification, you can define [Agent Requirements](configuring-agent-requirements.md) for the build configuration. For example, to define a minimum amount of memory (RAM), set the `teamcity.agent.hardware.memorySizeMb` [parameter](configuring-build-parameters.md). Builds under this build configuration will only run on a build agent that has a minimum of 30 GB RAM: 
 
 <img src="add-requirement-dialog.png" alt="Add Requirement dialog" width="460"/>
 

@@ -18,7 +18,7 @@ A TeamCity build agent contains [two processes](configuring-build-agent-startup-
 An agent typically checks out the source code, downloads artifacts of other builds and runs the build process. An agent can run a single build at a time. The number of agents basically limits the number of parallel builds and environments in which your build processes are run.   
 An agent can run builds of any compatible build configuration.
 
-The TeamCity server monitors all the connected agents and assigns queued builds to the agents based on [compatibility requirements](agent-requirements.md), [agent pools](configuring-agent-pools.md), build configuration restrictions configured for an agent and the selection algorithm described [here](working-with-build-queue.md#Build+Queue+Optimization+by+TeamCity).
+The TeamCity server monitors all the connected agents and assigns queued builds to the agents based on [compatibility requirements](configuring-agent-requirements.md), [agent pools](configuring-agent-pools.md), build configuration restrictions configured for an agent and the selection algorithm described [here](working-with-build-queue.md#Build+Queue+Optimization+by+TeamCity).
 
 ## Build Agent Status
 

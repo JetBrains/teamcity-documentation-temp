@@ -1,6 +1,6 @@
 # Project Administrator Guide
 
-This section focuses on **Project administration**. To learn more about other aspects of TeamCity, refer to the [](server-administrator-guide.md) and [](user-guide.md) sections.
+This section focuses on **Project administration**: creating TeamCity projects and build configurations, setting up build steps, configuring dependency chains, and so on.
 
 
 ## Basic TeamCity Workflow

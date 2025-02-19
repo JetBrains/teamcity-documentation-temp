@@ -1,7 +1,7 @@
 [//]: # (title: Requirement Conditions)
 [//]: # (auxiliary-id: Requirement Conditions)
 
-This page explains conditions used in [agent requirements](agent-requirements.md) or [build step execution requirements](build-step-execution-conditions.md).
+This page explains conditions used in [agent requirements](configuring-agent-requirements.md) or [build step execution requirements](build-step-execution-conditions.md).
 
 
 <table>

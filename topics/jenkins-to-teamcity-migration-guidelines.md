@@ -184,7 +184,7 @@ Label
 
 <td>
 
-[Agent Requirements](agent-requirements.md)
+[Agent Requirements](configuring-agent-requirements.md)
 
 </td></tr></table>
 
@@ -270,5 +270,5 @@ The active agents count is visible at the top of the TeamCity server UI:
 
 <img src="agentCount.png" width="300"/>
 
-You can break the agents into separate groups called [agent pools](configuring-agent-pools.md) and assign those to the specific projects. In Build Configuration settings, it is possible to specify a number of [Agent Requirements](agent-requirements.md) needed for the build.
+You can break the agents into separate groups called [agent pools](configuring-agent-pools.md) and assign those to the specific projects. In Build Configuration settings, it is possible to specify a number of [Agent Requirements](configuring-agent-requirements.md) needed for the build.
 
